@@ -1,0 +1,253 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>authorization</title>
+    <link rel="stylesheet" href="style-waiter.css">
+    <link rel="stylesheet" href="normalize.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+
+<body>
+    <div class="sign-inner sign-inner--back">
+        <div class="container-main container-main--back">
+            <div class="sign__content" id="signContent">
+                <!-- waiter-confirm link -->
+                <a class="back-button" href="waiter-confirm.html">
+                    <svg width="13" height="16" viewBox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.292893 7.29289C-0.0976315 7.68342 -0.0976314 8.31658 0.292893 8.70711L6.65685 15.0711C7.04738 15.4616 7.68054 15.4616 8.07107 15.0711C8.46159 14.6805 8.46159 14.0474 8.07107 13.6569L2.41421 8L8.07107 2.34315C8.46159 1.95262 8.46159 1.31946 8.07107 0.928933C7.68054 0.538408 7.04738 0.538408 6.65685 0.928933L0.292893 7.29289ZM13 7L1 7L1 9L13 9L13 7Z" fill="#3C4046" /> </svg>Назад</a>
+            </div>
+            <!--  employee block -->
+            <div class="sign__footer sign__footer--back">
+                <div class="sign-title footer-title">Кто вы?</div>
+                <div class="sign-switch">
+                    <!-- add "--active" modifier modifier --><a class="switch__item switch__item--active" id="switchItemEmployee" onClick="
+                    document.getElementById('postEmployee').hidden = false;
+                     document.getElementById('postOwner').hidden = true;
+                     document.getElementById('switchItemEmployee').classList.add('switch__item--active');
+                     document.getElementById('switchItemOwner').classList.remove('switch__item--active');">Сотрудник</a> <a class="switch__item" id="switchItemOwner" onClick="
+                     document.getElementById('postEmployee').hidden = true;
+                     document.getElementById('postOwner').hidden = false;
+                     document.getElementById('switchItemEmployee').classList.remove('switch__item--active');
+                     document.getElementById('switchItemOwner').classList.add('switch__item--active');">Владелец</a> </div>
+                <div class="form__inner">
+                    <div class="form form--small">
+                        <label for="" class="label">Имя</label>
+                        <input type="text" class="textform"> </div>
+                    <div class="form form--small">
+                        <label for="" class="label">Фамилия</label>
+                        <input type="text" class="textform"> </div>
+                </div>
+                <div class="sign__post" id="postEmployee">
+                    <div class="sign__post-text">Должность</div>
+                    <div class="sign__post-inner">
+                        <button class="button button-post button-post--active">Официант</button>
+                        <button class="button button-post">Администратор</button>
+                        <button class="button button-post">Повар</button>
+                    </div>
+                </div>
+                <!-- postOwner block -->
+                <div hidden class="sign__address" id="postOwner">
+                    <div class="sign__address-text"></div>
+                    <a class="sign__address-map" onclick="document.getElementById('popupAddress').hidden = false;">
+                        <div class="sign__address-icon">
+                            <svg width="14" height="20" viewBox="0 0 14 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.12143 0.332326C8.45478 0.120846 7.72753 0 6.98512 0C4.84882 0 2.92463 0.966767 1.63679 2.49245L4.93973 5.2568L9.12143 0.332326Z" fill="#3C4046" />
+                                <path d="M1.63679 2.49245C0.621664 3.70091 0 5.27192 0 6.96376C0 8.27796 0.257569 9.33536 0.69695 10.287L4.93973 5.2568L1.63679 2.49245Z" fill="#3C4046" />
+                                <path d="M7.00216 4.30516C8.48697 4.30516 9.6839 5.49851 9.6839 6.97887C9.6839 7.62842 9.44149 8.23265 9.04756 8.70092C9.04756 8.70092 11.1536 6.19337 13.2141 3.76135C12.3656 2.12993 10.896 0.891261 9.12331 0.332349L4.94161 5.25682C5.4416 4.6828 6.16885 4.30516 7.00216 4.30516Z" fill="#3C4046" />
+                                <path d="M6.9982 9.63753C5.51339 9.63753 4.31645 8.44417 4.31645 6.96381C4.31645 6.31427 4.54372 5.71004 4.93765 5.25686L0.695341 10.2871C1.42259 11.8883 2.63468 13.1874 3.87707 14.8037L9.04359 8.68587C8.54361 9.27499 7.81636 9.63753 6.9982 9.63753Z" fill="#3C4046" />
+                                <path d="M8.95468 16.4955C11.288 12.855 14 11.2085 14 6.97885C14 5.81571 13.7121 4.72809 13.2121 3.76133L3.87907 14.8036C4.273 15.3172 4.68208 15.9063 5.076 16.5106C6.50021 18.7009 6.10628 20 7.01534 20C7.92441 20 7.53048 18.6858 8.95468 16.4955Z" fill="#3C4046" /> </svg>
+                        </div>
+                        <!-- change address -->
+                        <div class="sign__address-select">Выбрать</div>
+                        <div class="sign__address-arrow">
+                            <svg width="10" height="15" viewBox="0 0 10 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.45681e-08 1.875L2.038 0L10 7.5L2.038 15L0 13.125L6 7.5L1.45681e-08 1.875Z" fill="#3C4046" /> </svg>
+                        </div>
+                    </a>
+                </div>
+                <div class="sign__personal-data">
+                    <input type="checkbox" class="radio-btn" id="radio-btn--employee">
+                    <label class="custom-radio" for="radio-btn--employee"></label><a href="">Согласие с политикой обработки данных <span>Nachai</span></a></div>
+                <!-- waiter__success link -->
+                <a href="waiter__success.html">
+                    <button class="button">Авторизоваться</button>
+                </a>
+                <div class="footer-info footer-info--register" id="footerInfo">
+                    <p>Уже есть учетная запись?</p>
+                    <!-- waiter-entry link --><a href="waiter-entry.html" class="authorization-link">&nbsp;Войти</a> </div>
+            </div>
+        </div>
+    </div>
+    <!-- address popup -->
+    <div hidden class="popup" id="popupAddress">
+        <div class="popup__inner">
+            <a class="popup__bar" onclick="document.getElementById('popupAddress').hidden = true;">
+                <svg width="30" height="4" viewBox="0 0 30 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="30" height="4" rx="2" fill="#D8DDE4" /> </svg>
+            </a>
+            <div class="form form--search">
+                <input type="text" class="textform">
+                <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17 15.3326L12.5695 10.9374C13.4028 9.8005 13.8955 8.40225 13.8955 6.89208C13.8955 3.09187 10.7788 0 6.94737 0C3.11668 0 0 3.09187 0 6.89208C0 10.693 3.11668 13.7842 6.94737 13.7842C8.39968 13.7842 9.74846 13.34 10.8652 12.5814L15.3192 17L17 15.3326ZM2.0378 6.89208C2.0378 4.20608 4.24054 2.02087 6.94809 2.02087C9.65563 2.02087 11.8584 4.20608 11.8584 6.89208C11.8584 9.57808 9.65563 11.7633 6.94809 11.7633C4.23983 11.7633 2.0378 9.57808 2.0378 6.89208Z" fill="#A4A9B0" /> </svg>
+            </div>
+            <div class="address-item">
+                <div class="address__logo"><img src="images/waiter/address__logo.png" alt="" class="address__logo-img"></div>
+                <div class="address__textblock">
+                    <div class="address__textblock-name">Пиццафабрика</div>
+                    <div class="address__textblock-street">
+                        <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="1.5" y="2" width="7" height="7" rx="3.5" fill="white" />
+                            <rect x="1.5" y="2" width="7" height="7" rx="3.5" stroke="#A4A9B0" stroke-width="3" /> </svg> Сретенская 7</div>
+                </div>
+                <a class="address__button">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="6" width="2" height="14" fill="#3C4046" />
+                        <rect x="14" y="6" width="2" height="14" transform="rotate(90 14 6)" fill="#3C4046" /> </svg>
+                </a>
+            </div>
+            <div class="address-item">
+                <div class="address__logo"><img src="images/waiter/address__logo.png" alt="" class="address__logo-img"></div>
+                <div class="address__textblock">
+                    <div class="address__textblock-name">Пиццафабрика</div>
+                    <div class="address__textblock-street">
+                        <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="1.5" y="2" width="7" height="7" rx="3.5" fill="white" />
+                            <rect x="1.5" y="2" width="7" height="7" rx="3.5" stroke="#A4A9B0" stroke-width="3" /> </svg> Сретенская 7</div>
+                </div>
+                <a class="address__button">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="6" width="2" height="14" fill="#3C4046" />
+                        <rect x="14" y="6" width="2" height="14" transform="rotate(90 14 6)" fill="#3C4046" /> </svg>
+                </a>
+            </div>
+            <div class="address-item">
+                <div class="address__logo"><img src="images/waiter/address__logo.png" alt="" class="address__logo-img"></div>
+                <div class="address__textblock">
+                    <div class="address__textblock-name">Пиццафабрика</div>
+                    <div class="address__textblock-street">
+                        <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="1.5" y="2" width="7" height="7" rx="3.5" fill="white" />
+                            <rect x="1.5" y="2" width="7" height="7" rx="3.5" stroke="#A4A9B0" stroke-width="3" /> </svg> Сретенская 7</div>
+                </div>
+                <a class="address__button">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="6" width="2" height="14" fill="#3C4046" />
+                        <rect x="14" y="6" width="2" height="14" transform="rotate(90 14 6)" fill="#3C4046" /> </svg>
+                </a>
+            </div>
+            <div class="address-item">
+                <div class="address__logo"><img src="images/waiter/address__logo.png" alt="" class="address__logo-img"></div>
+                <div class="address__textblock">
+                    <div class="address__textblock-name">Пиццафабрика</div>
+                    <div class="address__textblock-street">
+                        <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="1.5" y="2" width="7" height="7" rx="3.5" fill="white" />
+                            <rect x="1.5" y="2" width="7" height="7" rx="3.5" stroke="#A4A9B0" stroke-width="3" /> </svg> Сретенская 7</div>
+                </div>
+                <a class="address__button">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="6" width="2" height="14" fill="#3C4046" />
+                        <rect x="14" y="6" width="2" height="14" transform="rotate(90 14 6)" fill="#3C4046" /> </svg>
+                </a>
+            </div>
+            <div class="address-item">
+                <div class="address__logo"><img src="images/waiter/address__logo.png" alt="" class="address__logo-img"></div>
+                <div class="address__textblock">
+                    <div class="address__textblock-name">Пиццафабрика</div>
+                    <div class="address__textblock-street">
+                        <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="1.5" y="2" width="7" height="7" rx="3.5" fill="white" />
+                            <rect x="1.5" y="2" width="7" height="7" rx="3.5" stroke="#A4A9B0" stroke-width="3" /> </svg> Сретенская 7</div>
+                </div>
+                <a class="address__button">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="6" width="2" height="14" fill="#3C4046" />
+                        <rect x="14" y="6" width="2" height="14" transform="rotate(90 14 6)" fill="#3C4046" /> </svg>
+                </a>
+            </div>
+            <div class="address-item">
+                <div class="address__logo"><img src="images/waiter/address__logo.png" alt="" class="address__logo-img"></div>
+                <div class="address__textblock">
+                    <div class="address__textblock-name">Пиццафабрика</div>
+                    <div class="address__textblock-street">
+                        <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="1.5" y="2" width="7" height="7" rx="3.5" fill="white" />
+                            <rect x="1.5" y="2" width="7" height="7" rx="3.5" stroke="#A4A9B0" stroke-width="3" /> </svg> Сретенская 7</div>
+                </div>
+                <a class="address__button">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="6" width="2" height="14" fill="#3C4046" />
+                        <rect x="14" y="6" width="2" height="14" transform="rotate(90 14 6)" fill="#3C4046" /> </svg>
+                </a>
+            </div>
+            <div class="address-item">
+                <div class="address__logo"><img src="images/waiter/address__logo.png" alt="" class="address__logo-img"></div>
+                <div class="address__textblock">
+                    <div class="address__textblock-name">Пиццафабрика</div>
+                    <div class="address__textblock-street">
+                        <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="1.5" y="2" width="7" height="7" rx="3.5" fill="white" />
+                            <rect x="1.5" y="2" width="7" height="7" rx="3.5" stroke="#A4A9B0" stroke-width="3" /> </svg> Сретенская 7</div>
+                </div>
+                <a class="address__button">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="6" width="2" height="14" fill="#3C4046" />
+                        <rect x="14" y="6" width="2" height="14" transform="rotate(90 14 6)" fill="#3C4046" /> </svg>
+                </a>
+            </div>
+            <div class="address-item">
+                <div class="address__logo"><img src="images/waiter/address__logo.png" alt="" class="address__logo-img"></div>
+                <div class="address__textblock">
+                    <div class="address__textblock-name">Пиццафабрика</div>
+                    <div class="address__textblock-street">
+                        <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="1.5" y="2" width="7" height="7" rx="3.5" fill="white" />
+                            <rect x="1.5" y="2" width="7" height="7" rx="3.5" stroke="#A4A9B0" stroke-width="3" /> </svg> Сретенская 7</div>
+                </div>
+                <a class="address__button">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="6" width="2" height="14" fill="#3C4046" />
+                        <rect x="14" y="6" width="2" height="14" transform="rotate(90 14 6)" fill="#3C4046" /> </svg>
+                </a>
+            </div>
+            <div class="address-item">
+                <div class="address__logo"><img src="images/waiter/address__logo.png" alt="" class="address__logo-img"></div>
+                <div class="address__textblock">
+                    <div class="address__textblock-name">Пиццафабрика</div>
+                    <div class="address__textblock-street">
+                        <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="1.5" y="2" width="7" height="7" rx="3.5" fill="white" />
+                            <rect x="1.5" y="2" width="7" height="7" rx="3.5" stroke="#A4A9B0" stroke-width="3" /> </svg> Сретенская 7</div>
+                </div>
+                <a class="address__button">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="6" width="2" height="14" fill="#3C4046" />
+                        <rect x="14" y="6" width="2" height="14" transform="rotate(90 14 6)" fill="#3C4046" /> </svg>
+                </a>
+            </div>
+            <div class="address-item">
+                <div class="address__logo"><img src="images/waiter/address__logo.png" alt="" class="address__logo-img"></div>
+                <div class="address__textblock">
+                    <div class="address__textblock-name">Пиццафабрика</div>
+                    <div class="address__textblock-street">
+                        <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="1.5" y="2" width="7" height="7" rx="3.5" fill="white" />
+                            <rect x="1.5" y="2" width="7" height="7" rx="3.5" stroke="#A4A9B0" stroke-width="3" /> </svg> Сретенская 7</div>
+                </div>
+                <a href="#" class="address__button">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="6" width="2" height="14" fill="#3C4046" />
+                        <rect x="14" y="6" width="2" height="14" transform="rotate(90 14 6)" fill="#3C4046" /> </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- styles -->
+    <link rel="stylesheet" href="styles/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{URL::asset('css/styles/style.css') }}">
+    <link href="http://fonts.cdnfonts.com/css/helveticaneuecyr-2" rel="stylesheet">
+    <script src="{{asset(" scripts/script.js ")}}"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="entity">
+        <div class="header">
+            <div class="header-upper-box">
+                <div class="header-upper-box-logo"> <img class="header-logo" src="img/start-logo.jpg"> <img class="header-logo-text" src="img/start-logo-nachai.jpg"> </div>
+            </div>
+        </div>
+        <div class="body-box">
+            <div class="body-box-buttons">
+                <button class="button-pay-order">
+                    <p class="pay-order-text">Оплатить счет</p>
+                </button>
+                <!-- waiter-transfer link -->
+                <a href="/newProfile">
+                    <button class="button-send-tips">
+                        <p class="tips-text">Оставить чаевые</p>
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.2431 1.75733C11.2431 1.20505 10.7954 0.757333 10.2431 0.757334L1.24309 0.757333C0.690809 0.757333 0.243094 1.20505 0.243094 1.75733C0.243094 2.30962 0.690809 2.75733 1.24309 2.75733L9.24309 2.75733L9.24309 10.7573C9.24309 11.3096 9.69081 11.7573 10.2431 11.7573C10.7954 11.7573 11.2431 11.3096 11.2431 10.7573L11.2431 1.75733ZM2.46492 10.9497L10.9502 2.46444L9.53599 1.05023L1.05071 9.53551L2.46492 10.9497Z" fill="#3C4046" /> </svg>
+                    </button>
+                </a>
+            </div>
+        </div>
+        <div class="body-box-line">
+            <a class="body-line"></a>
+            <p class="body-line-text">или</p>
+            <a class="body-line"></a>
+        </div>
+        <div class="body-development-box">
+            <div class="body-development-upper-row">
+                <div class="body-development-rectangle-box">
+                    <div class="body-development-rectangle ">
+                        <div class="body-development-rectangle-text">Вызвать официанта</div> <img class="waiter" src="img/waiter-menu.png"> </div>
+                    <!-- {{URL::asset('img/waiter-menu.png') }} -->
+                </div>
+                <div class="body-development-rectangle-box">
+                    <div class="body-development-rectangle ">
+                        <div class="body-development-rectangle-text">Вызвать администра-
+                            <br>тора</div> <img class="admin" src="img/admin.png"> </div>
+                </div>
+            </div>
+            <div class="body-development-upper-row">
+                <div class="body-development-rectangle-box">
+                    <div class="body-development-rectangle ">
+                        <div class="body-development-rectangle-text">Доставка</div> <img class="waiter" src="img/dostavka.png"> </div>
+                </div>
+                <div class="body-development-rectangle-box">
+                    <div class="body-development-rectangle ">
+                        <div class="body-development-rectangle-text">Меню</div> <img class="waiter" src="img/menu.png"> </div>
+                </div>
+            </div>
+            <div class="body-development-upper-row">
+                <div class="body-development-rectangle-box">
+                    <div class="body-development-rectangle ">
+                        <div class="body-development-rectangle-text">Оставить чаевые</div> <img class="waiter" src="img/dostavka.png"> </div>
+                </div>
+                <div class="body-development-rectangle-box">
+                    <div class="body-development-rectangle ">
+                        <div class="body-development-rectangle-text">Оставить отзыв</div> <img class="waiter" src="img/menu.png"> </div>
+                </div>
+            </div>
+        </div>
+        <!-- надо добавить (кнопка добавления) -->
+        <div class="body-box-button">
+            <a href="#">
+                <div class="body-box-button-item">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="10.3359" y="0.333252" width="3.33333" height="23.3333" fill="white" />
+                        <rect x="23.668" y="10.3333" width="3.33333" height="23.3333" transform="rotate(90 23.668 10.3333)" fill="white" /> </svg>
+                </div>
+            </a>
+        </div>
+        <!--  -->
+    </div>
+</body>
+
+</html>

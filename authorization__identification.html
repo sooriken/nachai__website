@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>authorization</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="normalize.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+
+<body>
+    <div class="authorization__inner">
+        <div class="authorization__sidebar">
+            <div class="authorization__sidebar-logo"><img src="images/authorization/logo.png" alt=""></div>
+            <div class="authorization__sidebar-title">Чаевые на максимум. Подключи сервис будущего.</div>
+            <div class="authorization__gif"><img class="authorization__gif-img authorization__gif-img--sidebar" src="images/authorization/animation.png" alt=""></div>
+            <div class="authorization__sidebar-rules"> <a class="authorization__sidebar-btn" href="">Политика конфидениальности Nachai</a></div>
+        </div>
+        <div class="authorization__content">
+            <div class="authorization__content-back"> <img src="images/authorization/arrow.png" alt="">
+                <!-- authorization__gender --><a href="authorization__gender.html">Назад</a> </div>
+            <div class="authorization__content-title">Идентификация</div>
+            <div class="authorization__content-form">
+                <label for="authorization__content-textform" class="authorization__content-label">Название заведения</label>
+                <input type="text" class="authorization__content-textform authorization__content-textform--name" placeholder=""> </div>
+            <div class="authorization__content-form">
+                <label for="authorization__content-textform" class="authorization__content-label">Адрес заведения
+                    <!-- click to open popup -->
+                    <!-- if width < 800px then href="authorization__address.html" --><a class="authorization__content-map" id="mapBtn" href="#">Отметить на карте</a></label>
+                <input type="text" class="authorization__content-textform authorization__content-textform--address" placeholder="">
+                <div class="authorization__content-gps"> <img src="images/authorization/gps.png" alt=""> </div>
+            </div>
+            <div class="button authorization__content-button">
+                <!-- authorization__password --><a href="authorization__password.html" class="authorization__content-btn">Продолжить</a></div>
+            <div class="authorization__content-subtext">Уже есть учетная запись?
+                <!-- authorization__entry --><a href="authorization__entry.html" class="authorization__content-enter">Войти</a></div>
+        </div>
+    </div>
+    <!-- popup [display:none] -->
+    <div class="popup" id="popup-map">
+        <div class="popup__content">
+            <div class="popup__content-inner">
+                <div class="popup__title">Адресс заведения</div>
+                <div class="popup__form"> <img src="images/authorization/search.png" alt="" class="popup__search">
+                    <input class="popup__textform" type="text" placeholder="Поиск"> </div>
+                <div class="popup__address"><img src="images/authorization/address-icon.png" alt="" class="popup__address-icon">
+                    <div class="popup__address-name">Москва, Красная мельничная 4</div>
+                </div>
+                <div class="popup__map"></div>
+                <div class="popup__button"> <a href="#" class="popup__btn" onClick="document.getElementById('popup-map').style.display='none';">Сохранить</a> </div>
+            </div>
+        </div>
+        <div class="popup-bg"></div>
+    </div>
+    <!-- popup-map js -->
+    <script>
+        document.getElementById('mapBtn').onclick = function () {
+            const mediaQuery = window.matchMedia('(min-width: 800px)')
+            if (mediaQuery.matches) {
+                document.getElementById('popup-map').style.display = 'flex';
+            }
+            else {
+                document.getElementById('mapBtn').href = 'authorization__address.html';
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>authorization</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="normalize.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+
+<body>
+    <div class="authorization__inner">
+        <div class="authorization__sidebar">
+            <div class="authorization__sidebar-logo"><img src="images/authorization/logo.png" alt=""></div>
+            <div class="authorization__sidebar-title">Чаевые на максимум. Подключи сервис будущего.</div>
+            <div class="authorization__gif"><img class="authorization__gif-img authorization__gif-img--sidebar" src="images/authorization/animation.png" alt=""></div>
+            <div class="authorization__sidebar-rules"> <a class="authorization__sidebar-btn" href="">Политика конфидениальности Nachai</a></div>
+        </div>
+        <div class="authorization__content">
+            <div class="authorization__content-back"> <img src="images/authorization/arrow.png" alt="">
+                <!-- link authorization__mail.html --><a href="authorization__mail.html">Назад</a> </div>
+            <!-- media header -->
+            <div class="authorization-media__confirm-header">
+                <div class="authorization-media__confirm-item authorization-media__confirm-item--active">
+                    <div class="authorization-media__confirm-textblock">
+                        <div class="authorization-media__confirm-text">Письмо</div>
+                        <div class="authorization-media__confirm-icon">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="16" height="16" rx="8" fill="#4ADE80" />
+                                <path d="M10.5 6L7.0625 10L5.5 8.18182" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /> </svg>
+                        </div>
+                    </div>
+                    <div class="authorization-media__confirm-bar">
+                        <svg width="105" height="4" viewBox="0 0 105 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="105" height="4" rx="2" fill="#4ADE80" /> </svg>
+                    </div>
+                </div>
+                <div class="authorization-media__confirm-item authorization-media__confirm-item--active">
+                    <div class="authorization-media__confirm-textblock">
+                        <div class="authorization-media__confirm-text">Пароль</div>
+                        <div class="authorization-media__confirm-icon">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="16" height="16" rx="8" fill="#4ADE80" />
+                                <path d="M10.5 6L7.0625 10L5.5 8.18182" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /> </svg>
+                        </div>
+                    </div>
+                    <div class="authorization-media__confirm-bar">
+                        <svg width="105" height="4" viewBox="0 0 105 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="105" height="4" rx="2" fill="#4ADE80" /> </svg>
+                    </div>
+                </div>
+                <div class="authorization-media__confirm-item authorization-media__confirm-item--active">
+                    <div class="authorization-media__confirm-textblock">
+                        <div class="authorization-media__confirm-text">Профиль</div>
+                    </div>
+                    <div class="authorization-media__confirm-bar">
+                        <svg width="105" height="4" viewBox="0 0 105 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="105" height="4" rx="2" fill="#4ADE80" /> </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="authorization__content-title">Кто вы?</div>
+            <div class="authorization__content-title authorization__content-title--media">Кто вы?</div>
+            <!-- media gender -->
+            <!-- (старый код, пока не удаляю)  <div class="authorization__content-gender">
+                <div class="gender__inner">
+                    <div class="gender-item gender-item--active">
+                        <label class="gender__item-label" for="gender__item-radio">Владелец</label>
+                        <input class="gender__item-radio" type="radio"> </div>
+                    <div class="gender-item">
+                        <label class="gender__item-label" for="gender__item-radio">Сотрудник</label>
+                        <input class="gender__item-radio" type="radio"> </div>
+                </div>
+            </div> -->
+            <div class="sign-switch">
+                <!-- add "--active" modifier modifier --><a class="switch__item switch__item--active" id="switchItemEmployee" onClick="
+                    document.getElementById('postEmployee').hidden = false;
+                     document.getElementById('postOwner').hidden = true;
+                     document.getElementById('switchItemEmployee').classList.add('switch__item--active');
+                     document.getElementById('switchItemOwner').classList.remove('switch__item--active');">Сотрудник</a> <a class="switch__item" id="switchItemOwner" onClick="
+                     document.getElementById('postEmployee').hidden = true;
+                     document.getElementById('postOwner').hidden = false;
+                     document.getElementById('switchItemEmployee').classList.remove('switch__item--active');
+                     document.getElementById('switchItemOwner').classList.add('switch__item--active');">Владелец</a> </div>
+            <div class="form__inner form__inner--gender-media">
+                <div class="form form--small">
+                    <label for="" class="label">Имя</label>
+                    <input type="text" class="textform"> </div>
+                <div class="form form--small">
+                    <label for="" class="label">Фамилия</label>
+                    <input type="text" class="textform"> </div>
+            </div>
+            <!-- employee block -->
+            <div class="employee__inner" id="postEmployee">
+                <div class="post__suptitle">Должность</div>
+                <div class="employee-post__inner"> <a href="#">Официант</a> <a href="#">Администратор</a> <a href="#">Повар</a> </div>
+            </div>
+            <!-- owner block (hidden) -->
+            <div class="owner__inner" id="postOwner" hidden>
+                <div class="owner__desktop-inner">
+                    <div class="post__suptitle">Заведение</div>
+                    <div class="owner-post__inner">
+                        <a class="place-button" href="#" id="mapBtn">
+                            <svg class="place-button__gps-icon" width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.51531 0.232628C8.03913 0.0845922 7.51966 0 6.98937 0C5.46344 0 4.08902 0.676737 3.16913 1.74471L5.52838 3.67976L8.51531 0.232628Z" fill="#3C4046" />
+                                <path d="M3.16913 1.74471C2.44405 2.59063 2 3.69034 2 4.87463C2 5.79457 2.18398 6.53475 2.49782 7.20092L5.52838 3.67976L3.16913 1.74471Z" fill="#3C4046" />
+                                <path d="M7.00154 3.01361C8.06212 3.01361 8.91708 3.84896 8.91708 4.88521C8.91708 5.3399 8.74392 5.76286 8.46254 6.09065C8.46254 6.09065 9.96683 4.33536 11.4387 2.63295C10.8326 1.49095 9.78285 0.623883 8.51665 0.232644L5.52972 3.67977C5.88686 3.27796 6.40632 3.01361 7.00154 3.01361Z" fill="#3C4046" />
+                                <path d="M6.99871 6.74627C5.93814 6.74627 5.08318 5.91092 5.08318 4.87467C5.08318 4.41999 5.24551 3.99703 5.52689 3.67981L2.49667 7.20096C3.01614 8.3218 3.88192 9.23117 4.76934 10.3626L8.45971 6.08011C8.10258 6.4925 7.58311 6.74627 6.99871 6.74627Z" fill="#3C4046" />
+                                <path d="M8.3962 11.5468C10.0628 8.99849 12 7.84592 12 4.8852C12 4.071 11.7944 3.30967 11.4372 2.63293L4.77076 10.3625C5.05214 10.7221 5.34434 11.1344 5.62572 11.5574C6.643 13.0906 6.36163 14 7.01096 14C7.66029 14 7.37892 13.0801 8.3962 11.5468Z" fill="#3C4046" /> </svg> Выбрать
+                            <div class="place-button__arrow__inner">
+                                <svg class="place-button__arrow-icon" width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1.02005e-08 1.875L1.4266 0.5L7 6L1.4266 11.5L0 10.125L4.2 6L1.02005e-08 1.875Z" fill="#3C4046" /> </svg>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="owner__media-inner">
+                    <div class="authorization__content-form authorization__content-form--media authorization__content-form--media-address">
+                        <!-- media label -->
+                        <div class="media-label__inner">
+                            <label for="authorization__content-textform" class="authorization__content-label">Введите адрес заведения</label>
+                        </div>
+                        <!-- media form -->
+                        <input type="text" class="authorization__content-textform authorization__content-textform--media authorization__content-textform--media-address" placeholder=""> </div>
+                </div>
+            </div>
+            <!-- footer block -->
+            <div class="sign__personal-data">
+                <input type="checkbox" class="radio-btn" id="radio-btn--employee">
+                <label class="custom-radio" for="radio-btn--employee"></label><a href="#">Согласие с политикой обработки данных<span> Nachai</span></a></div>
+            <!-- media footer block -->
+            <div class="sign__personal-data sign__personal-data--media">
+                <input type="checkbox" class="radio-btn" id="radio-btn--employee-media">
+                <label class="custom-radio" for="radio-btn--employee-media"></label> <a href="#">Соглашаюсь с политикой обработки данных<span> Nachai</span></a></div>
+            <!-- authorization__final.html -->
+            <a href="authorization__final.html" id="postNext">
+                <button class="button button--post button--post-media">Продолжить</button>
+            </a>
+            <div class="authorization__content-subtext">Уже есть учетная запись?
+                <!-- authorization__entry --><a href="authorization__entry.html" class="authorization__content-enter">Войти</a></div>
+        </div>
+    </div>
+    <!-- popup [display:none] -->
+    <div class="popup" id="popup-map">
+        <div class="popup__content">
+            <div class="popup__content-inner">
+                <div class="popup__title">Адресс заведения</div>
+                <div class="popup__form"> <img src="images/authorization/search.png" alt="" class="popup__search">
+                    <input class="popup__textform" type="text" placeholder="Поиск"> </div>
+                <div class="popup__address"><img src="images/authorization/address-icon.png" alt="" class="popup__address-icon">
+                    <div class="popup__address-name">Москва, Красная мельничная 4</div>
+                </div>
+                <div class="popup__map"></div>
+                <div class="popup__button"> <a href="#" class="popup__btn" onClick="document.getElementById('popup-map').style.display='none';">Сохранить</a> </div>
+            </div>
+        </div>
+        <div class="popup-bg"></div>
+    </div>
+    <!-- popup-map js -->
+    <script>
+        document.getElementById('mapBtn').onclick = function () {
+            const mediaQuery = window.matchMedia('(min-width: 800px)')
+            if (mediaQuery.matches) {
+                document.getElementById('popup-map').style.display = 'flex';
+            }
+            else {
+                document.getElementById('mapBtn').href = 'authorization__address.html';
+            }
+        }
+    </script>
+    <!-- post-next js -->
+    <!-- (старый код для навигации,пока не удаляю) <script>
+        document.getElementById('postNext').onclick = function () {
+            const mediaQuery = window.matchMedia('(min-width: 800px)')
+            if (mediaQuery.matches) {
+                document.getElementById('postNext').href = 'authorization__new-password.html';
+            }
+            else {
+                document.getElementById('postNext').href = 'authorization__identification.html';
+            }
+        }
+    </script> -->
+</body>
+
+</html>

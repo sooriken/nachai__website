@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>authorization</title>
+    <link rel="stylesheet" href="style-waiter-transfer.css">
+    <link rel="stylesheet" href="normalize.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+
+<body>
+    <div class="main">
+        <div class="container-main">
+            <div class="main__header main__header--reviews">
+                <!-- waiter-transfer link -->
+                <a class="back-button" href="waiter-transfer.html">
+                    <svg width="13" height="16" viewBox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.292893 7.29289C-0.0976315 7.68342 -0.0976314 8.31658 0.292893 8.70711L6.65685 15.0711C7.04738 15.4616 7.68054 15.4616 8.07107 15.0711C8.46159 14.6805 8.46159 14.0474 8.07107 13.6569L2.41421 8L8.07107 2.34315C8.46159 1.95262 8.46159 1.31946 8.07107 0.928933C7.68054 0.538408 7.04738 0.538408 6.65685 0.928933L0.292893 7.29289ZM13 7L1 7L1 9L13 9L13 7Z" fill="#3C4046" /> </svg>
+                </a>
+            </div>
+            <div class="main__inner">
+                <div class="transfer-precheck__inner">
+                    <div class="transfer-precheck__title">ПИЦЦАФАБРИКА</div>
+                    <!-- header inner with title and items -->
+                    <div class="transfer-precheck__header-inner">
+                        <!-- item = 1 row -->
+                        <div class="transfer-precheck__header-item">
+                            <div class="transfer-precheck__header-name">Стол</div>
+                            <div class="transfer-precheck__header-value">#20 </div>
+                        </div>
+                        <div class="transfer-precheck__header-item">
+                            <div class="transfer-precheck__header-name">Открыт:</div>
+                            <div class="transfer-precheck__header-value">18:43 20-10-2021</div>
+                        </div>
+                        <div class="transfer-precheck__header-item">
+                            <div class="transfer-precheck__header-name">Официант:</div>
+                            <div class="transfer-precheck__header-value">Николаев Вадим</div>
+                        </div>
+                    </div>
+                    <!-- content inner with title and items -->
+                    <div class="transfer-precheck__content-inner">
+                        <div class="transfer-precheck__content-header">
+                            <div class="transfer-precheck__content-position">Блюдо</div>
+                            <div class="transfer-precheck__content-amount">Кол-во</div>
+                            <div class="transfer-precheck__content-value">Сумма</div>
+                        </div>
+                        <!-- item = 1 row -->
+                        <div class="transfer-precheck__content-item">
+                            <div class="transfer-precheck__content-position">Морс брусничный 0,5 </div>
+                            <div class="transfer-precheck__content-amount">1.000</div>
+                            <div class="transfer-precheck__content-value">110.00</div>
+                        </div>
+                        <div class="transfer-precheck__content-item">
+                            <div class="transfer-precheck__content-position">Морс брусничный 0,5 </div>
+                            <div class="transfer-precheck__content-amount">1.000</div>
+                            <div class="transfer-precheck__content-value">110.00</div>
+                        </div>
+                        <div class="transfer-precheck__content-item">
+                            <div class="transfer-precheck__content-position">Морс брусничный 0,5 </div>
+                            <div class="transfer-precheck__content-amount">1.000</div>
+                            <div class="transfer-precheck__content-value">110.00</div>
+                        </div>
+                        <div class="transfer-precheck__content-item">
+                            <div class="transfer-precheck__content-position">Морс брусничный 0,5 </div>
+                            <div class="transfer-precheck__content-amount">1.000</div>
+                            <div class="transfer-precheck__content-value">110.00</div>
+                        </div>
+                        <div class="transfer-precheck__content-item">
+                            <div class="transfer-precheck__content-position">Морс брусничный 0,5 </div>
+                            <div class="transfer-precheck__content-amount">1.000</div>
+                            <div class="transfer-precheck__content-value">110.00</div>
+                        </div>
+                        <div class="transfer-precheck__content-item">
+                            <div class="transfer-precheck__content-position">Морс брусничный 0,5 </div>
+                            <div class="transfer-precheck__content-amount">1.000</div>
+                            <div class="transfer-precheck__content-value">110.00</div>
+                        </div>
+                    </div>
+                    <!-- final inner row-->
+                    <div class="transfer-precheck__final-inner">
+                        <div class="transfer-precheck__final-item">
+                            <div class="transfer-precheck__final-title">Всего:</div>
+                            <div class="transfer-precheck__final-value">2720.00 ₽</div>
+                        </div>
+                    </div>
+                    <!-- currency inner row-->
+                    <div class="transfer-precheck__currency-inner">
+                        <div class="transfer-precheck__currency-name">Rubles</div>
+                        <div class="transfer-precheck__currency-value">2720.00 ₽</div>
+                    </div>
+                    <!-- remark inner row -->
+                    <div class="transfer-precheck__remark-inner">
+                        <div class="transfer-precheck__remark-text">Вознаграждение официанту приветствуется но всега остается на Ваше усмотрение.</div>
+                    </div>
+                </div>
+                <div class="waiter-transfer__bottom-inner">
+                    <!-- waiter-transfer link -->
+                    <a href="waiter-transfer.html">
+                        <!-- "--inactive" modifier -->
+                        <button class="button button--tips">Оплатить 2720 и оставить чаевые</button>
+                    </a>
+                    <!-- waiter-transfer__check link -->
+                    <a href="waiter-transfer__check.html">
+                        <button class="button button--next">Только оплатить 2720 </button>
+                    </a>
+                    <!-- waiter-transfer__precheck-apart link -->
+                    <a href="waiter-transfer__precheck-apart.html">
+                        <button class="button button--next">Разделить счет
+                            <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.499999 7.33333L0.5 14.6667L6.25 14.6667L6.25 7.33333L0.499999 7.33333ZM17.75 14.6667L17.75 22L23.5 22L23.5 14.6667L17.75 14.6667ZM17.75 1.15333e-06L17.75 7.33333L23.5 7.33333L23.5 9.01987e-07L17.75 1.15333e-06ZM15.8333 2.80317L15.8333 4.45408C12.2396 4.45408 14.6766 9.18958 11.2784 11.0009C14.6575 12.8013 12.252 17.5395 15.8333 17.5468L15.8333 19.1968C9.58404 19.1941 14.3652 12.4108 8.16667 11.8461L8.16667 10.1539C14.37 9.58925 9.57446 2.80317 15.8333 2.80317Z" fill="#334155" /> </svg>
+                        </button>
+                    </a>
+                    <div class="transfer__remark">
+                        <p>Совершая платеж, вы соглашаетесь с условиями сервиса</p>
+                        <p class="remark-underline">Nachai</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

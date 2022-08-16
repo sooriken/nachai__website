@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>authorization</title>
+    <link rel="stylesheet" href="style-waiter.css">
+    <link rel="stylesheet" href="normalize.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+
+<body>
+    <div class="sign-inner">
+        <div class="container-main">
+            <div class="sign__content" id="signContent">
+                <div class="sign-title">Авторизоваться через</div>
+                <div class="sign__social">
+                    <div class="sign__social-item">
+                        <div class="sign__social-icon">
+                            <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17.0306 8.68688C17.0313 8.12853 16.9841 7.57115 16.8895 7.02087H9.1626V10.1765H13.5882C13.4976 10.6805 13.306 11.1609 13.0247 11.5889C12.7435 12.0168 12.3785 12.3833 11.9518 12.6664V14.7148H14.593C16.1396 13.2889 17.0306 11.1802 17.0306 8.68688Z" fill="#4285F4" />
+                                <path d="M9.16291 16.6937C11.374 16.6937 13.2357 15.9677 14.5934 14.7159L11.9521 12.6676C11.217 13.166 10.2702 13.4505 9.16291 13.4505C7.02579 13.4505 5.21184 12.0098 4.5632 10.0684H1.84229V12.1794C2.52424 13.5364 3.56994 14.6772 4.86265 15.4743C6.15535 16.2715 7.64418 16.6937 9.16291 16.6937Z" fill="#34A853" />
+                                <path d="M4.56309 10.0683C4.22018 9.05103 4.22018 7.94936 4.56309 6.93206V4.82111H1.84218C1.2685 5.96267 0.969727 7.22258 0.969727 8.5002C0.969727 9.77781 1.2685 11.0377 1.84218 12.1793L4.56309 10.0683Z" fill="#FBBC04" />
+                                <path d="M9.16291 3.55006C10.3314 3.53097 11.4604 3.97245 12.306 4.77907L14.6446 2.44053C13.1617 1.04772 11.1972 0.283052 9.16291 0.306812C7.64418 0.306881 6.15535 0.729065 4.86265 1.52623C3.56994 2.32339 2.52424 3.46416 1.84229 4.82118L4.5632 6.93213C5.21184 4.99074 7.02579 3.55006 9.16291 3.55006Z" fill="#EA4335" /> </svg>
+                        </div>
+                        <div class="sign__social-name">Google</div>
+                    </div>
+                    <div class="sign__social-item">
+                        <div class="sign__social-icon">
+                            <svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.7014 2.88451C10.0471 3.64023 9.00014 4.23629 7.95318 4.15114C7.82231 3.12932 8.33488 2.04364 8.9347 1.37307C9.58905 0.596061 10.7342 0.0425758 11.6612 0C11.7702 1.06439 11.3449 2.1075 10.7014 2.88451ZM11.6502 4.35337C10.1343 4.26822 8.83655 5.19424 8.11677 5.19424C7.38608 5.19424 6.28459 4.39595 5.08495 4.41724C3.52542 4.43852 2.07495 5.30068 1.27882 6.67375C-0.35705 9.41989 0.853495 13.4859 2.43484 15.7211C3.20915 16.8281 4.13614 18.0415 5.35759 17.9989C6.51361 17.9563 6.97165 17.2645 8.3676 17.2645C9.77445 17.2645 10.178 17.9989 11.3994 17.9776C12.6645 17.9563 13.4606 16.8707 14.2349 15.7637C15.1183 14.5077 15.4782 13.2836 15.5 13.2198C15.4782 13.1985 13.0571 12.2938 13.0353 9.56891C13.0135 7.2911 14.9438 6.20542 15.031 6.14156C13.9405 4.56625 12.2392 4.39595 11.6502 4.35337Z" fill="#3C4046" /> </svg>
+                        </div>
+                        <div class="sign__social-name">Apple</div>
+                    </div>
+                    <div class="sign__social-item">
+                        <div class="sign__social-icon">
+                            <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M6.24 0.5H11.76C16.8 0.5 18 1.7 18 6.74V12.26C18 17.3 16.8 18.5 11.76 18.5H6.24C1.2 18.5 0 17.3 0 12.26V6.74C0 1.7 1.2 0.5 6.24 0.5Z" fill="#2787F5" />
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7414 6.70133C14.8248 6.42323 14.7414 6.21887 14.3445 6.21887H13.032C12.6983 6.21887 12.5445 6.3954 12.461 6.59007C12.461 6.59007 11.7936 8.21696 10.848 9.27373C10.5421 9.57964 10.4031 9.67697 10.2362 9.67697C10.1528 9.67697 10.032 9.57964 10.032 9.30156V6.70133C10.032 6.3676 9.93516 6.21887 9.65703 6.21887H7.59453C7.38598 6.21887 7.26056 6.37376 7.26056 6.52056C7.26056 6.83692 7.7333 6.90988 7.78203 7.79981V9.73261C7.78203 10.1564 7.70551 10.2332 7.53864 10.2332C7.0937 10.2332 6.01137 8.59904 5.36945 6.72913C5.24365 6.36568 5.11747 6.21887 4.78203 6.21887H3.46953C3.09454 6.21887 3.01953 6.3954 3.01953 6.59007C3.01953 6.9377 3.4645 8.66193 5.09137 10.9423C6.17594 12.4997 7.70403 13.3439 9.09453 13.3439C9.92882 13.3439 10.032 13.1564 10.032 12.8334V11.6564C10.032 11.2814 10.1111 11.2065 10.3753 11.2065C10.5699 11.2065 10.9036 11.3039 11.6823 12.0547C12.5723 12.9446 12.719 13.3439 13.2195 13.3439H14.532C14.907 13.3439 15.0945 13.1564 14.9864 12.7864C14.868 12.4176 14.4431 11.8825 13.8793 11.2482C13.5734 10.8867 13.1146 10.4974 12.9755 10.3027C12.7808 10.0524 12.8364 9.94116 12.9755 9.7187C12.9755 9.7187 14.5746 7.46609 14.7414 6.70133Z" fill="white" /> </svg>
+                        </div>
+                        <div class="sign__social-name">Vk</div>
+                    </div>
+                    <div class="sign__social-item">
+                        <div class="sign__social-icon"></div>
+                        <div class="sign__social-name">Instagram</div>
+                    </div>
+                </div>
+            </div>
+            <div class="sign__footer" id="signFooter">
+                <div class="form">
+                    <label for="" class="label">Или через номер</label>
+                    <input type="text" class="textform" value="+7"> </div>
+                <!-- waiter-confirm link -->
+                <a href="waiter-confirm.html">
+                    <button class="button"> Продолжить</button>
+                </a>
+                <div class="footer-info footer-info--register">
+                    <p>Уже есть учетная запись?</p>
+                    <!-- waiter-entry link --><a href="waiter-entry.html" class="authorization-link">&nbsp;Войти</a> </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,356 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>authorization</title>
+    <link rel="stylesheet" href="style-waiter.css">
+    <link rel="stylesheet" href="normalize.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+
+<body>
+    <div class="sign-inner sign-inner--option">
+        <div class="container-main container-main--option ">
+            <div class="sign__content" id="signContent">
+                <!-- waiter-home link -->
+                <a class="back-button" href="waiter-home.html">
+                    <svg width="13" height="16" viewBox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.292893 7.29289C-0.0976315 7.68342 -0.0976314 8.31658 0.292893 8.70711L6.65685 15.0711C7.04738 15.4616 7.68054 15.4616 8.07107 15.0711C8.46159 14.6805 8.46159 14.0474 8.07107 13.6569L2.41421 8L8.07107 2.34315C8.46159 1.95262 8.46159 1.31946 8.07107 0.928933C7.68054 0.538408 7.04738 0.538408 6.65685 0.928933L0.292893 7.29289ZM13 7L1 7L1 9L13 9L13 7Z" fill="#3C4046" /> </svg>Назад</a>
+                <!-- waiter-notices link -->
+                <a href="waiter-notices.html" class="sign__notices">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M25.6697 11.8389C24.1484 10.3067 22.107 9.46614 19.993 9.50105C18.9074 9.49779 17.8319 9.71917 16.8288 10.1524C15.8038 10.5951 14.4621 11.4623 13.2537 13.038C13.2341 13.0635 13.2156 13.0899 13.1983 13.1171C11.9464 15.076 11.8896 16.6893 11.8905 17.7082V19.9069C11.8905 22.3687 11.2708 24.6104 9.78901 26.2766C9.49618 26.6059 9.41819 27.0849 9.59038 27.4966C9.76258 27.9083 10.1522 28.1744 10.5828 28.1744H17.5637C17.6177 28.8072 17.896 29.3964 18.3445 29.8266C18.7959 30.2597 19.3868 30.5 20 30.5C20.6133 30.5 21.2041 30.2597 21.6556 29.8266C22.1041 29.3964 22.3824 28.8072 22.4363 28.1744H29.4172C29.8478 28.1744 30.2374 27.9083 30.4096 27.4966C30.5818 27.0849 30.5038 26.6059 30.211 26.2766C28.7292 24.6104 28.1095 22.3688 28.1095 19.9069V17.7076C28.1095 17.7008 28.1094 17.6941 28.1093 17.6874C28.0714 15.4776 27.1939 13.374 25.6697 11.8389Z" fill="white" /> </svg>
+                </a>
+                <div class="profile-info">
+                    <div class="profile-info__image"> <img src="images/waiter/option/option-logo.svg" alt="" class="profile-info__img"> </div>
+                    <div class="profile-info__name">Пиццафабрика</div>
+                    <div class="profile-info__post">Сретенская 7</div>
+                </div>
+            </div>
+            <div class="sign__footer sign__footer--option">
+                <label for="" class="label">Ссылка для QR</label>
+                <a href="#" onclick="document.getElementById('popupAddress').hidden = false; document.getElementById('mainFooter').hidden = true;">
+                    <button class="button button--address">
+                        <svg width="14" height="25" viewBox="0 0 14 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="2.5" y="7" width="9" height="9" rx="4.5" fill="white" />
+                            <rect x="2.5" y="7" width="9" height="9" rx="4.5" stroke="#3C4046" stroke-width="5" /> </svg>
+                        <p>Пиццафабрика. Сретенская 7 пер</p>
+                        <svg width="10" height="15" viewBox="0 0 10 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.45681e-08 1.875L2.038 0L10 7.5L2.038 15L0 13.125L6 7.5L1.45681e-08 1.875Z" fill="#3C4046" /> </svg>
+                    </button>
+                </a>
+                <div class="transfer__rules">
+                    <div class="transfer__rules-condition">Автоматически открывать и закрывать смену по геолокации</div>
+                    <label class="switch">
+                        <input type="checkbox"> <span class="slider"></span> </label>
+                </div>
+                <div class="option-shift__item">
+                    <div class="option-shift__item-info">
+                        <div class="option-shift__item-text">Смена (13 Октября) открыта </div>
+                        <div class="option-shift__item-time">
+                            <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 1.5C13.1355 1.5 16.5 4.8645 16.5 9C16.5 13.1355 13.1355 16.5 9 16.5C4.8645 16.5 1.5 13.1355 1.5 9C1.5 4.8645 4.8645 1.5 9 1.5ZM9 0C4.02975 0 0 4.02975 0 9C0 13.9703 4.02975 18 9 18C13.9703 18 18 13.9703 18 9C18 4.02975 13.9703 0 9 0ZM9.75 9V4.5H8.25V10.5H13.5V9H9.75Z" fill="#A4A9B0" /> </svg>8:10 </div>
+                    </div>
+                    <a href="waiter-entry.html">
+                        <button class="button button--shift">
+                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11 9H8V0H11V9ZM14.1597 1.3155L13.25 2.51475C15.488 3.81375 17 6.231 17 9C17 13.1355 13.6355 16.5 9.5 16.5C5.3645 16.5 2 13.1355 2 9C2 6.231 3.512 3.81375 5.75 2.51475L4.84025 1.3155C2.2415 2.89275 0.5 5.73825 0.5 9C0.5 13.9703 4.52975 18 9.5 18C14.4703 18 18.5 13.9703 18.5 9C18.5 5.73825 16.7585 2.89275 14.1597 1.3155Z" fill="white" /> </svg> Закрыть смену </button>
+                    </a>
+                    <!-- close shift button (add "--shift-close" modifier) [hidden]-->
+                    <a hidden href="waiter-entry.html">
+                        <button class="button button--shift-close">
+                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11 9H8V0H11V9ZM14.1597 1.3155L13.25 2.51475C15.488 3.81375 17 6.231 17 9C17 13.1355 13.6355 16.5 9.5 16.5C5.3645 16.5 2 13.1355 2 9C2 6.231 3.512 3.81375 5.75 2.51475L4.84025 1.3155C2.2415 2.89275 0.5 5.73825 0.5 9C0.5 13.9703 4.52975 18 9.5 18C14.4703 18 18.5 13.9703 18.5 9C18.5 5.73825 16.7585 2.89275 14.1597 1.3155Z" fill="white" /> </svg> Открыть смену </button>
+                    </a>
+                </div>
+                <div class="option-shifts__inner">
+                    <div class="option-shifts__title">Смены</div>
+                    <div class="option-shifts__item">
+                        <div class="shifts-item__date">
+                            <p>13</p>
+                        </div>
+                        <div class="shifts-item__info">
+                            <div class="shifts-item__description">Смена (13 Октября)</div>
+                            <div class="shifts-item__time">
+                                <div class="shifts-item__time-open">
+                                    <div class="shifts-item__time-text">Окрыта</div>
+                                    <div class="shifts-item__time-numbers">7:10</div>
+                                </div>
+                                <div class="shifts-item__time-arrow">
+                                    <svg width="32" height="15" viewBox="0 0 32 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M31.2071 8.20711C31.5976 7.81658 31.5976 7.18342 31.2071 6.79289L24.8431 0.428932C24.4526 0.0384078 23.8195 0.0384078 23.4289 0.428932C23.0384 0.819457 23.0384 1.45262 23.4289 1.84315L29.0858 7.5L23.4289 13.1569C23.0384 13.5474 23.0384 14.1805 23.4289 14.5711C23.8195 14.9616 24.4526 14.9616 24.8431 14.5711L31.2071 8.20711ZM0.5 8.5H30.5V6.5H0.5V8.5Z" fill="#3C4046" /> </svg>
+                                </div>
+                                <div class="shifts-item__time-close">
+                                    <div class="shifts-item__time-text">Закрыта</div>
+                                    <div class="shifts-item__time-numbers">17:30</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="option-shifts__item">
+                        <div class="shifts-item__date">
+                            <p>13</p>
+                        </div>
+                        <div class="shifts-item__info">
+                            <div class="shifts-item__description">Смена (13 Октября)</div>
+                            <div class="shifts-item__time">
+                                <div class="shifts-item__time-open">
+                                    <div class="shifts-item__time-text">Окрыта</div>
+                                    <div class="shifts-item__time-numbers">7:10</div>
+                                </div>
+                                <div class="shifts-item__time-arrow">
+                                    <svg width="32" height="15" viewBox="0 0 32 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M31.2071 8.20711C31.5976 7.81658 31.5976 7.18342 31.2071 6.79289L24.8431 0.428932C24.4526 0.0384078 23.8195 0.0384078 23.4289 0.428932C23.0384 0.819457 23.0384 1.45262 23.4289 1.84315L29.0858 7.5L23.4289 13.1569C23.0384 13.5474 23.0384 14.1805 23.4289 14.5711C23.8195 14.9616 24.4526 14.9616 24.8431 14.5711L31.2071 8.20711ZM0.5 8.5H30.5V6.5H0.5V8.5Z" fill="#3C4046" /> </svg>
+                                </div>
+                                <div class="shifts-item__time-close">
+                                    <div class="shifts-item__time-text">Закрыта</div>
+                                    <div class="shifts-item__time-numbers">17:30</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="option-shifts__item">
+                        <div class="shifts-item__date">
+                            <p>13</p>
+                        </div>
+                        <div class="shifts-item__info">
+                            <div class="shifts-item__description">Смена (13 Октября)</div>
+                            <div class="shifts-item__time">
+                                <div class="shifts-item__time-open">
+                                    <div class="shifts-item__time-text">Окрыта</div>
+                                    <div class="shifts-item__time-numbers">7:10</div>
+                                </div>
+                                <div class="shifts-item__time-arrow">
+                                    <svg width="32" height="15" viewBox="0 0 32 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M31.2071 8.20711C31.5976 7.81658 31.5976 7.18342 31.2071 6.79289L24.8431 0.428932C24.4526 0.0384078 23.8195 0.0384078 23.4289 0.428932C23.0384 0.819457 23.0384 1.45262 23.4289 1.84315L29.0858 7.5L23.4289 13.1569C23.0384 13.5474 23.0384 14.1805 23.4289 14.5711C23.8195 14.9616 24.4526 14.9616 24.8431 14.5711L31.2071 8.20711ZM0.5 8.5H30.5V6.5H0.5V8.5Z" fill="#3C4046" /> </svg>
+                                </div>
+                                <div class="shifts-item__time-close">
+                                    <div class="shifts-item__time-text">Закрыта</div>
+                                    <div class="shifts-item__time-numbers">17:30</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="option-shifts__item">
+                        <div class="shifts-item__date">
+                            <p>13</p>
+                        </div>
+                        <div class="shifts-item__info">
+                            <div class="shifts-item__description">Смена (13 Октября)</div>
+                            <div class="shifts-item__time">
+                                <div class="shifts-item__time-open">
+                                    <div class="shifts-item__time-text">Окрыта</div>
+                                    <div class="shifts-item__time-numbers">7:10</div>
+                                </div>
+                                <div class="shifts-item__time-arrow">
+                                    <svg width="32" height="15" viewBox="0 0 32 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M31.2071 8.20711C31.5976 7.81658 31.5976 7.18342 31.2071 6.79289L24.8431 0.428932C24.4526 0.0384078 23.8195 0.0384078 23.4289 0.428932C23.0384 0.819457 23.0384 1.45262 23.4289 1.84315L29.0858 7.5L23.4289 13.1569C23.0384 13.5474 23.0384 14.1805 23.4289 14.5711C23.8195 14.9616 24.4526 14.9616 24.8431 14.5711L31.2071 8.20711ZM0.5 8.5H30.5V6.5H0.5V8.5Z" fill="#3C4046" /> </svg>
+                                </div>
+                                <div class="shifts-item__time-close">
+                                    <div class="shifts-item__time-text">Закрыта</div>
+                                    <div class="shifts-item__time-numbers">17:30</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="option-shifts__item">
+                        <div class="shifts-item__date">
+                            <p>13</p>
+                        </div>
+                        <div class="shifts-item__info">
+                            <div class="shifts-item__description">Смена (13 Октября)</div>
+                            <div class="shifts-item__time">
+                                <div class="shifts-item__time-open">
+                                    <div class="shifts-item__time-text">Окрыта</div>
+                                    <div class="shifts-item__time-numbers">7:10</div>
+                                </div>
+                                <div class="shifts-item__time-arrow">
+                                    <svg width="32" height="15" viewBox="0 0 32 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M31.2071 8.20711C31.5976 7.81658 31.5976 7.18342 31.2071 6.79289L24.8431 0.428932C24.4526 0.0384078 23.8195 0.0384078 23.4289 0.428932C23.0384 0.819457 23.0384 1.45262 23.4289 1.84315L29.0858 7.5L23.4289 13.1569C23.0384 13.5474 23.0384 14.1805 23.4289 14.5711C23.8195 14.9616 24.4526 14.9616 24.8431 14.5711L31.2071 8.20711ZM0.5 8.5H30.5V6.5H0.5V8.5Z" fill="#3C4046" /> </svg>
+                                </div>
+                                <div class="shifts-item__time-close">
+                                    <div class="shifts-item__time-text">Закрыта</div>
+                                    <div class="shifts-item__time-numbers">17:30</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="option-shifts__item">
+                        <div class="shifts-item__date">
+                            <p>13</p>
+                        </div>
+                        <div class="shifts-item__info">
+                            <div class="shifts-item__description">Смена (13 Октября)</div>
+                            <div class="shifts-item__time">
+                                <div class="shifts-item__time-open">
+                                    <div class="shifts-item__time-text">Окрыта</div>
+                                    <div class="shifts-item__time-numbers">7:10</div>
+                                </div>
+                                <div class="shifts-item__time-arrow">
+                                    <svg width="32" height="15" viewBox="0 0 32 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M31.2071 8.20711C31.5976 7.81658 31.5976 7.18342 31.2071 6.79289L24.8431 0.428932C24.4526 0.0384078 23.8195 0.0384078 23.4289 0.428932C23.0384 0.819457 23.0384 1.45262 23.4289 1.84315L29.0858 7.5L23.4289 13.1569C23.0384 13.5474 23.0384 14.1805 23.4289 14.5711C23.8195 14.9616 24.4526 14.9616 24.8431 14.5711L31.2071 8.20711ZM0.5 8.5H30.5V6.5H0.5V8.5Z" fill="#3C4046" /> </svg>
+                                </div>
+                                <div class="shifts-item__time-close">
+                                    <div class="shifts-item__time-text">Закрыта</div>
+                                    <div class="shifts-item__time-numbers">17:30</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="option-shifts__item">
+                        <div class="shifts-item__date">
+                            <p>13</p>
+                        </div>
+                        <div class="shifts-item__info">
+                            <div class="shifts-item__description">Смена (13 Октября)</div>
+                            <div class="shifts-item__time">
+                                <div class="shifts-item__time-open">
+                                    <div class="shifts-item__time-text">Окрыта</div>
+                                    <div class="shifts-item__time-numbers">7:10</div>
+                                </div>
+                                <div class="shifts-item__time-arrow">
+                                    <svg width="32" height="15" viewBox="0 0 32 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M31.2071 8.20711C31.5976 7.81658 31.5976 7.18342 31.2071 6.79289L24.8431 0.428932C24.4526 0.0384078 23.8195 0.0384078 23.4289 0.428932C23.0384 0.819457 23.0384 1.45262 23.4289 1.84315L29.0858 7.5L23.4289 13.1569C23.0384 13.5474 23.0384 14.1805 23.4289 14.5711C23.8195 14.9616 24.4526 14.9616 24.8431 14.5711L31.2071 8.20711ZM0.5 8.5H30.5V6.5H0.5V8.5Z" fill="#3C4046" /> </svg>
+                                </div>
+                                <div class="shifts-item__time-close">
+                                    <div class="shifts-item__time-text">Закрыта</div>
+                                    <div class="shifts-item__time-numbers">17:30</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="option-shifts__item">
+                        <div class="shifts-item__date">
+                            <p>13</p>
+                        </div>
+                        <div class="shifts-item__info">
+                            <div class="shifts-item__description">Смена (13 Октября)</div>
+                            <div class="shifts-item__time">
+                                <div class="shifts-item__time-open">
+                                    <div class="shifts-item__time-text">Окрыта</div>
+                                    <div class="shifts-item__time-numbers">7:10</div>
+                                </div>
+                                <div class="shifts-item__time-arrow">
+                                    <svg width="32" height="15" viewBox="0 0 32 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M31.2071 8.20711C31.5976 7.81658 31.5976 7.18342 31.2071 6.79289L24.8431 0.428932C24.4526 0.0384078 23.8195 0.0384078 23.4289 0.428932C23.0384 0.819457 23.0384 1.45262 23.4289 1.84315L29.0858 7.5L23.4289 13.1569C23.0384 13.5474 23.0384 14.1805 23.4289 14.5711C23.8195 14.9616 24.4526 14.9616 24.8431 14.5711L31.2071 8.20711ZM0.5 8.5H30.5V6.5H0.5V8.5Z" fill="#3C4046" /> </svg>
+                                </div>
+                                <div class="shifts-item__time-close">
+                                    <div class="shifts-item__time-text">Закрыта</div>
+                                    <div class="shifts-item__time-numbers">17:30</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main__footer" id="mainFooter">
+                <a href="" class="main__footer-item">
+                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 4.5C14.8557 4.50002 14.7129 4.52903 14.5798 4.58535C14.4466 4.64167 14.3259 4.72419 14.2244 4.82812L3.22159 14.5553C3.15287 14.6067 3.09702 14.6737 3.05853 14.7509C3.02005 14.8282 3 14.9135 3 15C3 15.1466 3.05747 15.2871 3.15976 15.3908C3.26205 15.4944 3.40079 15.5526 3.54545 15.5526H6.27273V24.3947C6.27273 25.0048 6.76145 25.5 7.36364 25.5H11.7273C12.3295 25.5 12.8182 25.0048 12.8182 24.3947V17.7632H17.1818V24.3947C17.1818 25.0048 17.6705 25.5 18.2727 25.5H22.6364C23.2385 25.5 23.7273 25.0048 23.7273 24.3947V15.5526H26.4545C26.5992 15.5526 26.7379 15.4944 26.8402 15.3908C26.9425 15.2871 27 15.1466 27 15C27 14.9135 26.98 14.8282 26.9415 14.7509C26.903 14.6737 26.8471 14.6067 26.7784 14.5553L15.782 4.8346C15.7798 4.83243 15.7777 4.83027 15.7756 4.82812C15.6741 4.72419 15.5534 4.64167 15.4202 4.58535C15.2871 4.52903 15.1443 4.50002 15 4.5Z" fill="#A4A9B0" /> </svg>
+                    <p>Главная</p>
+                </a>
+                <a href="" class="main__footer-item">
+                    <svg width="31" height="30" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.5 3C8.873 3 3.5 8.373 3.5 15C3.5 21.627 8.873 27 15.5 27C22.127 27 27.5 21.627 27.5 15C27.5 8.373 22.127 3 15.5 3ZM19.826 21.266L15.5 18.952L11.174 21.265L12.037 16.436L8.5 13.037L13.36 12.366L15.5 7.951L17.64 12.366L22.5 13.037L18.963 16.437L19.826 21.266Z" fill="#A4A9B0" /> </svg>
+                    <p>Бонусы</p>
+                </a>
+                <a href="" class="main__footer-item">
+                    <svg width="31" height="30" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M24.7 5H6.3C5.035 5 4 6 4 7.22222V22.7778C4 24 5.035 25 6.3 25H24.7C25.965 25 27 24 27 22.7778V7.22222C27 6 25.965 5 24.7 5ZM13.2 20.5556H7.45V18.3333H13.2V20.5556ZM13.2 16.1111H7.45V13.8889H13.2V16.1111ZM13.2 11.6667H7.45V9.44444H13.2V11.6667ZM18.743 18.3333L15.5 15.1778L17.1215 13.6111L18.743 15.1889L22.3885 11.6667L24.0215 13.2444L18.743 18.3333Z" fill="#A4A9B0" /> </svg>
+                    <p> Задачи</p>
+                </a>
+                <a href="" class="main__footer-item">
+                    <svg width="31" height="30" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M23.2778 6.2H18.6333C18.1667 4.924 16.9444 4 15.5 4C14.0556 4 12.8333 4.924 12.3667 6.2H7.72222C6.5 6.2 5.5 7.19 5.5 8.4V23.8C5.5 25.01 6.5 26 7.72222 26H23.2778C24.5 26 25.5 25.01 25.5 23.8V8.4C25.5 7.19 24.5 6.2 23.2778 6.2ZM15.5 6.2C16.1111 6.2 16.6111 6.695 16.6111 7.3C16.6111 7.905 16.1111 8.4 15.5 8.4C14.8889 8.4 14.3889 7.905 14.3889 7.3C14.3889 6.695 14.8889 6.2 15.5 6.2ZM17.7222 21.6H9.94444V19.4H17.7222V21.6ZM21.0556 17.2H9.94444V15H21.0556V17.2ZM21.0556 12.8H9.94444V10.6H21.0556V12.8Z" fill="#A4A9B0" /> </svg>
+                    <p>Блокнот</p>
+                </a>
+                <a href="" class="main__footer-item">
+                    <svg width="31" height="30" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.5 3C8.873 3 3.5 8.373 3.5 15C3.5 21.627 8.873 27 15.5 27C22.127 27 27.5 21.627 27.5 15C27.5 8.373 22.127 3 15.5 3ZM15.5 25C12.377 25 9.586 23.559 7.751 21.31C8.01 20.722 8.534 20.315 9.618 20.064C11.862 19.546 14.077 19.083 13.011 17.119C9.856 11.299 12.112 8 15.5 8C18.822 8 21.134 11.177 17.989 17.119C16.954 19.071 19.089 19.535 21.382 20.064C22.464 20.314 22.992 20.719 23.253 21.305C21.417 23.558 18.625 25 15.5 25Z" fill="#A4A9B0" /> </svg>
+                    <p>Профиль</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- address popup (hidden) -->
+    <div hidden class="popup" id="popupAddress">
+        <div class="popup__inner">
+            <a class="popup__bar" onclick="document.getElementById('popupAddress').hidden = true; document.getElementById('mainFooter').hidden = false;">
+                <svg width="30" height="4" viewBox="0 0 30 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="30" height="4" rx="2" fill="#D8DDE4" /> </svg>
+            </a>
+            <div class="form form--search">
+                <input type="text" class="textform">
+                <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17 15.3326L12.5695 10.9374C13.4028 9.8005 13.8955 8.40225 13.8955 6.89208C13.8955 3.09187 10.7788 0 6.94737 0C3.11668 0 0 3.09187 0 6.89208C0 10.693 3.11668 13.7842 6.94737 13.7842C8.39968 13.7842 9.74846 13.34 10.8652 12.5814L15.3192 17L17 15.3326ZM2.0378 6.89208C2.0378 4.20608 4.24054 2.02087 6.94809 2.02087C9.65563 2.02087 11.8584 4.20608 11.8584 6.89208C11.8584 9.57808 9.65563 11.7633 6.94809 11.7633C4.23983 11.7633 2.0378 9.57808 2.0378 6.89208Z" fill="#A4A9B0" /> </svg>
+            </div>
+            <div class="address-item">
+                <div class="address__logo"><img src="images/waiter/address__logo.png" alt="" class="address__logo-img"></div>
+                <div class="address__textblock">
+                    <div class="address__textblock-name">Пиццафабрика</div>
+                    <div class="address__textblock-street">
+                        <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="1.5" y="2" width="7" height="7" rx="3.5" fill="white" />
+                            <rect x="1.5" y="2" width="7" height="7" rx="3.5" stroke="#A4A9B0" stroke-width="3" /> </svg> Сретенская 7</div>
+                </div>
+                <!-- address__button "--checked" -->
+                <a class="address__button address__button--checked">
+                    <svg width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11.8329 0L5.25 6.69668L2.1665 3.79558L0 5.94695L5.25 11L14 2.15079L11.8329 0Z" fill="white" /> </svg>
+                </a>
+            </div>
+            <div class="address-item">
+                <div class="address__logo"><img src="images/waiter/address__logo.png" alt="" class="address__logo-img"></div>
+                <div class="address__textblock">
+                    <div class="address__textblock-name">Пиццафабрика</div>
+                    <div class="address__textblock-street">
+                        <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="1.5" y="2" width="7" height="7" rx="3.5" fill="white" />
+                            <rect x="1.5" y="2" width="7" height="7" rx="3.5" stroke="#A4A9B0" stroke-width="3" /> </svg> Сретенская 7</div>
+                </div>
+                <!--  -->
+                <a class="address__button">
+                    <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.1818 7H12.5909L16.0455 10.5L19.5 7H16.9091C16.9091 3.1325 13.8173 1.66859e-07 10 0C8.64409 -5.92682e-08 7.38318 0.4025 6.32091 1.085L7.58182 2.3625C8.29864 1.96875 9.12773 1.75 10 1.75C12.8586 1.75 15.1818 4.10375 15.1818 7ZM13.6791 12.915L12.4182 11.6375C11.6927 12.0225 10.8723 12.25 10 12.25C7.14136 12.25 4.81818 9.89625 4.81818 7H7.40909L3.95455 3.5L0.5 7H3.09091C3.09091 10.8675 6.18273 14 10 14C11.3559 14 12.6168 13.5975 13.6791 12.915Z" fill="#3C4046" /> </svg>
+                </a>
+            </div>
+            <div class="address-item">
+                <div class="address__logo"><img src="images/waiter/address__logo.png" alt="" class="address__logo-img"></div>
+                <div class="address__textblock">
+                    <div class="address__textblock-name">Пиццафабрика</div>
+                    <div class="address__textblock-street">
+                        <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="1.5" y="2" width="7" height="7" rx="3.5" fill="white" />
+                            <rect x="1.5" y="2" width="7" height="7" rx="3.5" stroke="#A4A9B0" stroke-width="3" /> </svg> Сретенская 7</div>
+                </div>
+                <!--  -->
+                <a class="address__button">
+                    <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.1818 7H12.5909L16.0455 10.5L19.5 7H16.9091C16.9091 3.1325 13.8173 1.66859e-07 10 0C8.64409 -5.92682e-08 7.38318 0.4025 6.32091 1.085L7.58182 2.3625C8.29864 1.96875 9.12773 1.75 10 1.75C12.8586 1.75 15.1818 4.10375 15.1818 7ZM13.6791 12.915L12.4182 11.6375C11.6927 12.0225 10.8723 12.25 10 12.25C7.14136 12.25 4.81818 9.89625 4.81818 7H7.40909L3.95455 3.5L0.5 7H3.09091C3.09091 10.8675 6.18273 14 10 14C11.3559 14 12.6168 13.5975 13.6791 12.915Z" fill="#3C4046" /> </svg>
+                </a>
+            </div>
+            <div class="address-item">
+                <div class="address__logo"><img src="images/waiter/address__logo.png" alt="" class="address__logo-img"></div>
+                <div class="address__textblock">
+                    <div class="address__textblock-name">Пиццафабрика</div>
+                    <div class="address__textblock-street">
+                        <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="1.5" y="2" width="7" height="7" rx="3.5" fill="white" />
+                            <rect x="1.5" y="2" width="7" height="7" rx="3.5" stroke="#A4A9B0" stroke-width="3" /> </svg> Сретенская 7</div>
+                </div>
+                <!--  -->
+                <a class="address__button">
+                    <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.1818 7H12.5909L16.0455 10.5L19.5 7H16.9091C16.9091 3.1325 13.8173 1.66859e-07 10 0C8.64409 -5.92682e-08 7.38318 0.4025 6.32091 1.085L7.58182 2.3625C8.29864 1.96875 9.12773 1.75 10 1.75C12.8586 1.75 15.1818 4.10375 15.1818 7ZM13.6791 12.915L12.4182 11.6375C11.6927 12.0225 10.8723 12.25 10 12.25C7.14136 12.25 4.81818 9.89625 4.81818 7H7.40909L3.95455 3.5L0.5 7H3.09091C3.09091 10.8675 6.18273 14 10 14C11.3559 14 12.6168 13.5975 13.6791 12.915Z" fill="#3C4046" /> </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>authorization</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="normalize.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+
+<body>
+    <div class="authorization__inner">
+        <div class="authorization__sidebar">
+            <div class="authorization__sidebar-logo"><img src="images/authorization/logo.png" alt=""></div>
+            <div class="authorization__sidebar-title">Чаевые на максимум. Подключи сервис будущего.</div>
+            <div class="authorization__gif"><img class="authorization__gif-img authorization__gif-img--sidebar" src="images/authorization/animation.png" alt=""></div>
+            <div class="authorization__sidebar-rules"> <a class="authorization__sidebar-btn" href="">Политика конфидениальности Nachai</a></div>
+        </div>
+        <div class="authorization__content">
+            <div class="authorization__content-back"> <img src="images/authorization/arrow.png" alt="">
+                <!-- authorization__main link --><a href="authorization__main.html">Назад</a> </div>
+            <div class="authorization__content-title">Восстановление пароля</div>
+            <!-- media title -->
+            <div class="authorization__content-title authorization__content-title--media">Восстановление пароля</div>
+            <!-- media subtitle (phone) -->
+            <div id="recoverySubtitlePhone" class="authorization__content-subtitle authorization__content-subtitle--media">На этот номер поступит письмо с инструкцией по восстановлению пароля.</div>
+            <!-- media subtitle (email) -->
+            <div id="recoverySubtitleEmail" class="authorization__content-subtitle authorization__content-subtitle--media">На эту почту поступит письмо с инструкцией по восстановлению пароля.</div>
+            <div class="authorization__content-form">
+                <label for="authorization__content-textform" class="authorization__content-label">Введите номер телефона</label>
+                <input type="text" class="authorization__content-textform" placeholder="" value="+7"> </div>
+            <!-- media content Phone -->
+            <div class="" id="recoveryPhone">
+                <div class="authorization__content-form authorization__content-form--media">
+                    <!-- media label -->
+                    <div class="media-label__inner">
+                        <label for="authorization__content-textform" class="authorization__content-label">Вход</label> <a href="#" class="authorization__content-recovery" onClick="document.getElementById('recoveryPhone').style.display='none'; document.getElementById('recoveryEmail').style.display='block';document.getElementById('recoverySubtitlePhone').style.display='none';document.getElementById('recoverySubtitleEmail').style.display='block';">По Email</a></div>
+                    <!-- media form -->
+                    <input type="text" class="authorization__content-textform authorization__content-textform--media" placeholder=""> </div>
+                <div class="button authorization__content-button">
+                    <!-- authorizationPhone button --><a href="#" class="authorization__content-btn" onClick="document.getElementById('recoveryPhone').style.display='none'; document.getElementById('recoveryMedia').style.display='none'; document.getElementById('recoveryProfile').style.display='block';">Продолжить</a></div>
+            </div>
+            <!-- media content Email -->
+            <div class="" id="recoveryEmail">
+                <div class="authorization__content-form authorization__content-form--media authorization__content-form--media-mail">
+                    <!-- media label -->
+                    <div class="media-label__inner">
+                        <label for="authorization__content-textform" class="authorization__content-label">Вход</label> <a href="#" class="authorization__content-recovery" onClick="document.getElementById('recoveryPhone').style.display='block'; document.getElementById('recoveryEmail').style.display='none';document.getElementById('recoverySubtitlePhone').style.display='block';document.getElementById('recoverySubtitleEmail').style.display='none';">По номеру</a></div>
+                    <!-- media form -->
+                    <input type="text" class="authorization__content-textform authorization__content-textform--media" placeholder=""> </div>
+                <div class="button authorization__content-button">
+                    <!-- authorizationEmail button --><a href="#" class="authorization__content-btn" onClick="document.getElementById('recoveryEmail').style.display='none'; document.getElementById('recoveryMedia').style.display='none'; document.getElementById('recoveryProfile').style.display='block';">Продолжить</a></div>
+            </div>
+            <div class="button authorization__content-button authorization__content-button--desktop">
+                <!-- authorization__code link --><a href="authorization__code.html" class="authorization__content-btn">Далее</a></div>
+            <!-- media button -->
+            <div class="button authorization__content-button authorization__content-button--media">
+                <!-- authorization__code link --><a href="authorization__code.html" class="authorization__content-btn">Продолжить</a></div>
+            <div class="authorization__content-subtext authorization__content-subtext--desktop">Еще нет учетной записи?
+                <!-- authorization__entry --><a href="authorization__main.html" class="authorization__content-enter">Авторизоваться</a></div>
+            <!-- media subtext -->
+            <div class="authorization__content-subtext authorization__content-subtext--media authorization__content-subtext--media-block">Уже есть аккаунт?
+                <!-- authorization__entry --><a href="authorization__main.html" class="authorization__content-enter">Войти</a></div>
+        </div>
+    </div>
+</body>
+
+</html>

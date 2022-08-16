@@ -1,0 +1,305 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>authorization</title>
+    <link rel="stylesheet" href="style-waiter.css">
+    <link rel="stylesheet" href="normalize.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+
+<body>
+    <div class="main">
+        <div class="container-main">
+            <div class="main__header">
+                <div class="header__image"><img src="images/waiter/header__img.jpg" alt="" class="header__img"></div>
+                <!-- waiter-profile link -->
+                <a href="waiter-profile.html" class="header__name">
+                    <p>Andrew M.</p>
+                    <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 2L2.038 0L10 8L2.038 16L0 14L6 8L0 2Z" fill="#3C4046" /> </svg>
+                </a>
+                <!-- waiter-notices link -->
+                <a href="waiter-notices.html" class="header__notice">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M25.6697 11.8389C24.1484 10.3067 22.107 9.46614 19.993 9.50105C18.9074 9.49779 17.8319 9.71917 16.8288 10.1524C15.8038 10.5951 14.4621 11.4623 13.2537 13.038C13.2341 13.0635 13.2156 13.0899 13.1983 13.1171C11.9464 15.076 11.8896 16.6893 11.8905 17.7082V19.9069C11.8905 22.3687 11.2708 24.6104 9.78901 26.2766C9.49618 26.6059 9.41819 27.0849 9.59038 27.4966C9.76258 27.9083 10.1522 28.1744 10.5828 28.1744H17.5637C17.6177 28.8072 17.896 29.3964 18.3445 29.8266C18.7959 30.2597 19.3868 30.5 20 30.5C20.6133 30.5 21.2041 30.2597 21.6556 29.8266C22.1041 29.3964 22.3824 28.8072 22.4363 28.1744H29.4172C29.8478 28.1744 30.2374 27.9083 30.4096 27.4966C30.5818 27.0849 30.5038 26.6059 30.211 26.2766C28.7292 24.6104 28.1095 22.3688 28.1095 19.9069V17.7076C28.1095 17.7008 28.1094 17.6941 28.1093 17.6874C28.0714 15.4776 27.1939 13.374 25.6697 11.8389Z" fill="#A4A9B0" /> </svg>
+                </a>
+            </div>
+            <div class="main__inner">
+                <div class="bonuses__inner" id="bonusesInner">
+                    <div class="bonuses__title">
+                        <div class="bonuses__title-text">Бонусы </div>
+                        <div class="bonuses__title-balance">
+                            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="30" height="30" rx="15" fill="#FFC000" />
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M18.5754 10.4895L18.2645 10.6649C17.798 10.9279 17.2095 11.1473 16.5313 11.1473C15.9087 11.1473 15.3812 10.9551 14.9924 10.8054C14.9519 10.7898 14.9129 10.7747 14.8757 10.7602C14.7229 10.7009 14.6008 10.6536 14.4834 10.6165C14.3395 10.571 14.2497 10.5569 14.1896 10.5569C13.8697 10.5569 13.5092 10.7084 13.2173 10.9224L12.1557 11.7007V9.21117L12.4667 9.0358C12.9331 8.77276 13.5217 8.55338 14.1998 8.55338C14.8225 8.55338 15.3499 8.74564 15.7388 8.89529C15.7793 8.91092 15.8184 8.92607 15.8557 8.94057C16.0085 8.99991 16.1303 9.04712 16.2478 9.08424C16.3916 9.12971 16.4815 9.14377 16.5415 9.14377C16.8614 9.14377 17.2219 8.99231 17.5138 8.77831L18.5754 8V10.4895ZM12.0054 14.6489L11.8623 14.8863C11.5678 15.3749 11.3996 15.9479 11.3996 16.5718C11.3996 18.4756 12.9651 19.9276 15 19.9276C17.0349 19.9276 18.6004 18.4756 18.6004 16.5718C18.6004 15.9506 18.4337 15.3799 18.1416 14.8928L17.9994 14.6556L19.6885 13.1077L19.9568 13.4625C20.6193 14.3384 21 15.4071 21 16.5718C21 19.6331 18.3765 22 15 22C11.6235 22 9 19.6331 9 16.5718C9 15.404 9.3827 14.3327 10.0485 13.4554L10.317 13.1016L12.0054 14.6489Z" fill="white" />
+                                <rect x="1.5" y="1.5" width="27" height="27" rx="13.5" stroke="white" stroke-opacity="0.5" stroke-width="3" /> </svg> <span>350</span> </div>
+                    </div>
+                    <div class="transactions-nav">
+                        <!-- active item (add "--active" modifier) --><a class="bonuses-nav__item transactions-nav__item--active" id="transactionsNavAchievement" onclick="
+                        document.getElementById('transactionsNavStock').classList.remove('transactions-nav__item--active');
+                        document.getElementById('stockContentInner').hidden = true;
+                        document.getElementById('transactionsNavAchievement').classList.add('transactions-nav__item--active');
+                        document.getElementById('achievementContentInner').hidden = false;
+                        ">Накопления</a> <a class="bonuses-nav__item" id="transactionsNavStock" onclick="
+                        document.getElementById('transactionsNavAchievement').classList.remove('transactions-nav__item--active');
+                        document.getElementById('achievementContentInner').hidden = true;
+                        document.getElementById('transactionsNavStock').classList.add('transactions-nav__item--active');
+                        document.getElementById('stockContentInner').hidden = false;
+                        ">Акции</a> </div>
+                    <!-- achievement__content-inner -->
+                    <div hidden class="achievement__content-inner" id="achievementContentInner">
+                        <div class="achievement">
+                            <div class="achievement-title">Не будь как желе</div>
+                            <div class="achievement-text">Заработай 900 U-коинов и получи статус «Пицца», 7% годовых и возможность участия в акциях.</div>
+                            <div class="achievement-bar__inner">
+                                <div class="achievement__icon achievement__icon--cake"><img src="images/waiter/bonuses/achievement-icon__1.svg" alt="" class="achievement__icon-img"></div>
+                                <div class="achievement__bar">
+                                    <!-- bar progress (width 0%-100%) -->
+                                    <div class="achievement__bar-fill"></div>
+                                </div>
+                                <div class="achievement__icon achievement__icon--pizza"><img src="images/waiter/bonuses/achievement-icon__2.svg" alt="" class="achievement__icon-img"></div>
+                            </div>
+                            <div class="achievement__progress">
+                                <div class="achievement__progress-actual">250/900</div>
+                                <div class="achievement__progress-leftover">Еще 650</div>
+                            </div>
+                        </div>
+                        <div class="achievements--title">Достижения</div>
+                        <div class="achievements-list">
+                            <div class="achievements-list__item">
+                                <div class="achievements-list__image"><img src="images/waiter/bonuses/achievement-frame.png" alt="" class="achievements-list__img"></div>
+                                <div class="achievements-list__text">
+                                    <div class="achievements-list__name">Магистр</div>
+                                    <div class="achievements-list__description">Создать аккаунт в упцуыкпук пц приложефаыфуапцкпкпмукпмнии Nacai.</div>
+                                    <div class="achievements__bar-inner">
+                                        <div class="achievement__bar">
+                                            <!-- bar progress (width 0%-100%) -->
+                                            <div class="achievement__bar-fill"></div>
+                                        </div>
+                                        <div class="achievements__progress">13/30</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="achievements-list__item">
+                                <div class="achievements-list__image"><img src="images/waiter/bonuses/achievement-frame.png" alt="" class="achievements-list__img"></div>
+                                <div class="achievements-list__text">
+                                    <div class="achievements-list__name">Любимец</div>
+                                    <div class="achievements-list__description">Вы получили первые 5 отзывов.</div>
+                                </div>
+                            </div>
+                            <div class="achievements-list__item">
+                                <div class="achievements-list__image"><img src="images/waiter/bonuses/achievement-frame.png" alt="" class="achievements-list__img"></div>
+                                <div class="achievements-list__text">
+                                    <div class="achievements-list__name">Энтузиаст</div>
+                                    <div class="achievements-list__description">Поделитесь приложением в соц. сетях.</div>
+                                    <!-- waiter- link -->
+                                    <a href="#">
+                                        <button class="button button--achievements">Забрать 100
+                                            <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <rect y="0.591431" width="16" height="16" rx="8" fill="#FFC000" />
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M10.0857 5.69184L9.90427 5.80458C9.63219 5.97368 9.28885 6.11471 8.89327 6.11471C8.53006 6.11471 8.22238 5.99112 7.99557 5.89491C7.97193 5.88488 7.94922 5.87516 7.92748 5.86585C7.83835 5.8277 7.76715 5.7973 7.69864 5.77344C7.61473 5.74421 7.56232 5.73518 7.52728 5.73518C7.34067 5.73518 7.13038 5.83254 6.96011 5.97011L6.34084 6.47045V4.87004L6.52223 4.7573C6.79431 4.5882 7.13766 4.44718 7.53324 4.44718C7.89645 4.44718 8.20413 4.57077 8.43094 4.66698C8.45462 4.67702 8.47738 4.68676 8.49915 4.69608C8.58828 4.73423 8.65936 4.76458 8.72787 4.78844C8.81178 4.81767 8.86419 4.82671 8.89923 4.82671C9.08584 4.82671 9.29613 4.72934 9.4664 4.59178L10.0857 4.09143V5.69184ZM6.25314 8.36572L6.16966 8.51835C5.99787 8.83241 5.89976 9.20079 5.89976 9.60188C5.89976 10.8257 6.81297 11.7592 8 11.7592C9.18703 11.7592 10.1002 10.8257 10.1002 9.60188C10.1002 9.20254 10.003 8.83564 9.8326 8.52249L9.74965 8.37003L10.735 7.37493L10.8915 7.60301C11.2779 8.16612 11.5 8.85314 11.5 9.60188C11.5 11.5699 9.96963 13.0914 8 13.0914C6.03037 13.0914 4.5 11.5699 4.5 9.60188C4.5 8.85113 4.72324 8.16244 5.11161 7.5985L5.26826 7.37104L6.25314 8.36572Z" fill="white" />
+                                                <rect x="1" y="1.59143" width="14" height="14" rx="7" stroke="white" stroke-opacity="0.5" stroke-width="2" /> </svg>
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="achievements-list__item">
+                                <div class="achievements-list__image"><img src="images/waiter/bonuses/achievement-frame.png" alt="" class="achievements-list__img"></div>
+                                <div class="achievements-list__text">
+                                    <div class="achievements-list__name">Магистр</div>
+                                    <div class="achievements-list__description">Создать аккаунт в упцуыкпук пц приложефаыфуапцкпкпмукпмнии Nacai.</div>
+                                    <div class="achievements__bar-inner">
+                                        <div class="achievement__bar">
+                                            <!-- bar progress (width 0%-100%) -->
+                                            <div class="achievement__bar-fill"></div>
+                                        </div>
+                                        <div class="achievements__progress">13/30</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="achievements-list__item">
+                                <div class="achievements-list__image"><img src="images/waiter/bonuses/achievement-frame.png" alt="" class="achievements-list__img"></div>
+                                <div class="achievements-list__text">
+                                    <div class="achievements-list__name">Любимец</div>
+                                    <div class="achievements-list__description">Вы получили первые 5 отзывов.</div>
+                                </div>
+                            </div>
+                            <div class="achievements-list__item">
+                                <div class="achievements-list__image"><img src="images/waiter/bonuses/achievement-frame.png" alt="" class="achievements-list__img"></div>
+                                <div class="achievements-list__text">
+                                    <div class="achievements-list__name">Энтузиаст</div>
+                                    <div class="achievements-list__description">Поделитесь приложением в соц. сетях.</div>
+                                    <!-- waiter- link -->
+                                    <a href="#">
+                                        <button class="button button--achievements">Забрать 100
+                                            <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <rect y="0.591431" width="16" height="16" rx="8" fill="#FFC000" />
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M10.0857 5.69184L9.90427 5.80458C9.63219 5.97368 9.28885 6.11471 8.89327 6.11471C8.53006 6.11471 8.22238 5.99112 7.99557 5.89491C7.97193 5.88488 7.94922 5.87516 7.92748 5.86585C7.83835 5.8277 7.76715 5.7973 7.69864 5.77344C7.61473 5.74421 7.56232 5.73518 7.52728 5.73518C7.34067 5.73518 7.13038 5.83254 6.96011 5.97011L6.34084 6.47045V4.87004L6.52223 4.7573C6.79431 4.5882 7.13766 4.44718 7.53324 4.44718C7.89645 4.44718 8.20413 4.57077 8.43094 4.66698C8.45462 4.67702 8.47738 4.68676 8.49915 4.69608C8.58828 4.73423 8.65936 4.76458 8.72787 4.78844C8.81178 4.81767 8.86419 4.82671 8.89923 4.82671C9.08584 4.82671 9.29613 4.72934 9.4664 4.59178L10.0857 4.09143V5.69184ZM6.25314 8.36572L6.16966 8.51835C5.99787 8.83241 5.89976 9.20079 5.89976 9.60188C5.89976 10.8257 6.81297 11.7592 8 11.7592C9.18703 11.7592 10.1002 10.8257 10.1002 9.60188C10.1002 9.20254 10.003 8.83564 9.8326 8.52249L9.74965 8.37003L10.735 7.37493L10.8915 7.60301C11.2779 8.16612 11.5 8.85314 11.5 9.60188C11.5 11.5699 9.96963 13.0914 8 13.0914C6.03037 13.0914 4.5 11.5699 4.5 9.60188C4.5 8.85113 4.72324 8.16244 5.11161 7.5985L5.26826 7.37104L6.25314 8.36572Z" fill="white" />
+                                                <rect x="1" y="1.59143" width="14" height="14" rx="7" stroke="white" stroke-opacity="0.5" stroke-width="2" /> </svg>
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- stock__content-inner (hidden) -->
+                    <div hidden class="stock__content-inner" id="stockContentInner">
+                        <div class="stock__item">
+                            <div class="stock__item-name">
+                                <div class="stock__item-title">Выиграй Playstation 5</div>
+                                <div class="stock__item-period">28 д</div>
+                            </div>
+                            <div class="stock__item-condition">Выполняйти условия акции и отправляйте запрос на участие. 23.11.2021 в 19:00 по МСК...</div>
+                            <a href="#" onclick="document.getElementById('bonusesInner').hidden = true;document.getElementById('bonusesMoreInner').hidden = false;">
+                                <button class="button button--more">Подробнее
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M11.2431 1.75739C11.2431 1.20511 10.7954 0.757394 10.2431 0.757395L1.24309 0.757395C0.690809 0.757395 0.243094 1.20511 0.243094 1.75739C0.243094 2.30968 0.690809 2.75739 1.24309 2.75739L9.24309 2.75739L9.24309 10.7574C9.24309 11.3097 9.69081 11.7574 10.2431 11.7574C10.7954 11.7574 11.2431 11.3097 11.2431 10.7574L11.2431 1.75739ZM2.46492 10.9498L10.9502 2.4645L9.53599 1.05029L1.05071 9.53557L2.46492 10.9498Z" fill="#3C4046" /> </svg>
+                                </button>
+                            </a>
+                        </div>
+                        <div class="stock__item">
+                            <div class="stock__item-name">
+                                <div class="stock__item-title">Выиграй Playstation 5</div>
+                                <div class="stock__item-period">28 д</div>
+                            </div>
+                            <div class="stock__item-condition">Выполняйти условия акции и отправляйте запрос на участие. 23.11.2021 в 19:00 по МСК...</div>
+                            <a href="#" onclick="document.getElementById('bonusesInner').hidden = true;document.getElementById('bonusesMoreInner').hidden = false;">
+                                <button class="button button--more">Подробнее
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M11.2431 1.75739C11.2431 1.20511 10.7954 0.757394 10.2431 0.757395L1.24309 0.757395C0.690809 0.757395 0.243094 1.20511 0.243094 1.75739C0.243094 2.30968 0.690809 2.75739 1.24309 2.75739L9.24309 2.75739L9.24309 10.7574C9.24309 11.3097 9.69081 11.7574 10.2431 11.7574C10.7954 11.7574 11.2431 11.3097 11.2431 10.7574L11.2431 1.75739ZM2.46492 10.9498L10.9502 2.4645L9.53599 1.05029L1.05071 9.53557L2.46492 10.9498Z" fill="#3C4046" /> </svg>
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- bonuses-more (hidden) -->
+                <div class="bonuses-more__inner" id="bonusesMoreInner">
+                    <!-- waiter-stock button -->
+                    <a class="back-button" href="#" onclick="document.getElementById('bonusesMoreInner').hidden = true;document.getElementById('bonusesInner').hidden = false;">
+                        <svg width="13" height="16" viewBox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.292893 7.29289C-0.0976315 7.68342 -0.0976314 8.31658 0.292893 8.70711L6.65685 15.0711C7.04738 15.4616 7.68054 15.4616 8.07107 15.0711C8.46159 14.6805 8.46159 14.0474 8.07107 13.6569L2.41421 8L8.07107 2.34315C8.46159 1.95262 8.46159 1.31946 8.07107 0.928933C7.68054 0.538408 7.04738 0.538408 6.65685 0.928933L0.292893 7.29289ZM13 7L1 7L1 9L13 9L13 7Z" fill="#3C4046" /> </svg>Назад</a>
+                    <div class="bonuses-more__item">
+                        <div class="bonuses-more__promo">
+                            <div class="bonuses-promo__period">28 д</div>
+                            <div class="bonuses-promo__image"><img src="images/waiter/bonuses/bonuses-more__img.png" alt="" class="bonuses-more__img"></div>
+                            <div class="bonuses-promo__title">Выиграй Playstation 5</div>
+                            <div class="bonuses-promo__info">Выполняйти условия акции и отправляйте запрос на участие. 23.11.2021 в 19:00 по МСК в нашей группе Вконтакте в прямом эфире мы разыграем между случайными участниками PS5 и 5 утешительных призов.</div>
+                        </div>
+                        <div class="bonuses-more__condition">
+                            <div class="bonuses-condition__title">Условия участия</div>
+                            <!-- bonuses-condition__item "--bad" modifier  -->
+                            <div class="bonuses-condition__item bonuses-condition__item--bad">Статус пицца</div>
+                            <!-- bonuses-condition__item "--bad" modifier  -->
+                            <div class="bonuses-condition__item bonuses-condition__item--bad">Аккаунту больше месяца</div>
+                            <!-- bonuses-condition__item "--good" modifier  -->
+                            <div class="bonuses-condition__item bonuses-condition__item--good">Получить минимум 5 отзывов</div>
+                        </div>
+                        <div class="bonuses-more__draw-inner"> <a class="bonuses-more__draw-link" href="#">Группа Вконтакте</a>
+                            <div class="bonuses-more__draw-players"><img class="bonuses-more__draw-player" src="images/history/person-1.png" alt=""><img class="bonuses-more__draw-player" src="images/history/person-1.png" alt=""><img class="bonuses-more__draw-player" src="images/history/person-1.png" alt=""><img class="bonuses-more__draw-player" src="images/history/person-1.png" alt=""><img class="bonuses-more__draw-player" src="images/history/person-1.png" alt=""><img class="bonuses-more__draw-player" src="images/history/person-1.png" alt="">
+                                <div class="bonuses-more__draw-value">1094</div>
+                            </div>
+                        </div>
+                        <!-- waiter- link -->
+                        <a href="#" onclick="document.getElementById('popupDraw').hidden = false; document.getElementById('mainFooter').hidden = true;">
+                            <button class="button button--bonuses">Принять участие</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- popup Draw (hidden) -->
+            <div hidden class="popup" id="popupDraw">
+                <div class="popup__content popup__content--draw">
+                    <div class="popup__content-inner">
+                        <div class="popup-draw__header-inner">
+                            <div class="popup__title">Для участия подключите свои социальные сети </div>
+                            <div class="popup-draw__header-icon">
+                                <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="50" height="50" rx="25" fill="#8672E8" fill-opacity="0.2" />
+                                    <circle cx="21.5" cy="16.5" r="2.5" fill="#8672E8" />
+                                    <circle cx="28.5" cy="16.5" r="2.5" fill="#8672E8" />
+                                    <path d="M16.5281 20.3574C15.3936 21.9351 14.7379 23.8658 14.7379 25.98C14.7379 31.5003 19.2082 35.7698 24.9999 35.7698C30.7916 35.7698 35.2619 31.5003 35.2619 25.98C35.2619 23.8714 34.6098 21.9454 33.4809 20.37L31.3811 22.401C31.9749 23.4462 32.3099 24.6644 32.3099 25.98C32.3099 30.0319 29.1329 33.1592 24.9999 33.1592C20.867 33.1592 17.69 30.0319 17.69 25.98C17.69 24.6586 18.0279 23.4355 18.6266 22.3872L16.5281 20.3574Z" fill="#8672E8" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M16.4952 20L18.9216 22.3469L18.835 22.4985C18.256 23.5123 17.9281 24.697 17.9281 25.98C17.9281 29.9082 21.0021 32.929 25 32.929C28.9979 32.929 32.0719 29.9082 32.0719 25.98C32.0719 24.7026 31.7468 23.5227 31.1726 22.5118L31.0865 22.3604L33.5142 20.0123L33.6765 20.2389C34.8331 21.8528 35.5 23.8247 35.5 25.98C35.5 31.6304 30.9201 36 25 36C19.0799 36 14.5 31.6304 14.5 25.98C14.5 23.8189 15.1705 21.8423 16.3328 20.2259L16.4952 20ZM33.6166 20.5644C34.6619 22.1027 35.2619 23.9574 35.2619 25.98C35.2619 31.5003 30.7916 35.7698 24.9999 35.7698C19.2082 35.7698 14.7379 31.5003 14.7379 25.98C14.7379 23.9517 15.3415 22.0923 16.3922 20.5515C16.4367 20.4862 16.482 20.4215 16.5281 20.3574L18.6266 22.3872C18.0279 23.4355 17.69 24.6586 17.69 25.98C17.69 30.0319 20.867 33.1592 24.9999 33.1592C29.1329 33.1592 32.3099 30.0319 32.3099 25.98C32.3099 24.6644 31.9749 23.4462 31.3811 22.401L33.4809 20.37C33.5269 20.4342 33.5722 20.499 33.6166 20.5644Z" fill="#8672E8" /> </svg>
+                            </div>
+                        </div>
+                        <div class="popup-draw__social-inner">
+                            <div class="popup-draw__social-item">
+                                <div class="popup-draw__social-icon"><img src="images/authorization/instagram.png" alt=""></div>
+                                <div class="popup-draw__social-name">Инстаграм</div>
+                                <a href="#" class="popup-draw__social-button">
+                                    <button class="button button--draw">Привязать</button>
+                                </a>
+                            </div>
+                            <div class="popup-draw__social-item">
+                                <div class="popup-draw__social-icon"><img src="images/authorization/vk-svg.svg" alt=""></div>
+                                <div class="popup-draw__social-name">Вконтакте</div>
+                                <!-- "--active" item modifier -->
+                                <a href="#" class="popup-draw__social-button popup-draw__social-button--active">
+                                    <button class="button button--draw">Привязано</button>
+                                </a>
+                            </div>
+                            <div class="popup-draw__social-item">
+                                <div class="popup-draw__social-icon"><img src="images/authorization/facebook-svg.svg" alt=""></div>
+                                <div class="popup-draw__social-name">Фейсбук</div>
+                                <a href="#" class="popup-draw__social-button">
+                                    <button class="button button--draw">Привязать</button>
+                                </a>
+                            </div>
+                            <div class="popup-draw__social-item">
+                                <div class="popup-draw__social-icon"><img src="images/authorization/twitter-svg.svg" alt=""></div>
+                                <div class="popup-draw__social-name">Твиттер</div>
+                                <a href="#" class="popup-draw__social-button">
+                                    <button class="button button--draw">Привязать</button>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- link -->
+                        <a class="popup-draw__button" href="#" onclick="document.getElementById('popupDraw').hidden = true; document.getElementById('mainFooter').hidden = false;">
+                            <button class="button">Участвовать</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="main__footer" id="mainFooter">
+                <!-- waiter-home link -->
+                <a href="waiter-home.html" class="main__footer-item">
+                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 4.5C14.8557 4.50002 14.7129 4.52903 14.5798 4.58535C14.4466 4.64167 14.3259 4.72419 14.2244 4.82812L3.22159 14.5553C3.15287 14.6067 3.09702 14.6737 3.05853 14.7509C3.02005 14.8282 3 14.9135 3 15C3 15.1466 3.05747 15.2871 3.15976 15.3908C3.26205 15.4944 3.40079 15.5526 3.54545 15.5526H6.27273V24.3947C6.27273 25.0048 6.76145 25.5 7.36364 25.5H11.7273C12.3295 25.5 12.8182 25.0048 12.8182 24.3947V17.7632H17.1818V24.3947C17.1818 25.0048 17.6705 25.5 18.2727 25.5H22.6364C23.2385 25.5 23.7273 25.0048 23.7273 24.3947V15.5526H26.4545C26.5992 15.5526 26.7379 15.4944 26.8402 15.3908C26.9425 15.2871 27 15.1466 27 15C27 14.9135 26.98 14.8282 26.9415 14.7509C26.903 14.6737 26.8471 14.6067 26.7784 14.5553L15.782 4.8346C15.7798 4.83243 15.7777 4.83027 15.7756 4.82812C15.6741 4.72419 15.5534 4.64167 15.4202 4.58535C15.2871 4.52903 15.1443 4.50002 15 4.5Z" fill="#A4A9B0" /> </svg>
+                    <p>Главная</p>
+                </a>
+                <!-- active item (add "--active" modifier) -->
+                <!-- waiter-bonuses link -->
+                <a href="waiter-bonuses.html" class="main__footer-item main__footer-item--active">
+                    <svg width="31" height="30" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.5 3C8.873 3 3.5 8.373 3.5 15C3.5 21.627 8.873 27 15.5 27C22.127 27 27.5 21.627 27.5 15C27.5 8.373 22.127 3 15.5 3ZM19.826 21.266L15.5 18.952L11.174 21.265L12.037 16.436L8.5 13.037L13.36 12.366L15.5 7.951L17.64 12.366L22.5 13.037L18.963 16.437L19.826 21.266Z" fill="#A4A9B0" /> </svg>
+                    <p>Бонусы</p>
+                </a>
+                <!-- waiter-task link -->
+                <a href="waiter-task.html" class="main__footer-item">
+                    <svg width="31" height="30" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M24.7 5H6.3C5.035 5 4 6 4 7.22222V22.7778C4 24 5.035 25 6.3 25H24.7C25.965 25 27 24 27 22.7778V7.22222C27 6 25.965 5 24.7 5ZM13.2 20.5556H7.45V18.3333H13.2V20.5556ZM13.2 16.1111H7.45V13.8889H13.2V16.1111ZM13.2 11.6667H7.45V9.44444H13.2V11.6667ZM18.743 18.3333L15.5 15.1778L17.1215 13.6111L18.743 15.1889L22.3885 11.6667L24.0215 13.2444L18.743 18.3333Z" fill="#A4A9B0" /> </svg>
+                    <p> Задачи</p>
+                </a>
+                <!-- waiter-notepad link -->
+                <a href="waiter-notepad.html" class="main__footer-item">
+                    <svg width="31" height="30" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M23.2778 6.2H18.6333C18.1667 4.924 16.9444 4 15.5 4C14.0556 4 12.8333 4.924 12.3667 6.2H7.72222C6.5 6.2 5.5 7.19 5.5 8.4V23.8C5.5 25.01 6.5 26 7.72222 26H23.2778C24.5 26 25.5 25.01 25.5 23.8V8.4C25.5 7.19 24.5 6.2 23.2778 6.2ZM15.5 6.2C16.1111 6.2 16.6111 6.695 16.6111 7.3C16.6111 7.905 16.1111 8.4 15.5 8.4C14.8889 8.4 14.3889 7.905 14.3889 7.3C14.3889 6.695 14.8889 6.2 15.5 6.2ZM17.7222 21.6H9.94444V19.4H17.7222V21.6ZM21.0556 17.2H9.94444V15H21.0556V17.2ZM21.0556 12.8H9.94444V10.6H21.0556V12.8Z" fill="#A4A9B0" /> </svg>
+                    <p>Блокнот</p>
+                </a>
+                <!-- waiter-profile__main link -->
+                <a href="waiter-profile__main.html" class="main__footer-item">
+                    <svg width="31" height="30" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.5 3C8.873 3 3.5 8.373 3.5 15C3.5 21.627 8.873 27 15.5 27C22.127 27 27.5 21.627 27.5 15C27.5 8.373 22.127 3 15.5 3ZM15.5 25C12.377 25 9.586 23.559 7.751 21.31C8.01 20.722 8.534 20.315 9.618 20.064C11.862 19.546 14.077 19.083 13.011 17.119C9.856 11.299 12.112 8 15.5 8C18.822 8 21.134 11.177 17.989 17.119C16.954 19.071 19.089 19.535 21.382 20.064C22.464 20.314 22.992 20.719 23.253 21.305C21.417 23.558 18.625 25 15.5 25Z" fill="#A4A9B0" /> </svg>
+                    <p>Профиль</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

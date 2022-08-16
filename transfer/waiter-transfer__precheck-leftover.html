@@ -1,0 +1,152 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>authorization</title>
+    <link rel="stylesheet" href="style-waiter-transfer.css">
+    <link rel="stylesheet" href="normalize.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+
+<body>
+    <div class="main">
+        <div class="container-main">
+            <div class="main__header main__header--reviews">
+                <!-- waiter-transfer__precheck link -->
+                <a class="back-button" href="waiter-transfer__precheck.html">
+                    <svg width="13" height="16" viewBox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.292893 7.29289C-0.0976315 7.68342 -0.0976314 8.31658 0.292893 8.70711L6.65685 15.0711C7.04738 15.4616 7.68054 15.4616 8.07107 15.0711C8.46159 14.6805 8.46159 14.0474 8.07107 13.6569L2.41421 8L8.07107 2.34315C8.46159 1.95262 8.46159 1.31946 8.07107 0.928933C7.68054 0.538408 7.04738 0.538408 6.65685 0.928933L0.292893 7.29289ZM13 7L1 7L1 9L13 9L13 7Z" fill="#3C4046" /> </svg>
+                </a>
+            </div>
+            <div class="main__inner">
+                <div class="transfer-precheck__inner">
+                    <div class="transfer-precheck__title">ПИЦЦАФАБРИКА</div>
+                    <!-- header inner with title and items -->
+                    <div class="transfer-precheck__header-inner">
+                        <!-- item = 1 row -->
+                        <div class="transfer-precheck__header-item">
+                            <div class="transfer-precheck__header-name">Стол</div>
+                            <div class="transfer-precheck__header-value">#20 </div>
+                        </div>
+                        <div class="transfer-precheck__header-item">
+                            <div class="transfer-precheck__header-name">Открыт:</div>
+                            <div class="transfer-precheck__header-value">18:43 20-10-2021</div>
+                        </div>
+                        <div class="transfer-precheck__header-item">
+                            <div class="transfer-precheck__header-name">Официант:</div>
+                            <div class="transfer-precheck__header-value">Николаев Вадим</div>
+                        </div>
+                    </div>
+                    <!-- apart content inner with title and items -->
+                    <div class="transfer-precheck__apart-inner">
+                        <div class="transfer-apart__content-header">
+                            <div class="transfer-apart__content-position">Выбрать блюдо</div>
+                            <div class="transfer-apart__content-value">Сумма</div>
+                        </div>
+                        <!-- add "--active" modifier onclick -->
+                        <div class="transfer-precheck__apart-item transfer-precheck__apart-item--active">
+                            <a href="#" class="transfer-precheck__apart-button"></a>
+                            <div class="transfer-precheck__apart-position">Морс брусничный 0,5 </div>
+                            <div class="transfer-precheck__apart-value">110.00</div>
+                        </div>
+                        <div class="transfer-precheck__apart-item">
+                            <a href="#" class="transfer-precheck__apart-button"></a>
+                            <div class="transfer-precheck__apart-position">Морс брусничный 0,5 </div>
+                            <div class="transfer-precheck__apart-value">110.00</div>
+                        </div>
+                        <div class="transfer-precheck__apart-item">
+                            <a href="#" class="transfer-precheck__apart-button"></a>
+                            <div class="transfer-precheck__apart-position">Морс брусничный 0,5 </div>
+                            <div class="transfer-precheck__apart-value">110.00</div>
+                        </div>
+                        <div class="transfer-precheck__apart-item">
+                            <a href="#" class="transfer-precheck__apart-button"></a>
+                            <div class="transfer-precheck__apart-position">Морс брусничный 0,5 </div>
+                            <div class="transfer-precheck__apart-value">110.00</div>
+                        </div>
+                        <div class="transfer-precheck__apart-item">
+                            <a href="#" class="transfer-precheck__apart-button"></a>
+                            <div class="transfer-precheck__apart-position">Морс брусничный 0,5 </div>
+                            <div class="transfer-precheck__apart-value">110.00</div>
+                        </div>
+                        <div class="transfer-precheck__apart-item">
+                            <a href="#" class="transfer-precheck__apart-button"></a>
+                            <div class="transfer-precheck__apart-position">Морс брусничный 0,5 </div>
+                            <div class="transfer-precheck__apart-value">110.00</div>
+                        </div>
+                        <div class="transfer-precheck__apart-item">
+                            <a href="#" class="transfer-precheck__apart-button"></a>
+                            <div class="transfer-precheck__apart-position">Морс брусничный 0,5 </div>
+                            <div class="transfer-precheck__apart-value">110.00</div>
+                        </div>
+                    </div>
+                    <!-- final inner row-->
+                    <!-- add "--active" modifier -->
+                    <div class="transfer-precheck__final-inner transfer-precheck__final-inner--active">
+                        <div class="transfer-precheck__leftover-inner">
+                            <div class="transfer-precheck__leftover-title">Оплачено</div>
+                            <div class="transfer-precheck__leftover-item">
+                                <div class="transfer-precheck__leftover-position">Пепперони </div>
+                                <div class="transfer-precheck__leftover-value">580.00</div>
+                            </div>
+                            <div class="transfer-precheck__leftover-item">
+                                <div class="transfer-precheck__leftover-position">Пепперони </div>
+                                <div class="transfer-precheck__leftover-value">580.00</div>
+                            </div>
+                            <div class="transfer-precheck__leftover-item">
+                                <div class="transfer-precheck__leftover-position">Пепперони </div>
+                                <div class="transfer-precheck__leftover-value">580.00</div>
+                            </div>
+                        </div>
+                        <div class="transfer-precheck__final-item">
+                            <div class="transfer-precheck__final-title">Всего:</div>
+                            <div class="transfer-precheck__final-value">2720.00 ₽</div>
+                        </div>
+                        <div class="transfer-precheck__final-subitem">
+                            <div class="transfer-precheck__final-title">Остаток:</div>
+                            <div class="transfer-precheck__final-value">2000.00 ₽</div>
+                        </div>
+                    </div>
+                    <!-- currency inner row-->
+                    <div class="transfer-precheck__currency-inner">
+                        <div class="transfer-precheck__currency-name">Rubles</div>
+                        <div class="transfer-precheck__currency-value">2000.00 ₽</div>
+                    </div>
+                    <!-- remark inner row -->
+                    <div class="transfer-precheck__remark-inner">
+                        <div class="transfer-precheck__remark-text">Вознаграждение официанту приветствуется но всегда остается на Ваше усмотрение.</div>
+                    </div>
+                </div>
+                <div class="transfer-pay__inner">
+                    <div class="transfer-check">Сумма оплаты</div>
+                    <input type="text" class="textform textform--cash" placeholder="0 ₽">
+                    <div class="textform--cash-procent">7.37 %</div>
+                    <div class="transfer-tip">
+                        <!-- "--active" item modifier --><a class="transfer-tip__item transfer-tip__item--active">10%</a> <a class="transfer-tip__item">25%</a> <a class="transfer-tip__item">50%</a> <a class="transfer-tip__item">75%</a> </div>
+                </div>
+                <div class="waiter-transfer__bottom-inner">
+                    <!-- waiter-transfer link -->
+                    <a href="waiter-transfer.html">
+                        <!-- "--inactive" modifier -->
+                        <button class="button button--tips">Оплатить 2720 и оставить чаевые</button>
+                    </a>
+                    <!-- waiter-transfer__check link -->
+                    <a href="waiter-transfer__check.html">
+                        <button class="button button--next">Только оплатить 2720 </button>
+                    </a>
+                    <div class="transfer__remark">
+                        <p>Совершая платеж, вы соглашаетесь с условиями сервиса</p>
+                        <p class="remark-underline">Nachai</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

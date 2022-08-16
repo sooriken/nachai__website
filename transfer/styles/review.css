@@ -1,0 +1,373 @@
+body {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.entity {
+    display: flex;
+    flex-direction: column;
+    width: 428px;
+    height: 926px;
+}
+
+.header-logo {
+    width: 40px;
+    height: 40px;
+    padding-top: 100px;
+    padding-left: 20px;
+    margin-bottom: 40px;
+}
+
+.header-logo-text {
+    width: 271px;
+    height: 84px;
+    margin: 0 auto;
+}
+
+.header-upper-box-logo {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*Тело стартовой страницы*/
+
+.body-box-buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.button-pay-order {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 18px 20px 16px;
+    width: 350px;
+    height: 58px;
+    background: linear-gradient(90.66deg, #6279E6 0.57%, #847AEA 48%, #8867E6 96.43%);
+    color: #ffff;
+    border-color: transparent;
+    border-style: none;
+    border-radius: 16px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    text-decoration: none;
+    margin: 10px 0px;
+}
+
+.pay-order-text {
+    height: 18px;
+    font-family: HelveticaNeueCyr;
+    font-style: normal;
+    font-weight: 550;
+    font-size: 18px;
+    line-height: 100%;
+}
+
+.button-send-tips {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 18px 20px 16px;
+    width: 350px;
+    height: 58px;
+    background: #FFFFFF;
+    border: 1px solid #F0F3F8;
+    box-sizing: border-box;
+    border-radius: 16px;
+}
+
+.tips-text {
+    height: 18px;
+    font-family: HelveticaNeueCyr, sans-serif;
+    font-style: normal;
+    font-weight: 550;
+    font-size: 18px;
+    line-height: 100%;
+    text-align: center;
+    color: #3C4046;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 10px;
+}
+
+.body-box {
+    margin-left: 12px;
+}
+
+
+/*блок линии*/
+
+.body-box-line {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    flex: none;
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 46px 0px;
+}
+
+.body-line {
+    width: 148px;
+    height: 0px;
+    border: 1px solid #F0F3F8;
+    flex: none;
+    flex-grow: 1;
+    margin: 0px 10px;
+}
+
+.body-line-text {
+    width: 28px;
+    height: 16px;
+    font-family: HelveticaNeueCyr;
+    font-style: normal;
+    font-weight: 550;
+    font-size: 16px;
+    line-height: 100%;
+    text-align: center;
+    color: #A4A9B0;
+    flex: none;
+    flex-grow: 0;
+    margin: 0px 10px;
+}
+
+.body-development-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    position: static;
+    width: 420px;
+    height: 170px;
+    flex: none;
+    flex-grow: 0;
+    margin: 46px 0px;
+}
+
+.body-development-upper-row {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding: 0px;
+    width: 98vw;
+    height: 184px;
+    flex: none;
+    flex-grow: 0;
+    margin: 20px 0px;
+}
+
+@media screen and (max-width: 374px) {
+    .body-development-upper-row {
+        justify-content: center !important;
+    }
+    .body-development-rectangle-box {
+        margin: 0px 2px !important;
+    }
+}
+
+.body-development-rectangle-box {
+    width: 84px;
+    height: 120px;
+    flex: none;
+    flex-grow: 0;
+    margin: 0px 5px;
+    background: #F0F3F8;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.body-development-rectangle {
+    width: 90px;
+    height: 120px;
+}
+
+.body-development-rectangle-text {
+    font-family: HelveticaNeueCyr;
+    font-style: normal;
+    font-weight: 550;
+    color: #FFFFFF;
+    padding-left: 7px;
+}
+
+.back-img {
+    width: 93px;
+    height: 40px;
+    padding: 14px 15px 12px;
+    margin-right: 244px;
+}
+
+.order-img {
+    width: 388px;
+    height: 179px;
+}
+
+.menu-order {
+    margin-top: 115px;
+}
+
+.a-img {
+    width: 388px;
+    height: 58px;
+}
+
+.g-img {
+    width: 388px;
+    height: 58px;
+}
+
+.c-img {
+    width: 388px;
+    height: 58px;
+}
+
+.payment-container-main {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.payment-container {
+    margin-top: 87px;
+}
+
+.order-info {
+    /* Совершая платеж, вы соглашаетесь с условиями сервиса Nachai */
+    position: static;
+    width: 388px;
+    height: 40px;
+    left: 0px;
+    top: 342px;
+    font-family: HelveticaNeueCyr;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 144%;
+    text-align: center;
+    color: #A4A9B0;
+    flex: none;
+    flex-grow: 0;
+    margin: 15px 0px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.review-img {
+    width: 388px;
+    height: 92px;
+}
+
+.review-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.review-upper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.stars-img {
+    margin-left: -199px;
+    width: 190px;
+    height: 30px;
+}
+
+.congr-img {
+    width: 388px;
+    font-family: HelveticaNeueCyr;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 180%;
+    /* or 32px */
+    /* Gray */
+    color: #A4A9B0;
+}
+
+.special-img {
+    width: 390px;
+    height: 162px;
+}
+
+.text-img {
+    width: 388px;
+    height: 150px;
+}
+
+.thx {
+    padding-left: 20px;
+    font-family: HelveticaNeueCyr;
+    font-style: normal;
+    font-weight: 550;
+    font-size: 34px;
+    line-height: 134%;
+    color: #3C4046;
+}
+
+.active {
+    background: #847AEA;
+}
+
+a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.food {
+    width: 83px;
+}
+
+.gloves {
+    width: 87px;
+}
+
+.waiter {
+    width: 84px;
+}
+
+.light {
+    width: 92px;
+}
+
+.lighter {
+    padding-top: 18px;
+}
+
+.text-light {
+    font-size: 13px !important;
+    line-height: 0 !important;
+}
+
+.text-food {
+    font-size: 13px !important;
+    line-height: 161% !important;
+    padding-top: 7px;
+}
+
+.text-gloves {
+    font-size: 13px !important;
+    line-height: 161% !important;
+    padding-top: 7px;
+}
+
+.text-waiter {
+    font-size: 13px !important;
+    line-height: 161% !important;
+    padding-top: 7px;
+}

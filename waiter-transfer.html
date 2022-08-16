@@ -1,0 +1,318 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>authorization</title>
+    <link rel="stylesheet" href="style-waiter.css">
+    <link rel="stylesheet" href="normalize.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+
+<body>
+    <div class="sign-inner">
+        <div class="container-main container-main--profile">
+            <div class="transfer-logo">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 20C0 8.95431 8.95431 0 20 0C31.0457 0 40 8.95431 40 20C40 31.0457 31.0457 40 20 40C8.95431 40 0 31.0457 0 20Z" fill="white" />
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M25.6611 12.5899L25.1687 12.8781C24.4302 13.3102 23.4983 13.6706 22.4246 13.6706C21.4387 13.6706 20.6036 13.3547 19.988 13.1089C19.9238 13.0833 19.8622 13.0584 19.8031 13.0346L19.8028 13.0345C19.5609 12.937 19.368 12.8595 19.182 12.7985C18.9543 12.7238 18.812 12.7007 18.7169 12.7007C18.2104 12.7007 17.6396 12.9495 17.1774 13.3011L15.4966 14.5797V10.4898L15.9889 10.2017C16.7274 9.76953 17.6594 9.40913 18.7331 9.40913C19.7189 9.40913 20.5541 9.72498 21.1697 9.97084C21.234 9.9965 21.2957 10.0214 21.3548 10.0452C21.5968 10.1427 21.7897 10.2203 21.9756 10.2813C22.2034 10.3559 22.3457 10.379 22.4408 10.379C22.9473 10.379 23.5181 10.1302 23.9802 9.77866L25.6611 8.5V12.5899ZM15.2585 19.4232L15.0319 19.8132C14.5656 20.6158 14.2994 21.5572 14.2994 22.5823C14.2994 25.7099 16.7781 28.0954 20 28.0954C23.2219 28.0954 25.7006 25.7099 25.7006 22.5823C25.7006 21.5617 25.4367 20.6241 24.9742 19.8238L24.749 19.4342L27.4234 16.8912L27.8483 17.474C28.8973 18.9131 29.5 20.6688 29.5 22.5823C29.5 27.6115 25.3461 31.5 20 31.5C14.6539 31.5 10.5 27.6115 10.5 22.5823C10.5 20.6637 11.1059 18.9037 12.1601 17.4625L12.5853 16.8812L15.2585 19.4232Z" fill="#8672E8" /> </svg>
+            </div>
+            <div class="sign__content sign__content--transfer" id="signContent">
+                <div class="profile-info profile-info--inactive">
+                    <div class="profile-info__image-inner">
+                        <div class="profile-info__image"> <img src="images/waiter/transfer/profile-image.jpg" alt="" class="profile-info__img"> </div>
+                    </div>
+                    <div class="profile-info__name">Елена Любимова</div>
+                    <div class="profile-info__post">Официант</div>
+                    <div class="profile-objective">
+                        <div class="profile-objective__text">Коплю на стеклянный дом</div>
+                        <div class="profile-objective__percent">26.8%</div>
+                        <div class="achievement__bar achievement__bar--objective">
+                            <!-- bar progress (width 0%-100%) -->
+                            <div class="achievement__bar-fill"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="profile-info  profile-info--inactive">
+                    <div class="profile-info__image-inner">
+                        <div class="profile-info__image"> <img src="images/waiter/transfer/profile-image.jpg" alt="" class="profile-info__img"> </div>
+                    </div>
+                    <div class="profile-info__name">Елена Любимова</div>
+                    <div class="profile-info__post">Официант</div>
+                    <div class="profile-objective">
+                        <div class="profile-objective__text">Коплю на стеклянный дом</div>
+                        <div class="profile-objective__percent">26.8%</div>
+                        <div class="achievement__bar achievement__bar--objective">
+                            <!-- bar progress (width 0%-100%) -->
+                            <div class="achievement__bar-fill"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="profile-info ">
+                    <div class="profile-info__image-inner">
+                        <div class="profile-info__image"> <img src="images/waiter/transfer/profile-image.jpg" alt="" class="profile-info__img"> </div>
+                    </div>
+                    <div class="profile-info__name">Елена Любимова</div>
+                    <div class="profile-info__post">Официант</div>
+                    <div class="profile-objective">
+                        <div class="profile-objective__text">Коплю на стеклянный дом</div>
+                        <div class="profile-objective__percent">26.8%</div>
+                        <div class="achievement__bar achievement__bar--objective">
+                            <!-- bar progress (width 0%-100%) -->
+                            <div class="achievement__bar-fill"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="profile-info profile-info--inactive">
+                    <div class="profile-info__image-inner">
+                        <div class="profile-info__image"> <img src="images/waiter/transfer/profile-image.jpg" alt="" class="profile-info__img"> </div>
+                    </div>
+                    <div class="profile-info__name">Елена Любимова</div>
+                    <div class="profile-info__post">Официант</div>
+                    <div class="profile-objective">
+                        <div class="profile-objective__text">Коплю на стеклянный дом</div>
+                        <div class="profile-objective__percent">26.8%</div>
+                        <div class="achievement__bar achievement__bar--objective">
+                            <!-- bar progress (width 0%-100%) -->
+                            <div class="achievement__bar-fill"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="profile-info profile-info--inactive">
+                    <div class="profile-info__image-inner">
+                        <div class="profile-info__image"> <img src="images/waiter/transfer/profile-image.jpg" alt="" class="profile-info__img"> </div>
+                    </div>
+                    <div class="profile-info__name">Елена Любимова</div>
+                    <div class="profile-info__post">Официант</div>
+                    <div class="profile-objective">
+                        <div class="profile-objective__text">Коплю на стеклянный дом</div>
+                        <div class="profile-objective__percent">26.8%</div>
+                        <div class="achievement__bar achievement__bar--objective">
+                            <!-- bar progress (width 0%-100%) -->
+                            <div class="achievement__bar-fill"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sign__footer sign__footer--transfer">
+                <div class="transfer__short">
+                    <div class="transfer__short-item">
+                        <div class="transfer__short-image"><img src="images/waiter/transfer/profile-image.jpg" alt="" class="transfer__short-img"></div>
+                        <div class="transfer__short-textblock">
+                            <div class="transfer__short-name">Елена Л.</div>
+                            <div class="transfer__short-cash">200 ₽</div>
+                        </div>
+                        <a href="#">
+                            <div class="transfer__short-button">
+                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 10.094L7.8425 5.9895L11.9425 1.8485L10.094 0L5.988 4.159L1.833 0.0575L0 1.8905L4.1605 6.0105L0.0575 10.167L1.8905 12L6.009 7.841L10.1515 11.9425L12 10.094Z" fill="#3C4046" /> </svg>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="transfer__short-item">
+                        <div class="transfer__short-image"><img src="images/waiter/transfer/profile-image.jpg" alt="" class="transfer__short-img"></div>
+                        <div class="transfer__short-textblock">
+                            <div class="transfer__short-name">Елена Л.</div>
+                            <div class="transfer__short-cash">200 ₽</div>
+                        </div>
+                        <a href="#">
+                            <div class="transfer__short-button">
+                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 10.094L7.8425 5.9895L11.9425 1.8485L10.094 0L5.988 4.159L1.833 0.0575L0 1.8905L4.1605 6.0105L0.0575 10.167L1.8905 12L6.009 7.841L10.1515 11.9425L12 10.094Z" fill="#3C4046" /> </svg>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="transfer__short-item">
+                        <div class="transfer__short-image"><img src="images/waiter/transfer/profile-image.jpg" alt="" class="transfer__short-img"></div>
+                        <div class="transfer__short-textblock">
+                            <div class="transfer__short-name">Елена Л.</div>
+                            <div class="transfer__short-cash">200 ₽</div>
+                        </div>
+                        <a href="#">
+                            <div class="transfer__short-button">
+                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 10.094L7.8425 5.9895L11.9425 1.8485L10.094 0L5.988 4.159L1.833 0.0575L0 1.8905L4.1605 6.0105L0.0575 10.167L1.8905 12L6.009 7.841L10.1515 11.9425L12 10.094Z" fill="#3C4046" /> </svg>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="transfer__short-item">
+                        <div class="transfer__short-image"><img src="images/waiter/transfer/profile-image.jpg" alt="" class="transfer__short-img"></div>
+                        <div class="transfer__short-textblock">
+                            <div class="transfer__short-name">Елена Л.</div>
+                            <div class="transfer__short-cash">200 ₽</div>
+                        </div>
+                        <a href="#">
+                            <div class="transfer__short-button">
+                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 10.094L7.8425 5.9895L11.9425 1.8485L10.094 0L5.988 4.159L1.833 0.0575L0 1.8905L4.1605 6.0105L0.0575 10.167L1.8905 12L6.009 7.841L10.1515 11.9425L12 10.094Z" fill="#3C4046" /> </svg>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="transfer-check">Счет на 3500 ₽</div>
+                <input type="text" class="textform textform--cash" placeholder="0 ₽">
+                <div class="textform--cash-procent">7.37 %</div>
+                <div class="transfer-tip"> <a class="transfer-tip__item">50&nbsp;₽</a> <a class="transfer-tip__item">100&nbsp;₽</a> <a class="transfer-tip__item">150&nbsp;₽</a> <a class="transfer-tip__item">200&nbsp;₽</a> <a class="transfer-tip__item">400&nbsp;₽</a> <a class="transfer-tip__item">600&nbsp;₽</a> <a class="transfer-tip__item">800&nbsp;₽</a> <a class="transfer-tip__item">1000&nbsp;₽</a> </div>
+                <div class="transfer__rules">
+                    <div class="transfer__rules-condition">Оплатить комиссию 40₽ и отправить сотруднику полную сумму</div>
+                    <label class="switch">
+                        <input type="checkbox"> <span class="slider"></span> </label>
+                </div>
+                <!-- inactive button (add "--inactive" modifier) -->
+                <a href="#">
+                    <button class="button button--inactive">Оплатить чаевые 0 ₽</button>
+                </a>
+                <!--  -->
+                <a href="#" onclick="document.getElementById('popupTransfer-review').hidden = false;">
+                    <button class="button button--next">Оставить отзыв
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.2431 1.75739C11.2431 1.20511 10.7954 0.757394 10.2431 0.757395L1.24309 0.757395C0.690809 0.757395 0.243094 1.20511 0.243094 1.75739C0.243094 2.30968 0.690809 2.75739 1.24309 2.75739L9.24309 2.75739L9.24309 10.7574C9.24309 11.3097 9.69081 11.7574 10.2431 11.7574C10.7954 11.7574 11.2431 11.3097 11.2431 10.7574L11.2431 1.75739ZM2.46492 10.9498L10.9502 2.4645L9.53599 1.05029L1.05071 9.53557L2.46492 10.9498Z" fill="#3C4046" /> </svg>
+                    </button>
+                </a>
+                <div class="transfer__remark">
+                    <p>Совершая платеж, вы соглашаетесь с условиями сервиса</p>
+                    <p class="remark-underline">Nachai</p>
+                </div>
+            </div>
+            <!-- popup Transfer-review (hidden) -->
+            <div hidden class="popup popup--transfer-review" id="popupTransfer-review">
+                <div class="popup__inner">
+                    <a class="popup__bar" onclick="document.getElementById('popupTransfer-review').hidden = true;">
+                        <svg width="30" height="4" viewBox="0 0 30 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="30" height="4" rx="2" fill="#D8DDE4" /> </svg>
+                    </a>
+                    <div class="transfer-review__info">
+                        <div class="transfer-review__image"><img src="images/waiter/transfer/profile-image.jpg" alt="" class="transfer-review__img"></div>
+                        <div class="transfer-review__rate">
+                            <div class="transfer-review__title">Елена Любимова</div>
+                            <div class="transfer-review__post">Официант</div>
+                            <div class="transfer-review__stars">
+                                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15 0L19.585 9.94655L30 11.4593L22.42 19.119L24.27 30L15 24.7862L5.72875 30L7.58 19.119L0 11.4593L10.415 9.94655L15 0Z" fill="#D8DDE4" /> </svg>
+                                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15 0L19.585 9.94655L30 11.4593L22.42 19.119L24.27 30L15 24.7862L5.72875 30L7.58 19.119L0 11.4593L10.415 9.94655L15 0Z" fill="#D8DDE4" /> </svg>
+                                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15 0L19.585 9.94655L30 11.4593L22.42 19.119L24.27 30L15 24.7862L5.72875 30L7.58 19.119L0 11.4593L10.415 9.94655L15 0Z" fill="#D8DDE4" /> </svg>
+                                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15 0L19.585 9.94655L30 11.4593L22.42 19.119L24.27 30L15 24.7862L5.72875 30L7.58 19.119L0 11.4593L10.415 9.94655L15 0Z" fill="#D8DDE4" /> </svg>
+                                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15 0L19.585 9.94655L30 11.4593L22.42 19.119L24.27 30L15 24.7862L5.72875 30L7.58 19.119L0 11.4593L10.415 9.94655L15 0Z" fill="#D8DDE4" /> </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- waiter- link -->
+                    <a href="#" onclick="document.getElementById('popupTransfer-review').hidden = true; document.getElementById('popupTransfer-compaint').hidden = false;">
+                        <button class="button button--inactive">Отправить отзыв</button>
+                    </a>
+                    <a href="#" onclick="document.getElementById('popupTransfer-review').hidden = true;document.getElementById('popupTransfer-reviewPlace').hidden = false;">
+                        <button class="button button--next">Отзыв заведению
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.2431 1.75739C11.2431 1.20511 10.7954 0.757394 10.2431 0.757395L1.24309 0.757395C0.690809 0.757395 0.243094 1.20511 0.243094 1.75739C0.243094 2.30968 0.690809 2.75739 1.24309 2.75739L9.24309 2.75739L9.24309 10.7574C9.24309 11.3097 9.69081 11.7574 10.2431 11.7574C10.7954 11.7574 11.2431 11.3097 11.2431 10.7574L11.2431 1.75739ZM2.46492 10.9498L10.9502 2.4645L9.53599 1.05029L1.05071 9.53557L2.46492 10.9498Z" fill="#3C4046" /> </svg>
+                        </button>
+                    </a>
+                    <div class="transfer__remark">
+                        <p class="remark-underline">Подробности о сервисе Nachai</p>
+                    </div>
+                </div>
+            </div>
+            <!-- popup Transfer-reviewPlace (hidden) -->
+            <div hidden class="popup popup--transfer-review" id="popupTransfer-reviewPlace">
+                <div class="popup__inner">
+                    <a class="popup__bar" onclick="document.getElementById('popupTransfer-reviewPlace').hidden = true;">
+                        <svg width="30" height="4" viewBox="0 0 30 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="30" height="4" rx="2" fill="#D8DDE4" /> </svg>
+                    </a>
+                    <div class="transfer-review__info">
+                        <div class="transfer-review__image"><img src="images/waiter/transfer/transfer-review__place.svg"></div>
+                        <div class="transfer-review__rate">
+                            <div class="transfer-review__title">Пиццафабрика</div>
+                            <div class="transfer-review__post">Заведение</div>
+                            <div class="transfer-review__stars">
+                                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15 0L19.585 9.94655L30 11.4593L22.42 19.119L24.27 30L15 24.7862L5.72875 30L7.58 19.119L0 11.4593L10.415 9.94655L15 0Z" fill="#D8DDE4" /> </svg>
+                                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15 0L19.585 9.94655L30 11.4593L22.42 19.119L24.27 30L15 24.7862L5.72875 30L7.58 19.119L0 11.4593L10.415 9.94655L15 0Z" fill="#D8DDE4" /> </svg>
+                                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15 0L19.585 9.94655L30 11.4593L22.42 19.119L24.27 30L15 24.7862L5.72875 30L7.58 19.119L0 11.4593L10.415 9.94655L15 0Z" fill="#D8DDE4" /> </svg>
+                                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15 0L19.585 9.94655L30 11.4593L22.42 19.119L24.27 30L15 24.7862L5.72875 30L7.58 19.119L0 11.4593L10.415 9.94655L15 0Z" fill="#D8DDE4" /> </svg>
+                                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15 0L19.585 9.94655L30 11.4593L22.42 19.119L24.27 30L15 24.7862L5.72875 30L7.58 19.119L0 11.4593L10.415 9.94655L15 0Z" fill="#D8DDE4" /> </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- waiter- link -->
+                    <a href="#" onclick="document.getElementById('popupTransfer-reviewPlace').hidden = true; document.getElementById('popupTransfer-compaint').hidden = false;">
+                        <button class="button button--inactive">Отправить отзыв</button>
+                    </a>
+                    <a href="#" onclick="document.getElementById('popupTransfer-reviewPlace').hidden = true; document.getElementById('popupTransfer-review').hidden = false;">
+                        <button class="button button--next">Отзыв сотруднику
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.2431 1.75739C11.2431 1.20511 10.7954 0.757394 10.2431 0.757395L1.24309 0.757395C0.690809 0.757395 0.243094 1.20511 0.243094 1.75739C0.243094 2.30968 0.690809 2.75739 1.24309 2.75739L9.24309 2.75739L9.24309 10.7574C9.24309 11.3097 9.69081 11.7574 10.2431 11.7574C10.7954 11.7574 11.2431 11.3097 11.2431 10.7574L11.2431 1.75739ZM2.46492 10.9498L10.9502 2.4645L9.53599 1.05029L1.05071 9.53557L2.46492 10.9498Z" fill="#3C4046" /> </svg>
+                        </button>
+                    </a>
+                    <div class="transfer__remark">
+                        <p class="remark-underline">Подробности о сервисе Nachai</p>
+                    </div>
+                </div>
+            </div>
+            <!-- popup Transfer-compaint (hidden) -->
+            <div hidden class="popup popup--transfer" id="popupTransfer-compaint">
+                <div class="popup__content popup__content--transfer">
+                    <div class="popup__content-inner popup__content-inner">
+                        <div class="popup-transfer-logo">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="40" height="40" rx="20" fill="#D4EFDF" />
+                                <path d="M25.5233 13.5L18 21.4143L14.476 17.9857L12 20.5282L18 26.5L28 16.0418L25.5233 13.5Z" fill="#3ED07C" /> </svg>
+                        </div>
+                        <div class="popup-transfer__title">Жалоба успешно отправлена</div>
+                        <div class="popup-transfer__subtitle">Мы все уладим.</div>
+                        <div class="popup-transfer__timer-inner">
+                            <div class="popup-transfer__timer-title">Администратор скоро подойдет</div>
+                            <div class="popup-transfer__timer-progress">
+                                <div class="transfer-progress__bar">
+                                    <svg width="258" height="10" viewBox="0 0 258 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="258" height="10" rx="5" fill="#D74E4E" /> </svg>
+                                </div>
+                                <div class="transfer-progress__fill">
+                                    <svg width="258" height="10" viewBox="0 0 258 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <!-- width procent -->
+                                        <rect width="258" height="10" rx="5" fill="#FFFFFF" /> </svg>
+                                </div>
+                            </div>
+                            <div class="popup-transfer__timer">13мин 37сек</div>
+                        </div>
+                        <!-- popupTransfer-success link -->
+                        <a href="#" onclick="document.getElementById('popupTransfer-compaint').hidden = true; document.getElementById('popupTransfer-success').hidden = false;">
+                            <button class="button">Окей</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- popup Transfer-success (hidden) -->
+            <div hidden class="popup popup--transfer" id="popupTransfer-success">
+                <div class="popup__content popup__content--transfer">
+                    <div class="popup__content-inner popup__content-inner">
+                        <div class="popup-transfer-logo">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="40" height="40" rx="20" fill="#D4EFDF" />
+                                <path d="M25.5233 13.5L18 21.4143L14.476 17.9857L12 20.5282L18 26.5L28 16.0418L25.5233 13.5Z" fill="#3ED07C" /> </svg>
+                        </div>
+                        <div class="popup-transfer__title">Отлично!</div>
+                        <div class="popup-transfer__subtitle">Отзыв успешно отправлен.</div>
+                        <!-- popupTransfer-success link -->
+                        <a href="#" onclick="document.getElementById('popupTransfer-success').hidden = true;">
+                            <button class="button">Окей</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,450 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>authorization</title>
+    <link rel="stylesheet" href="style-waiter.css">
+    <link rel="stylesheet" href="normalize.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+
+<body>
+    <div class="main">
+        <div class="container-main">
+            <div class="main__header">
+                <div class="header__image"><img src="images/waiter/header__img.jpg" alt="" class="header__img"></div>
+                <!-- waiter-profile link -->
+                <a href="waiter-profile.html" class="header__name">
+                    <p>Andrew M.</p>
+                    <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 2L2.038 0L10 8L2.038 16L0 14L6 8L0 2Z" fill="#3C4046" /> </svg>
+                </a>
+                <!-- waiter-notices link -->
+                <a href="waiter-notices.html" class="header__notice">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M25.6697 11.8389C24.1484 10.3067 22.107 9.46614 19.993 9.50105C18.9074 9.49779 17.8319 9.71917 16.8288 10.1524C15.8038 10.5951 14.4621 11.4623 13.2537 13.038C13.2341 13.0635 13.2156 13.0899 13.1983 13.1171C11.9464 15.076 11.8896 16.6893 11.8905 17.7082V19.9069C11.8905 22.3687 11.2708 24.6104 9.78901 26.2766C9.49618 26.6059 9.41819 27.0849 9.59038 27.4966C9.76258 27.9083 10.1522 28.1744 10.5828 28.1744H17.5637C17.6177 28.8072 17.896 29.3964 18.3445 29.8266C18.7959 30.2597 19.3868 30.5 20 30.5C20.6133 30.5 21.2041 30.2597 21.6556 29.8266C22.1041 29.3964 22.3824 28.8072 22.4363 28.1744H29.4172C29.8478 28.1744 30.2374 27.9083 30.4096 27.4966C30.5818 27.0849 30.5038 26.6059 30.211 26.2766C28.7292 24.6104 28.1095 22.3688 28.1095 19.9069V17.7076C28.1095 17.7008 28.1094 17.6941 28.1093 17.6874C28.0714 15.4776 27.1939 13.374 25.6697 11.8389Z" fill="#A4A9B0" /> </svg>
+                </a>
+            </div>
+            <div class="main__inner">
+                <div class="main-ad">
+                    <div class="main-ad__item">
+                        <div class="main-ad__image main-ad__image--phone"><img src="images/waiter/home/ad-1.png" alt="" class="main-ad__img"></div>
+                        <div class="main-ad__text">Товары за чаевые</div>
+                    </div>
+                    <div class="main-ad__item">
+                        <div class="main-ad__image"><img src="images/waiter/home/ad-2.png" alt="" class="main-ad__img"></div>
+                        <div class="main-ad__text">Выиграй Playstation 5</div>
+                    </div>
+                    <div class="main-ad__item">
+                        <div class="main-ad__image"><img src="images/waiter/home/ad-3.png" alt="" class="main-ad__img"></div>
+                        <div class="main-ad__text">Беспроцент
+                            <br>ный кредит 100 тыс</div>
+                    </div>
+                    <div class="main-ad__item">
+                        <div class="main-ad__image"><img src="images/waiter/home/ad-1.png" alt="" class="main-ad__img"></div>
+                        <div class="main-ad__text">Товары за чаевые</div>
+                    </div>
+                    <div class="main-ad__item">
+                        <div class="main-ad__image"><img src="images/waiter/home/ad-2.png" alt="" class="main-ad__img"></div>
+                        <div class="main-ad__text">Выиграй Playstation 5</div>
+                    </div>
+                    <div class="main-ad__item">
+                        <div class="main-ad__image"><img src="images/waiter/home/ad-3.png" alt="" class="main-ad__img"></div>
+                        <div class="main-ad__text">Беспроцентный кредит 100 тыс</div>
+                    </div>
+                </div>
+                <div class="main-balance">
+                    <div class="main-balance__info">
+                        <div class="main-balance__image"><img src="images/waiter/home/main-balance__img.jpg" alt="" class="main-balance__img"></div>
+                        <div class="main-balance__name">Andrew M.</div>
+                        <div class="main-balance__pay">Желе</div>
+                    </div>
+                    <div class="main-balance__cash">
+                        <div class="main-balance__money">
+                            <p>328 443 </p>₽</div>
+                        <div class="main-balance__percent">+ 5%</div>
+                    </div>
+                    <!-- waiter- link -->
+                    <a href="#" onclick="document.getElementById('popupDistribute').hidden = false;document.getElementById('mainFooter').hidden = true;">
+                        <button class="button button--balance">Вывести</button>
+                    </a>
+                </div>
+                <div class="main-generate">
+                    <!-- popupQR link -->
+                    <a class="main-generate__item" onclick="document.getElementById('popupQR').hidden = false; document.getElementById('mainFooter').hidden = true;">
+                        <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.41667 6.66667H8.58333V5H9.41667V5.83333H11.0833V6.66667H10.25V7.5H9.41667V6.66667ZM11.0833 16.6667V15.8333H10.25V16.6667H11.0833ZM10.25 4.16667V3.33333H8.58333V4.16667H9.41667V5H10.25V4.16667ZM16.9167 3.33333V8.33333H16.0833V7.5H12.75V3.33333H16.9167ZM16.0833 6.66667V4.16667H13.5833V6.66667H16.0833ZM4.41667 8.33333H3.58333V9.16667H5.25V8.33333H4.41667ZM4.41667 10.8333H5.25V11.6667H6.08333V9.16667H5.25V10H3.58333V11.6667H4.41667V10.8333ZM8.58333 11.6667V13.3333H9.41667V11.6667H8.58333ZM11.9167 3.33333H11.0833V5.83333H11.9167V3.33333ZM11.9167 7.5V6.66667H11.0833V7.5H11.9167ZM14.4167 5.83333H15.25V5H14.4167V5.83333ZM6.08333 5H5.25V5.83333H6.08333V5ZM7.75 3.33333V7.5H3.58333V3.33333H7.75ZM6.91667 4.16667H4.41667V6.66667H6.91667V4.16667ZM14.4167 8.33333V9.16667H13.5833V8.33333H11.9167V9.16667H11.0833V8.33333H8.58333V7.5H7.75V8.33333H6.91667V9.16667H7.75V10.8333H8.58333V10H9.41667V11.6667H10.25V10H12.75V10.8333H11.0833V11.6667H12.75V12.5H13.5833V10H14.4167V10.8333H15.25V12.5H16.0833V11.6667H16.9167V10.8333H16.0833V10H15.25V9.16667H16.0833V8.33333H14.4167ZM5.25 15H6.08333V14.1667H5.25V15ZM3.58333 12.5H7.75V16.6667H3.58333V12.5ZM4.41667 15.8333H6.91667V13.3333H4.41667V15.8333ZM14.4167 13.3333V12.5H13.5833V13.3333H14.4167ZM14.4167 14.1667H13.5833V15H12.75V14.1667H11.9167V13.3333H12.75V12.5H11.0833V11.6667H10.25V13.3333H9.41667V14.1667H8.58333V16.6667H9.41667V15.8333H10.25V15H11.9167V16.6667H12.75V15.8333H13.5833V16.6667H15.25V15.8333H16.0833V15H14.4167V14.1667ZM6.91667 11.6667H7.75V10.8333H6.91667V11.6667ZM15.25 13.3333V14.1667H16.0833V15H16.9167V12.5H16.0833V13.3333H15.25ZM16.9167 16.6667V15.8333H16.0833V16.6667H16.9167ZM16.9167 10V9.16667H16.0833V10H16.9167ZM15.25 1.66667H18.5833V5H20.25V0H15.25V1.66667ZM1.91667 5V1.66667H5.25V0H0.25V5H1.91667ZM5.25 18.3333H1.91667V15H0.25V20H5.25V18.3333ZM18.5833 15V18.3333H15.25V20H20.25V15H18.5833Z" fill="white" /> </svg>QR код </a>
+                    <!-- popupNFC link -->
+                    <a class="main-generate__item" onclick="document.getElementById('popupNFC').hidden = false;  document.getElementById('mainFooter').hidden = true;">
+                        <svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.7501 5.94455C12.9041 5.94455 13.8391 6.86445 13.8391 7.99974C13.8391 9.13504 12.9041 10.0549 11.7501 10.0549C10.5961 10.0549 9.66049 9.13504 9.66049 7.99974C9.66049 6.86445 10.5961 5.94455 11.7501 5.94455ZM19.8816 0C24.3728 4.41787 24.3728 11.5816 19.8816 16L18.0193 14.1674C21.4818 10.761 21.4818 5.23851 18.0193 1.83212L19.8816 0ZM16.6032 3.22527C19.283 5.86167 19.283 10.1378 16.6032 12.7747L14.7409 10.9421C16.3931 9.31718 16.3931 6.68231 14.7409 5.0574L16.6032 3.22527ZM6.89641 12.7747C4.21658 10.1378 4.21658 5.86167 6.89641 3.22527L8.75872 5.0574C7.10703 6.68231 7.10703 9.31718 8.75872 10.9421L6.89641 12.7747ZM3.61799 16C-0.872665 11.5816 -0.872665 4.41787 3.61799 0L5.48082 1.83212C2.01831 5.23851 2.01831 10.761 5.48082 14.1674L3.61799 16Z" fill="white" /> </svg>NFC</a>
+                </div>
+                <div class="main-adblock" id="mainAdblock">
+                    <div class="main-adblock__text">
+                        <div class="main-adblock__title">Товары по себестоимости</div>
+                        <div class="main-adblock__subtitle">Копи бонусы и оплачивай ими товары</div>
+                    </div>
+                    <div class="main-adblock__image"><img src="images/waiter/home/adblock-img.png" alt="" class="main-adblock__img"></div>
+                    <!-- click to close main-adblock -->
+                    <a href="#" class="main-adblock__close" onClick="
+                     document.getElementById('mainAdblock').hidden = true;">
+                        <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.5 6.38817L5.07479 3.99388L7.46646 1.57829L6.38817 0.5L3.993 2.92608L1.56925 0.533542L0.5 1.60279L2.92696 4.00612L0.533542 6.43075L1.60279 7.5L4.00525 5.07392L6.42171 7.46646L7.5 6.38817Z" fill="#3C4046" /> </svg>
+                    </a>
+                </div>
+                <div class="transactions">
+                    <div class="transactions-title">Транзакции</div>
+                    <div class="transactions-nav">
+                        <!-- active item (add "--active" modifier) --><a class="transactions-nav__item transactions-nav__item--active" id="homeNavAll" onclick="
+                        var transationsNav = document.getElementsByClassName('transactions-nav__item--active');
+                        for (var i = 0; i < transationsNav.length; i ++) {
+                        transationsNav[i].classList.remove('transactions-nav__item--active');};
+                        document.getElementById('homeNavAll').classList.add('transactions-nav__item--active');
+                        ">Все</a> <a class="transactions-nav__item" id="homeNavTip" onclick="
+                        var transationsNav = document.getElementsByClassName('transactions-nav__item--active');
+                        for (var i = 0; i < transationsNav.length; i ++) {
+                        transationsNav[i].classList.remove('transactions-nav__item--active');};
+                        document.getElementById('homeNavTip').classList.add('transactions-nav__item--active');
+                        ">Чаевые</a> <a class="transactions-nav__item" id="homeNavProcent" onclick="
+                        var transationsNav = document.getElementsByClassName('transactions-nav__item--active');
+                        for (var i = 0; i < transationsNav.length; i ++) {
+                        transationsNav[i].classList.remove('transactions-nav__item--active');};
+                        document.getElementById('homeNavProcent').classList.add('transactions-nav__item--active');
+                        ">Проценты</a> </div>
+                    <div class="transactions__inner">
+                        <div class="transactions__pad">
+                            <div class="transactions__pad-date">16.11.2021</div>
+                            <div class="transactions__pad-profit">
+                                <p>Всего+</p>
+                                <p>21 110</p>
+                                <p>₽</p>
+                            </div>
+                        </div>
+                        <div class="transactions__item transactions__item-tip">
+                            <div class="transactions__item-image">₽</div>
+                            <div class="transactions__item-textblock">
+                                <div class="transactions__item-name">Чаевые </div>
+                                <div class="transactions__item-date">13.10.2021</div>
+                            </div>
+                            <!-- in process item (add "--progress" modifier) -->
+                            <div class="transactions__item-value transactions__item-value--progress">+3 268</div>
+                        </div>
+                        <div class="transactions__item transactions__item-tip">
+                            <div class="transactions__item-image">₽</div>
+                            <div class="transactions__item-textblock">
+                                <div class="transactions__item-name">Чаевые </div>
+                                <div class="transactions__item-date">13.10.2021</div>
+                            </div>
+                            <div class="transactions__item-value">+3 268</div>
+                        </div>
+                        <div class="transactions__item transactions__item-tip">
+                            <div class="transactions__item-image">₽</div>
+                            <div class="transactions__item-textblock">
+                                <div class="transactions__item-name">Чаевые </div>
+                                <div class="transactions__item-date">13.10.2021</div>
+                            </div>
+                            <div class="transactions__item-value">+3 268</div>
+                        </div>
+                    </div>
+                    <div class="transactions__inner">
+                        <div class="transactions__pad">
+                            <div class="transactions__pad-date">16.11.2021</div>
+                            <div class="transactions__pad-profit">
+                                <p>Всего+</p>
+                                <p>21 110</p>
+                                <p>₽</p>
+                            </div>
+                        </div>
+                        <div class="transactions__item transactions__item-tip">
+                            <div class="transactions__item-image">₽</div>
+                            <div class="transactions__item-textblock">
+                                <div class="transactions__item-name">Чаевые </div>
+                                <div class="transactions__item-date">13.10.2021</div>
+                            </div>
+                            <!-- in process item (add "--progress" modifier) -->
+                            <div class="transactions__item-value transactions__item-value--progress">+3 268</div>
+                        </div>
+                        <div class="transactions__item transactions__item-tip">
+                            <div class="transactions__item-image">₽</div>
+                            <div class="transactions__item-textblock">
+                                <div class="transactions__item-name">Чаевые </div>
+                                <div class="transactions__item-date">13.10.2021</div>
+                            </div>
+                            <div class="transactions__item-value">+3 268</div>
+                        </div>
+                        <div class="transactions__item transactions__item-tip">
+                            <div class="transactions__item-image">₽</div>
+                            <div class="transactions__item-textblock">
+                                <div class="transactions__item-name">Чаевые </div>
+                                <div class="transactions__item-date">13.10.2021</div>
+                            </div>
+                            <div class="transactions__item-value">+3 268</div>
+                        </div>
+                    </div>
+                    <div class="transactions__inner" id="transactionsItemTip">
+                        <div class="transactions__pad">
+                            <div class="transactions__pad-date">16.11.2021</div>
+                            <div class="transactions__pad-profit">
+                                <p>Всего+</p>
+                                <p>21 110</p>
+                                <p>₽</p>
+                            </div>
+                        </div>
+                        <div class="transactions__item transactions__item-procent">
+                            <div class="transactions__item-image">%</div>
+                            <div class="transactions__item-textblock">
+                                <div class="transactions__item-name">Процент по операции </div>
+                                <div class="transactions__item-date">13.10.2021</div>
+                            </div>
+                            <!-- in process item (add "--withdrawal" modifier) -->
+                            <div class="transactions__item-value transactions__item-value--withdrawal">-65</div>
+                        </div>
+                        <div class="transactions__item transactions__item-withdrawal">
+                            <div class="transactions__item-image"></div>
+                            <div class="transactions__item-textblock">
+                                <div class="transactions__item-name">Вывод на карту Tinkoff ****4673 </div>
+                                <div class="transactions__item-date">13.10.2021</div>
+                            </div>
+                            <div class="transactions__item-value transactions__item-value--withdrawal">-3 268</div>
+                        </div>
+                        <div class="transactions__item transactions__item-tip">
+                            <div class="transactions__item-image">₽</div>
+                            <div class="transactions__item-textblock">
+                                <div class="transactions__item-name">Чаевые </div>
+                                <div class="transactions__item-date">13.10.2021</div>
+                            </div>
+                            <div class="transactions__item-value">+3 268</div>
+                        </div>
+                        <div class="transactions__item transactions__item-withdrawal">
+                            <div class="transactions__item-image"></div>
+                            <div class="transactions__item-textblock">
+                                <div class="transactions__item-name">Вывод на карту Tinkoff ****4673 </div>
+                                <div class="transactions__item-date">13.10.2021</div>
+                            </div>
+                            <div class="transactions__item-value transactions__item-value--withdrawal">-73 268</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main__footer" id="mainFooter">
+                <!-- active item (add "--active" modifier) -->
+                <!-- waiter-home link -->
+                <a href="waiter-home.html" class="main__footer-item main__footer-item--active">
+                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 4.5C14.8557 4.50002 14.7129 4.52903 14.5798 4.58535C14.4466 4.64167 14.3259 4.72419 14.2244 4.82812L3.22159 14.5553C3.15287 14.6067 3.09702 14.6737 3.05853 14.7509C3.02005 14.8282 3 14.9135 3 15C3 15.1466 3.05747 15.2871 3.15976 15.3908C3.26205 15.4944 3.40079 15.5526 3.54545 15.5526H6.27273V24.3947C6.27273 25.0048 6.76145 25.5 7.36364 25.5H11.7273C12.3295 25.5 12.8182 25.0048 12.8182 24.3947V17.7632H17.1818V24.3947C17.1818 25.0048 17.6705 25.5 18.2727 25.5H22.6364C23.2385 25.5 23.7273 25.0048 23.7273 24.3947V15.5526H26.4545C26.5992 15.5526 26.7379 15.4944 26.8402 15.3908C26.9425 15.2871 27 15.1466 27 15C27 14.9135 26.98 14.8282 26.9415 14.7509C26.903 14.6737 26.8471 14.6067 26.7784 14.5553L15.782 4.8346C15.7798 4.83243 15.7777 4.83027 15.7756 4.82812C15.6741 4.72419 15.5534 4.64167 15.4202 4.58535C15.2871 4.52903 15.1443 4.50002 15 4.5Z" fill="#A4A9B0" /> </svg>
+                    <p>Главная</p>
+                </a>
+                <!-- waiter-bonuses link -->
+                <a href="waiter-bonuses.html" class="main__footer-item">
+                    <svg width="31" height="30" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.5 3C8.873 3 3.5 8.373 3.5 15C3.5 21.627 8.873 27 15.5 27C22.127 27 27.5 21.627 27.5 15C27.5 8.373 22.127 3 15.5 3ZM19.826 21.266L15.5 18.952L11.174 21.265L12.037 16.436L8.5 13.037L13.36 12.366L15.5 7.951L17.64 12.366L22.5 13.037L18.963 16.437L19.826 21.266Z" fill="#A4A9B0" /> </svg>
+                    <p>Бонусы</p>
+                </a>
+                <!-- waiter-task link -->
+                <a href="waiter-task.html" class="main__footer-item">
+                    <svg width="31" height="30" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M24.7 5H6.3C5.035 5 4 6 4 7.22222V22.7778C4 24 5.035 25 6.3 25H24.7C25.965 25 27 24 27 22.7778V7.22222C27 6 25.965 5 24.7 5ZM13.2 20.5556H7.45V18.3333H13.2V20.5556ZM13.2 16.1111H7.45V13.8889H13.2V16.1111ZM13.2 11.6667H7.45V9.44444H13.2V11.6667ZM18.743 18.3333L15.5 15.1778L17.1215 13.6111L18.743 15.1889L22.3885 11.6667L24.0215 13.2444L18.743 18.3333Z" fill="#A4A9B0" /> </svg>
+                    <p> Задачи</p>
+                </a>
+                <!-- waiter-notepad link -->
+                <a href="waiter-notepad.html" class="main__footer-item">
+                    <svg width="31" height="30" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M23.2778 6.2H18.6333C18.1667 4.924 16.9444 4 15.5 4C14.0556 4 12.8333 4.924 12.3667 6.2H7.72222C6.5 6.2 5.5 7.19 5.5 8.4V23.8C5.5 25.01 6.5 26 7.72222 26H23.2778C24.5 26 25.5 25.01 25.5 23.8V8.4C25.5 7.19 24.5 6.2 23.2778 6.2ZM15.5 6.2C16.1111 6.2 16.6111 6.695 16.6111 7.3C16.6111 7.905 16.1111 8.4 15.5 8.4C14.8889 8.4 14.3889 7.905 14.3889 7.3C14.3889 6.695 14.8889 6.2 15.5 6.2ZM17.7222 21.6H9.94444V19.4H17.7222V21.6ZM21.0556 17.2H9.94444V15H21.0556V17.2ZM21.0556 12.8H9.94444V10.6H21.0556V12.8Z" fill="#A4A9B0" /> </svg>
+                    <p>Блокнот</p>
+                </a>
+                <!-- waiter-profile__main link -->
+                <a href="waiter-profile__main.html" class="main__footer-item">
+                    <svg width="31" height="30" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.5 3C8.873 3 3.5 8.373 3.5 15C3.5 21.627 8.873 27 15.5 27C22.127 27 27.5 21.627 27.5 15C27.5 8.373 22.127 3 15.5 3ZM15.5 25C12.377 25 9.586 23.559 7.751 21.31C8.01 20.722 8.534 20.315 9.618 20.064C11.862 19.546 14.077 19.083 13.011 17.119C9.856 11.299 12.112 8 15.5 8C18.822 8 21.134 11.177 17.989 17.119C16.954 19.071 19.089 19.535 21.382 20.064C22.464 20.314 22.992 20.719 23.253 21.305C21.417 23.558 18.625 25 15.5 25Z" fill="#A4A9B0" /> </svg>
+                    <p>Профиль</p>
+                </a>
+            </div>
+            <!-- popup nfc (hidden) -->
+            <div hidden class="popup" id="popupNFC">
+                <div class="popup__content ">
+                    <div class="popup__content-inner ">
+                        <div class="popup__content-nfc ">
+                            <svg width="60 " height="34 " viewBox="0 0 60 34 " fill="none " xmlns="http://www.w3.org/2000/svg ">
+                                <path d="M30.2088 0.00316604C19.2111 -0.131742 8.63109 4.05042 0.835267 11.4704C-0.278422 12.4147 -0.278422 13.8987 0.835267 14.978C1.80974 16.0573 3.34107 16.0573 4.45476 14.978C11.4153 8.36748 20.464 4.85986 30.0696 4.85986C39.8144 4.99477 48.7239 8.63729 55.5452 15.3827C56.5197 16.462 58.051 16.462 59.1647 15.3827C59.7216 14.8431 60 14.3034 60 13.6289C60 12.9544 59.7216 12.4147 59.1647 11.8751C51.6473 4.45514 41.2065 0.138074 30.2088 0.00316604Z " fill="#A4A9B0 " />
+                                <path d="M30.0699 12.5495C22.6917 12.5495 15.5919 15.2477 10.1627 20.5091C9.049 21.4534 9.049 22.9374 10.1627 24.0167C11.1372 25.096 12.6685 24.9611 13.7822 24.0167C18.2369 19.8345 24.0838 17.4062 30.2091 17.5411C36.3344 17.676 42.1812 19.9695 46.4968 24.2865C47.4713 25.3658 49.0026 25.3658 50.1163 24.2865C50.6731 23.7469 50.9515 23.2073 50.9515 22.5327C50.9515 21.8582 50.6731 21.3185 50.1163 20.7789C44.687 15.5175 37.5873 12.6844 30.0699 12.5495Z " fill="#A4A9B0 " />
+                                <path d="M19.0714 29.548C18.2361 30.3575 18.0969 31.9764 19.2106 33.0556C20.1851 34.1349 21.7164 34.1349 22.8301 33.0556C26.8672 29.1433 33.4101 29.2782 37.4473 33.1905C38.4217 34.2698 39.9531 34.2698 41.0667 33.1905C41.6236 32.6509 41.902 32.1113 41.902 31.4367C41.902 30.7622 41.6236 30.2226 41.0667 29.6829C34.9415 23.747 25.1967 23.747 19.0714 29.548Z " fill="#A4A9B0 " /> </svg>
+                            <div class="nfc__text ">Поднесите устройство к телефону клиента</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- popup QR (hidden) -->
+            <div hidden class="popup" id="popupQR">
+                <div class="popup__inner popup__inner--qr">
+                    <a class="popup__bar" onclick="document.getElementById('popupQR').hidden = true; document.getElementById('mainFooter').hidden = false;">
+                        <svg width="30" height="4" viewBox="0 0 30 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="30" height="4" rx="2" fill="#D8DDE4" /> </svg>
+                    </a>
+                    <div class="address-item address-item--qr">
+                        <div class="address__logo"><img src="images/waiter/home/popupQR-img.png" alt="" class="address__logo-img"></div>
+                        <div class="address__textblock">
+                            <div class="address__textblock-name address__textblock-name--qr">Andrew Mazhaev</div>
+                            <div class="address__textblock-idea"> Коплю на поездку в Disneyland</div>
+                        </div>
+                        <a class="address__button">
+                            <svg width="24" height="23" viewBox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 16.5C8.269 6.619 17 4.833 17 4.833V1.5L24 8.137L17 14.833V11.5C17 11.5 10.83 11.329 6 16.5ZM18 16.645V19.5H2V7.5H8.598C9.366 6.713 10.159 6.051 10.937 5.5H0V21.5H20V14.731L18 16.645Z" fill="#3C4046" /> </svg>
+                        </a>
+                    </div>
+                    <div class="popup-qr__item"> <img src="images/waiter/home/qr-svg.svg" alt="" class="popup-qr__img"> </div>
+                    <label for="" class="label">Ссылка на чаевые/отзыв</label>
+                    <a href="#">
+                        <button class="button button--qr">http///utips_andrew
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13.5 4.50024V0.000244141H0V13.5002H4.5V18.0002H18V4.50024H13.5ZM1.5 12.0002V1.50024H12V4.50024H4.5V12.0002H1.5Z" fill="#3C4046" /> </svg>
+                        </button>
+                    </a>
+                    <!-- waiter__tip-card link -->
+                    <a href="./waiter__tip-card.html">
+                        <button class="button button--apple"><img class="button-apple__icon" src="images/waiter/home/button-apple__icon.svg" alt="">Добавить в Apple Wallet</button>
+                    </a>
+                </div>
+            </div>
+            <!-- popup Distribute (hidden) -->
+            <div hidden class="popup popup--distribute" id="popupDistribute">
+                <div class="popup__inner">
+                    <a class="popup__bar" onclick="document.getElementById('popupDistribute').hidden = true;">
+                        <svg width="30" height="4" viewBox="0 0 30 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="30" height="4" rx="2" fill="#D8DDE4" /> </svg>
+                    </a>
+                    <div class="popup__title">Вывод</div>
+                    <!-- card block -->
+                    <div class="popup-distribute__card">
+                        <div class="popup-distribute__card-item">
+                            <div class="card-info">
+                                <div class="card-info__name">Tinkoff platinum</div>
+                                <div class="card-info__logo"><img src="images/waiter/home/card-logo__1.svg" alt="" class="card-info__logo-img"></div>
+                            </div>
+                            <div class="card-code">
+                                <div class="card-code__numbers">3762 •••• •••• 5230</div>
+                                <div class="card-code__date">••/••</div>
+                            </div> <a href="" class="card-button">Отвязать</a> </div>
+                        <div class="popup-distribute__card-item">
+                            <div class="card-info">
+                                <div class="card-info__name">Sberbank premium</div>
+                                <div class="card-info__logo"><img src="images/waiter/home/card-logo__2.svg" alt="" class="card-info__logo-img"></div>
+                            </div>
+                            <div class="card-code">
+                                <div class="card-code__numbers">3762 •••• •••• 5230</div>
+                                <div class="card-code__date">••/••</div>
+                            </div> <a href="" class="card-button">Отвязать</a> </div>
+                    </div>
+                    <!-- link -->
+                    <a href="#" onclick="document.getElementById('popupDistribute').hidden = true; document.getElementById('popupAddCard').hidden = false;">
+                        <button class="button button--next">
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6.00059 0H8.00059V14H6.00059V0Z" fill="#3C4046" />
+                                <path d="M14 6.00025V8.00025L0 8.00025L8.74269e-08 6.00025L14 6.00025Z" fill="#3C4046" /> </svg> Добавить карту </button>
+                    </a>
+                    <div class="balance">
+                        <div class="balance-textblock">
+                            <div class="balance-text">Доступно</div>
+                            <div class="balance-cash">
+                                <p>328 443</p>
+                                <p>₽</p>
+                            </div>
+                        </div>
+                        <div class="balance-arrow">
+                            <svg width="31" height="16" viewBox="0 0 31 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M30.7071 8.70711C31.0976 8.31658 31.0976 7.68342 30.7071 7.29289L24.3431 0.928932C23.9526 0.538408 23.3195 0.538408 22.9289 0.928932C22.5384 1.31946 22.5384 1.95262 22.9289 2.34315L28.5858 8L22.9289 13.6569C22.5384 14.0474 22.5384 14.6805 22.9289 15.0711C23.3195 15.4616 23.9526 15.4616 24.3431 15.0711L30.7071 8.70711ZM0 9H30V7H0V9Z" fill="#3C4046" /> </svg>
+                        </div>
+                        <div class="balance-textblock balance-textblock--leftover">
+                            <div class="balance-text">Останется</div>
+                            <div class="balance-cash">
+                                <p>328 443</p>
+                                <p>₽</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form form--percent">
+                        <label for="" class="label">Сумма вывода</label>
+                        <input type="text" class="textform" placeholder="0 ₽">
+                        <div class="form-percent__icon">100%</div>
+                    </div>
+                    <!-- waiter- link -->
+                    <a href="#">
+                        <!-- inactive button -->
+                        <button class="button button--inactive">Вывести</button>
+                    </a>
+                </div>
+            </div>
+            <!-- popup AddCard (hidden) -->
+            <div hidden class="popup" id="popupAddCard">
+                <div class="popup__content popup__content--addcard">
+                    <div class="popup__content-inner">
+                        <div class="form">
+                            <label for="" class="label">Название карты</label>
+                            <input type="text" class="textform"> </div>
+                        <div class="form__inner">
+                            <div class="form form--addcard">
+                                <label for="" class="label">Дата выдачи</label>
+                                <input type="text" class="textform"> </div>
+                            <div class="form form--addcard">
+                                <label for="" class="label">CVV-код</label>
+                                <input type="text" class="textform"> </div>
+                        </div>
+                        <!-- popupSuccess link -->
+                        <a href="#" onclick="document.getElementById('popupAddCard').hidden = true; document.getElementById('popupSuccess').hidden = false;">
+                            <button class="button">Добавить карту</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- popup success (hidden) -->
+            <div hidden class="popup" id="popupSuccess">
+                <div class="popup__content popup__content--success">
+                    <div class="popup__content-inner">
+                        <div class="sign__notice-textblock">
+                            <div class="sign__notice-text sign__notice-text--success">Отлично! Операция успешно проведена.</div>
+                            <div class="sign__notice-logo"><img src="images/waiter/sign__notice-logo.png" alt="" class="sign__notice-img"></div>
+                        </div>
+                        <!-- close link -->
+                        <a href="#" onclick="document.getElementById('popupSuccess').hidden = true;">
+                            <button class="button">Окей</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- alert-shift (hidden)-->
+            <div hidden class="alert-shift">
+                <div class="address-item">
+                    <div class="address__logo"><img src="images/waiter/address__logo.png" alt="" class="address__logo-img"></div>
+                    <div class="address__textblock">
+                        <div class="address__textblock-name">Пиццафабрика</div>
+                        <div class="address__textblock-street">
+                            <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="1.5" y="2" width="7" height="7" rx="3.5" fill="white" />
+                                <rect x="1.5" y="2" width="7" height="7" rx="3.5" stroke="#A4A9B0" stroke-width="3" /> </svg> Сретенская 7</div>
+                    </div>
+                    <a class="shift__button">
+                        <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2 5.5L3.6304 4L10 10L3.6304 16L2 14.5L6.8 10L2 5.5Z" fill="black" /> </svg>
+                    </a>
+                </div>
+                <!-- link -->
+                <a href="#">
+                    <!-- button open (add "--close" modifier) -->
+                    <button class="button button--close">
+                        <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.66667 7H6.33333V0H8.66667V7ZM11.1242 1.02317L10.4167 1.95592C12.1573 2.96625 13.3333 4.84633 13.3333 7C13.3333 10.2165 10.7165 12.8333 7.5 12.8333C4.2835 12.8333 1.66667 10.2165 1.66667 7C1.66667 4.84633 2.84267 2.96625 4.58333 1.95592L3.87575 1.02317C1.8545 2.24992 0.5 4.46308 0.5 7C0.5 10.8657 3.63425 14 7.5 14C11.3657 14 14.5 10.8657 14.5 7C14.5 4.46308 13.1455 2.24992 11.1242 1.02317Z" fill="white" /> </svg> Закрыть смену </button>
+                    <!-- button open (add "--open" modifier) -->
+                    <button hidden class="button button--open">
+                        <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.66667 7H6.33333V0H8.66667V7ZM11.1242 1.02317L10.4167 1.95592C12.1573 2.96625 13.3333 4.84633 13.3333 7C13.3333 10.2165 10.7165 12.8333 7.5 12.8333C4.2835 12.8333 1.66667 10.2165 1.66667 7C1.66667 4.84633 2.84267 2.96625 4.58333 1.95592L3.87575 1.02317C1.8545 2.24992 0.5 4.46308 0.5 7C0.5 10.8657 3.63425 14 7.5 14C11.3657 14 14.5 10.8657 14.5 7C14.5 4.46308 13.1455 2.24992 11.1242 1.02317Z" fill="white" /> </svg> Открыть смену </button>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

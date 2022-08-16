@@ -1,0 +1,75 @@
+<!doctype html>
+
+<head>
+    <!-- styles -->
+    <link rel="stylesheet" href="styles/style.css">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{URL::asset('css/styles/style.css') }}">
+    <link href="http://fonts.cdnfonts.com/css/helveticaneuecyr-2" rel="stylesheet">
+    <script src="{{URL::asset('js/scripts/script.js') }}"></script>
+    <script src="{{URL::asset('js/scripts/anime.min.js') }}"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="entity">
+        <div class="order-container">
+            <div class="header-back-logo">
+                <a href="/newProfile"><img class="back-img" src="img/back.jpg"></a>
+            </div>
+            <div class="payment-container-main">
+                <div class="menu-order">
+                    <div class="menu-order-left">
+                        <p class="main-order-text">Получатели</p>
+                        <p class="main-order-text">Чаевые</p>
+                        <p class="main-order-text">Комиссия</p>
+                        <p class="main-order-text">Итого</p>
+                    </div>
+                    <div class="menu-order-right">
+                        <p class="menu-order-text humans"></p>
+                        <p class="menu-order-text chai"></p>
+                        <p class="menu-order-text">45₽</p>
+                        <input class="menu-order-input amount" value="45"> </div>
+                </div>
+                <div class="payment-container"> <img class="c-img" src="img/payc.jpg">
+                    <p class="order-info">Совершая платеж, вы соглашаетесь с условиями сервиса Nachai</p>
+                </div>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script>
+            document.querySelector('.humans').innerHTML = sessionStorage.length + '&nbsp' + 'чел';
+            for (let user in sessionStorage) {
+                user = JSON.parse(sessionStorage.getItem(user));
+                if (user != null) {
+                    let sum = document.querySelector('.amount').value;
+                    document.querySelector('.amount').value = (Number((user['waiter_sum'])) + Number(sum));
+                }
+            }
+            $('.c-img').on('click', function () {
+                let paymentData = [];
+                let data = [];
+                for (let user in sessionStorage) {
+                    user = JSON.parse(sessionStorage.getItem(user));
+                    if (user != null) {
+                        data.push(user);
+                    }
+                }
+                $.ajax({
+                    type: "POST"
+                    , url: "http://89.208.228.140/api/v0/auth/apitinkoffVirtualEmployeePayment"
+                    , data: JSON.stringify(data)
+                    , success: function (data) {
+                        window.location.href = data.data.PaymentURL;
+                    }
+                });
+            })
+        </script>
+    </div>
+</body>
+
+</html>

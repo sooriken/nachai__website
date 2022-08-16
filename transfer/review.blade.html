@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- styles -->
+    <link rel="stylesheet" href="styles/review.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{URL::asset('css/styles/review.css') }}">
+    <link href="http://fonts.cdnfonts.com/css/helveticaneuecyr-2" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="entity">
+        <div class="header">
+            <div class="header-upper-box">
+                <div class="header-upper-box-logo"> <img class="header-logo" src="{{URL::asset('img/header-logo-profile.png') }}"> </div>
+            </div>
+        </div>
+        <div class="review-container">
+            <div class="review-upper">
+                <p class="thx">Отлично! Чаевые отправлены.</p>
+                <p class="congr-img">Мы будем рады услышать ваше мнение о нашем ресторане Пиццафабрика.</p>
+                <div class="stars">
+                    <button class="star-one" value="1" onclick="setReview(value)">
+                        <svg width="30" class="star" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15 0L19.585 9.94655L30 11.4593L22.42 19.119L24.27 30L15 24.7862L5.72875 30L7.58 19.119L0 11.4593L10.415 9.94655L15 0Z" fill="#D8DDE4" /> </svg>
+                    </button>
+                    <button class="star-two" value="2" onclick="setReview(value)">
+                        <svg width="30" class="star" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15 0L19.585 9.94655L30 11.4593L22.42 19.119L24.27 30L15 24.7862L5.72875 30L7.58 19.119L0 11.4593L10.415 9.94655L15 0Z" fill="#D8DDE4" /> </svg>
+                    </button>
+                    <button class="star-three" value="3" onclick="setReview(value)">
+                        <svg width="30" class="star" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15 0L19.585 9.94655L30 11.4593L22.42 19.119L24.27 30L15 24.7862L5.72875 30L7.58 19.119L0 11.4593L10.415 9.94655L15 0Z" fill="#D8DDE4" /> </svg>
+                    </button>
+                    <button class="star-four" value="4" onclick="setReview(value)">
+                        <svg width="30" class="star" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15 0L19.585 9.94655L30 11.4593L22.42 19.119L24.27 30L15 24.7862L5.72875 30L7.58 19.119L0 11.4593L10.415 9.94655L15 0Z" fill="#D8DDE4" /> </svg>
+                    </button>
+                    <button class="star-five" value="5" onclick="setReview(value)">
+                        <svg width="30" class="star" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15 0L19.585 9.94655L30 11.4593L22.42 19.119L24.27 30L15 24.7862L5.72875 30L7.58 19.119L0 11.4593L10.415 9.94655L15 0Z" fill="#D8DDE4" /> </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="body-development-box">
+            <div class="body-development-upper-row">
+                <div class="body-development-rectangle-box ffrst">
+                    <div class="body-development-rectangle food">
+                        <div class="body-development-rectangle-text text-food">Вкусно</div> <img class="food" src="{{URL::asset('img/food.png') }}"> </div>
+                </div>
+                <div class="body-development-rectangle-box">
+                    <div class="body-development-rectangle gloves">
+                        <div class="body-development-rectangle-text text-gloves">Чисто</div> <img class="gloves" src="{{URL::asset('img/gloves.png') }}"> </div>
+                </div>
+                <div class="body-development-rectangle-box">
+                    <div class="body-development-rectangle waiter">
+                        <div class="body-development-rectangle-text text-waiter">Сервис</div> <img class="waiter" src="{{URL::asset('img/waiter.png') }}"> </div>
+                </div>
+                <div class="body-development-rectangle-box">
+                    <div class="body-development-rectangle light text-light">
+                        <div class="body-development-rectangle-text lighter">Атмосфера</div> <img class="light" src="{{URL::asset('img/light.png') }}"> </div>
+                </div>
+            </div>
+        </div>
+        <div class="body-box">
+            <div class="body-box-buttons">
+                <button class="button-pay-order">
+                    <a href="/newProfile">
+                        <p class="pay-order-text">Отправить</p>
+                    </a>
+                </button>
+                <button class="button-send-tips">
+                    <a href="/new">
+                        <p class="tips-text">На главную</p>
+                    </a>
+                </button>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        function setReview(value) {
+            if (value = 1) {
+                document.querySelector('.star-one').firstElementChild.firstElementChild.setAttribute('fill', '#FF5950');
+                document.querySelector('.star-one').firstElementChild.classList.add('choosen');
+            }
+        }
+        $('.body-development-rectangle').on('click', function () {
+            if (!$(this).hasClass('active')) {
+                $(this).addClass("active");
+            }
+            else {
+                $(this).removeClass("active");
+            }
+        })
+    </script>
+</body>
+
+</html>

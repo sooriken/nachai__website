@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- styles -->
+    <link rel="stylesheet" href="styles/profile.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{URL::asset('css/styles/profile.css') }}">
+    <link href="http://fonts.cdnfonts.com/css/helveticaneuecyr-2" rel="stylesheet">
+    <script src="{{URL::asset('js/scripts/script.js') }}"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="entity">
+        <div class="header-menu"> <img class="header-img" src="img/header-logo-profile.png">
+            <!-- {{URL::asset('img/header-logo-profile.png') }} -->
+        </div>
+        <div class="menu-box">
+            <div class="menu-box-upper">
+                <div class="menu-rectangle">
+                    <div class="slider">
+                        <div class="slider-list">
+                            <div class="slider-track">
+                                <div class="slide active">
+                                    <div class="waiter-container">
+                                        <input type="hidden" class="hidden_waiter_id" value="2"> <img class="waiter-image" src="img/elena-main.png">
+                                        <!-- {{URL::asset('img/elena-main.png')}} -->
+                                        <div class="waiter-text text-active">
+                                            <input disabled="disabled" class="waiter-name" value="Елена Любимова">
+                                            <input disabled="disabled" class="waiter-order" value="Официант"> </div>
+                                    </div>
+                                </div>
+                                <div class="slide">
+                                    <div class="waiter-container">
+                                        <input type="hidden" class="hidden_waiter_id" value="3"> <img class="waiter-image" src="{{URL::asset('img/chao-main.png')}}">
+                                        <div class="waiter-text">
+                                            <input disabled="disabled" class="waiter-name" value="Чао Дан">
+                                            <input disabled="disabled" class="waiter-order" value="Официант"> </div>
+                                    </div>
+                                </div>
+                                <div class="slide">
+                                    <div class="waiter-container">
+                                        <input type="hidden" class="hidden_waiter_id" value="4"> <img class="waiter-image" src="{{URL::asset('img/inna-main.png')}}">
+                                        <div class="waiter-text">
+                                            <input disabled="disabled" class="waiter-name" value="Инна Миримова">
+                                            <input disabled="disabled" class="waiter-order" value="Официант"> </div>
+                                    </div>
+                                </div>
+                                <div class="slide">
+                                    <div class="waiter-container">
+                                        <input type="hidden" class="hidden_waiter_id" value="5"> <img class="waiter-image" src="{{URL::asset('img/elenaa-main.png')}}">
+                                        <div class="waiter-text">
+                                            <input disabled="disabled" class="waiter-name" value="Елена Ламма">
+                                            <input disabled="disabled" class="waiter-order" value="Бармен"> </div>
+                                    </div>
+                                </div>
+                                <div class="slide">
+                                    <div class="waiter-container">
+                                        <input type="hidden" class="hidden_waiter_id" value="6"> <img class="waiter-image" src="{{URL::asset('img/misha-main.png')}}">
+                                        <div class="waiter-text">
+                                            <input disabled="disabled" class="waiter-name" value="Миша Смелец">
+                                            <input disabled="disabled" class="waiter-order" value="Официант"> </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-box-down">
+                <div class="avatars"> {{--
+                    <div class="avatar-container chao" style="display: none">--}} {{--
+                        <div class="avatar-image">--}} {{-- <img class="elena-img" src="{{URL::asset('img/chao-small.jpg') }}">--}} {{-- </div>--}} {{--
+                        <div class="avatar-text">--}} {{--
+                            <p class="avatar-name">Чао Д.</p>--}} {{--
+                            <p class="avatar-order avatar-order-chao"></p>--}} {{-- </div>--}} {{--
+                        <div id="chao-delete" class="avatar-delete">--}} {{--
+                            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">--}} {{--
+                                <rect width="36" height="36" rx="18" fill="#F0F3F8" />--}} {{--
+                                <path d="M24 22.094L19.8425 17.9895L23.9425 13.8485L22.094 12L17.988 16.159L13.833 12.0575L12 13.8905L16.1605 18.0105L12.0575 22.167L13.8905 24L18.009 19.841L22.1515 23.9425L24 22.094Z" fill="#3C4046" />--}} {{-- </svg>--}} {{-- </div>--}} {{-- </div>--}} </div>
+                <div class="money-input">
+                    <div class="money-container">
+                        <div class="money-bar">
+                            <input class="money-value" type="hidden" value="">
+                            <input class="default" type="number" min="1" max="10000" onchange="addToCart(value)" value="0">
+                            <p class="procent">7.37%</p>
+                        </div>
+                        <div class="money-var">
+                            <div class="variation money50">
+                                <input type="hidden" disabled="disabled" name="OrderVariation" value="50">
+                                <p class="money-v">50₽</p>
+                            </div>
+                            <div class="variation">
+                                <input type="hidden" disabled="disabled" name="OrderVariation" value="100">
+                                <p class="money-v">100₽</p>
+                            </div>
+                            <div class="variation">
+                                <input type="hidden" disabled="disabled" name="OrderVariation" value="150">
+                                <p class="money-v">150₽</p>
+                            </div>
+                            <div class="variation">
+                                <input type="hidden" disabled="disabled" name="OrderVariation" value="200">
+                                <p class="money-v">200₽</p>
+                            </div>
+                            <div class="variation">
+                                <input type="hidden" disabled="disabled" name="OrderVariation" value="400">
+                                <p class="money-v">400₽</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu_procent">
+                    <p class="procent_text">Оплатить комиссию 40₽ и отправить сотруднику полную сумму</p>
+                    <div class="button_container">
+                        <button class="procent_button"></button>
+                    </div>
+                </div>
+                <div class="body-box-buttons">
+                    <a class="pay-order-link" href="/payOrder">
+                        <button class="button-pay-order">
+                            <p class="pay-order-text">Оплатить счет</p>
+                            <p class="pay-order-text order-sum"></p>
+                        </button>
+                    </a>
+                    <button class="button-send-tips">
+                        <p class="tips-text">Оставить отзыв</p>
+                    </button>
+                    <p class="information">Совершая платеж, вы соглашаетесь с условиями сервиса Nachai</p>
+                </div>
+            </div>
+        </div>
+        <div class="waiter-review" style="display:none;">
+            <div class="waiter-upper-box"></div>
+            <div class="waiter-down-box">
+                <div class="waiter-close"></div>
+                <div class="waiter-container">
+                    <div class="waiter-image"> <img class="waiter-img" src="{{URL::asset('img/elena-small.jpg') }}"> </div>
+                    <div class="waiter-text">
+                        <p class="waiter-name">Елена Любимова</p>
+                        <p class="waiter-order">Официант</p>
+                    </div>
+                </div>
+                <div class="waiter-image-box"> <img class="waiter-stars" src="{{URL::asset('img/stars.jpg') }}"> </div>
+                <div class="body-box-buttons">
+                    <button class="button-pay-order">
+                        <p class="pay-order-text closew">Отправить отзыв</p>
+                    </button>
+                    <button class="button-send-tips">
+                        <a href="../views/review.html">
+                            <p class="tips-text">Отзыв заведению</p>
+                        </a>
+                    </button>
+                    <p class="wai-inf">Совершая платеж, вы соглашаетесь с условиями сервиса Nachai</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let slider = document.querySelector('.slider')
+            , sliderList = slider.querySelector('.slider-list')
+            , sliderTrack = slider.querySelector('.slider-track')
+            , slides = slider.querySelectorAll('.slide')
+            , slideArray = sliderTrack.childNodes
+            , arrows = slider.querySelector('.slider-arrows')
+            , slideWidth = slides[0].offsetWidth
+            , slideIndex = 0
+            , posInit = 0
+            , posX1 = 0
+            , posX2 = 0
+            , posY1 = 0
+            , posY2 = 0
+            , posFinal = 0
+            , isSwipe = false
+            , isScroll = false
+            , allowSwipe = true
+            , transition = true
+            , nextTrf = 0
+            , prevTrf = 0
+            , lastTrf = --slides.length * slideWidth
+            , posThreshold = slides[0].offsetWidth * 0.35
+            , trfRegExp = /([-0-9.]+(?=px))/
+            , swipeStartTime, swipeEndTime, getEvent = function () {
+                return (event.type.search('touch') !== -1) ? event.touches[0] : event;
+            }
+            , slide = function () {
+                if (transition) {
+                    sliderTrack.style.transition = 'transform .5s';
+                }
+                sliderTrack.style.transform = `translate3d(-${slideIndex * (slideWidth)}px, 0px, 0px)`;
+            }
+            , swipeStart = function () {
+                let evt = getEvent();
+                var showCart;
+                if (allowSwipe) {
+                    swipeStartTime = Date.now();
+                    transition = true;
+                    nextTrf = (slideIndex + 1) * -slideWidth;
+                    prevTrf = (slideIndex - 1) * -slideWidth;
+                    posInit = posX1 = evt.clientX;
+                    posY1 = evt.clientY;
+                    sliderTrack.style.transition = '';
+                    document.addEventListener('touchmove', swipeAction);
+                    document.addEventListener('mousemove', swipeAction);
+                    document.addEventListener('touchend', swipeEnd);
+                    document.addEventListener('mouseup', swipeEnd);
+                    if (slides[slideIndex + 1]) {
+                        slides[slideIndex + 1].lastElementChild.lastElementChild.style.display = "flex";
+                        slides[slideIndex + 1].classList.add('active');
+                    }
+                    sliderList.classList.remove('grab');
+                    sliderList.classList.add('grabbing');
+                }
+            }
+            , swipeAction = function () {
+                let evt = getEvent()
+                    , style = sliderTrack.style.transform
+                    , transform = +style.match(trfRegExp)[0];
+                posX2 = posX1 - evt.clientX;
+                posX1 = evt.clientX;
+                posY2 = posY1 - evt.clientY;
+                posY1 = evt.clientY;
+                if (!isSwipe && !isScroll) {
+                    let posY = Math.abs(posY2);
+                    if (posY > 7 || posX2 === 0) {
+                        isScroll = true;
+                        allowSwipe = false;
+                    }
+                    else if (posY < 7) {
+                        isSwipe = true;
+                    }
+                }
+                if (isSwipe) {
+                    if (slideIndex === 0) {
+                        if (posInit < posX1) {
+                            setTransform(transform, 0);
+                            return;
+                        }
+                        else {
+                            allowSwipe = true;
+                        }
+                    }
+                    // запрет ухода вправо на последнем слайде
+                    if (slideIndex === --slides.length) {
+                        if (posInit > posX1) {
+                            setTransform(transform, lastTrf);
+                            return;
+                        }
+                        else {
+                            allowSwipe = true;
+                        }
+                    }
+                    if (posInit > posX1 && transform < nextTrf || posInit < posX1 && transform > prevTrf) {
+                        reachEdge();
+                        return;
+                    }
+                    sliderTrack.style.transform = `translate3d(${transform - posX2}px, 0px, 0px)`;
+                }
+            }
+            , swipeEnd = function () {
+                posFinal = posInit - posX1;
+                isScroll = false;
+                isSwipe = false;
+                document.removeEventListener('touchmove', swipeAction);
+                document.removeEventListener('mousemove', swipeAction);
+                document.removeEventListener('touchend', swipeEnd);
+                document.removeEventListener('mouseup', swipeEnd);
+                sliderList.classList.add('grab');
+                sliderList.classList.remove('grabbing');
+                let waiterSum = JSON.parse(sessionStorage.getItem('user' + slideIndex));
+                if (waiterSum !== null && waiterSum['waiter_sum'] > 0) {
+                    document.querySelector('.default').value = waiterSum['waiter_sum'] + '₽';
+                    document.querySelector('.money-value').value = waiterSum['waiter_sum'] + '₽';
+                }
+                else {
+                    document.querySelector('.default').value = 0;
+                    document.querySelector('.money-value').value = 0;
+                }
+                if (allowSwipe) {
+                    swipeEndTime = Date.now();
+                    if (Math.abs(posFinal) > posThreshold || swipeEndTime - swipeStartTime < 400) {
+                        if (posInit < posX1) {
+                            slideIndex--;
+                        }
+                        else if (posInit > posX1) {
+                            slideIndex++;
+                        }
+                    }
+                    if (posInit !== posX1) {
+                        allowSwipe = false;
+                        slide();
+                    }
+                    else {
+                        allowSwipe = true;
+                    }
+                }
+                else {
+                    allowSwipe = true;
+                }
+            }
+            , setTransform = function (transform, comapreTransform) {
+                if (transform >= comapreTransform) {
+                    if (transform > comapreTransform) {
+                        sliderTrack.style.transform = `translate3d(${comapreTransform}px, 0px, 0px)`;
+                    }
+                }
+                allowSwipe = false;
+            }
+            , reachEdge = function () {
+                transition = false;
+                swipeEnd();
+                allowSwipe = true;
+            };
+        sliderTrack.style.transform = 'translate3d(0px, 0px, 0px)';
+        sliderList.classList.add('grab');
+        sliderTrack.addEventListener('transitionend', () => allowSwipe = true);
+        slider.addEventListener('touchstart', swipeStart);
+        slider.addEventListener('mousedown', swipeStart);
+        $(function () {
+            $(".default").change(function () {
+                var max = parseInt($(this).attr('max'));
+                var min = parseInt($(this).attr('min'));
+                if ($(this).val() > max) {
+                    $(this).val(max);
+                }
+                else if ($(this).val() < min) {
+                    $(this).val(min);
+                }
+            });
+        });
+
+        function addToCart(value) {
+            console.log(value);
+            if ((value !== '') && (!Number.isNaN(value)) && value.length > 1 && value.length < 6 && value.length !== 0) {
+                let user = {
+                    waiter_sum: value
+                    , waiter_id: slides[slideIndex].lastElementChild.firstElementChild.value
+                };
+                sessionStorage.setItem('user' + slideIndex, JSON.stringify(user));
+                console.log(sessionStorage);
+                let checker = document.querySelector('.avatar-container' + slideIndex);
+                if (!checker) {
+                    const avatarsContainer = document.querySelector('.avatars');
+                    const cartItem = document.createElement('div');
+                    const cartImg = document.createElement('img');
+                    const cartText = document.createElement('div');
+                    const avatarName = document.createElement('p');
+                    const avatarOrder = document.createElement('input');
+                    const cartDelete = document.createElement('button');
+                    avatarName.className = 'avatar-name';
+                    avatarName.id = 'avatar-name';
+                    avatarOrder.className = 'avatar-order';
+                    avatarOrder.setAttribute("disabled", "disabled");
+                    avatarOrder.id = 'avatar-order';
+                    cartItem.id = 'avatar-container';
+                    cartItem.className = 'avatar-container' + slideIndex;
+                    cartImg.className = 'avatar-image';
+                    cartText.className = 'avatar-text';
+                    cartDelete.className = 'avatar-delete';
+                    cartDelete.setAttribute('onclick', 'deleteFromCart(value)');
+                    cartDelete.setAttribute('value', slideIndex);
+                    cartDelete.insertAdjacentHTML("afterbegin", "<img src='{{URL::asset('img/delete.png')}}'>");
+                    avatarsContainer.prepend(cartItem);
+                    cartText.prepend(avatarOrder);
+                    cartText.prepend(avatarName);
+                    cartItem.prepend(cartDelete);
+                    cartItem.prepend(cartText);
+                    cartItem.prepend(cartImg);
+                    cartImg.src = slides[slideIndex].lastElementChild.firstElementChild.nextElementSibling.src;
+                    let waiter_name = slides[slideIndex].lastElementChild.lastElementChild.firstElementChild.value;
+                    waiter_name = waiter_name.split(" ");
+                    waiter_name[1] = waiter_name[1].substring(0, 1);
+                    waiter_name = waiter_name.join(" ");
+                    avatarName.innerHTML = waiter_name;
+                    let waiter = JSON.parse(sessionStorage.getItem('user' + slideIndex));
+                    avatarOrder.value = waiter['waiter_sum'] + '₽';
+                    avatarName.className = 'avatar-name' + slideIndex;
+                    avatarOrder.className = 'avatar-order' + slideIndex;
+                    avatarName.id = 'avatar-name';
+                    avatarOrder.id = 'avatar-order';
+                }
+                else {
+                    let avatarName = document.querySelector('.avatar-name' + slideIndex);
+                    let waiter_name = slides[slideIndex].lastElementChild.lastElementChild.firstElementChild.value;
+                    waiter_name = waiter_name.split(" ");
+                    waiter_name[1] = waiter_name[1].substring(0, 1);
+                    waiter_name = waiter_name.join(" ");
+                    avatarName.innerHTML = waiter_name;
+                    let waiter = JSON.parse(sessionStorage.getItem('user' + slideIndex));
+                    let avatarOrder = document.querySelector('.avatar-order' + slideIndex);
+                    avatarOrder.value = waiter['waiter_sum'];
+                }
+            }
+            else {
+                console.log('неккоректная сумма')
+            }
+        }
+        $('.variation').on('click', function () {
+            $('.variation').css("background", "#F0F3F8");
+            $(this).css("background", "#8672E8");
+            let user = {
+                waiter_sum: this.firstElementChild.value
+                , waiter_id: slides[slideIndex].lastElementChild.firstElementChild.value
+            };
+            sessionStorage.setItem('user' + slideIndex, JSON.stringify(user));
+            console.log(sessionStorage);
+            let checker = document.querySelector('.avatar-container' + slideIndex);
+            if (!checker) {
+                const avatarsContainer = document.querySelector('.avatars');
+                const cartItem = document.createElement('div');
+                const cartImg = document.createElement('img');
+                const cartText = document.createElement('div');
+                const avatarName = document.createElement('p');
+                const avatarOrder = document.createElement('input');
+                const cartDelete = document.createElement('button');
+                avatarName.className = 'avatar-name';
+                avatarName.id = 'avatar-name';
+                avatarOrder.className = 'avatar-order';
+                avatarOrder.id = 'avatar-order';
+                avatarOrder.setAttribute("disabled", "disabled");
+                cartItem.id = 'avatar-container';
+                cartItem.className = 'avatar-container' + slideIndex;
+                cartImg.className = 'avatar-image';
+                cartText.className = 'avatar-text';
+                cartDelete.className = 'avatar-delete';
+                cartDelete.setAttribute('onclick', 'deleteFromCart(value)');
+                cartDelete.setAttribute('value', slideIndex);
+                cartDelete.insertAdjacentHTML("afterbegin", "<img src='{{URL::asset('img/delete.png')}}'>");
+                avatarsContainer.prepend(cartItem);
+                cartText.prepend(avatarOrder);
+                cartText.prepend(avatarName);
+                cartItem.prepend(cartDelete);
+                cartItem.prepend(cartText);
+                cartItem.prepend(cartImg);
+                cartImg.src = slides[slideIndex].lastElementChild.firstElementChild.nextElementSibling.src;
+                let waiter_name = slides[slideIndex].lastElementChild.lastElementChild.firstElementChild.value;
+                waiter_name = waiter_name.split(" ");
+                waiter_name[1] = waiter_name[1].substring(0, 1);
+                waiter_name = waiter_name.join(" ");
+                avatarName.innerHTML = waiter_name;
+                let waiter = JSON.parse(sessionStorage.getItem('user' + slideIndex));
+                avatarOrder.value = waiter['waiter_sum'] + '₽';
+                avatarName.className = 'avatar-name' + slideIndex;
+                avatarOrder.className = 'avatar-order' + slideIndex;
+                avatarName.id = 'avatar-name';
+                avatarOrder.id = 'avatar-order';
+            }
+            else {
+                let avatarName = document.querySelector('.avatar-name' + slideIndex);
+                let waiter_name = slides[slideIndex].lastElementChild.lastElementChild.firstElementChild.value;
+                waiter_name = waiter_name.split(" ");
+                waiter_name[1] = waiter_name[1].substring(0, 1);
+                waiter_name = waiter_name.join(" ");
+                avatarName.innerHTML = waiter_name;
+                let waiter = JSON.parse(sessionStorage.getItem('user' + slideIndex));
+                let avatarOrder = document.querySelector('.avatar-order' + slideIndex);
+                avatarOrder.value = waiter['waiter_sum'];
+            }
+        })
+
+        function deleteFromCart(value) {
+            sessionStorage.removeItem('user' + value);
+            let deleteElement = document.querySelector('.avatar-container' + value);
+            deleteElement.remove();
+        }
+        $('.button-send-tips').on('click', function () {
+            $('.waiter-review').css("display", "flex")
+        })
+        $('.waiter-close').on('click', function () {
+            $('.waiter-review').css("display", "none")
+        })
+        $('.waiter-upper-box').on('click', function () {
+            $('.waiter-review').css("display", "none")
+        })
+        $('.closew').on('click', function () {
+            $('.waiter-review').css("display", "none")
+        })
+        document.querySelector('.procent_button').onclick = function () {
+            if (!document.querySelector('.procent_button').classList.contains('activee')) {
+                document.querySelector('.procent_button').classList.add('activee')
+            }
+            else {
+                document.querySelector('.procent_button').classList.remove('activee')
+            }
+        }
+        $('.money-v').on('click', function () {
+            $('.money-v').css("color", "#3C4046");
+            $(this).css("color", "#ffff");
+            const OrderVariation = this.previousElementSibling.value;
+            $('.default').val(OrderVariation + '₽');
+            $('.money-value').val(OrderVariation);
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</body>

@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>authorization</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="normalize.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+
+<body>
+    <div class="authorization__inner">
+        <div class="authorization__sidebar">
+            <div class="authorization__sidebar-logo"><img src="images/authorization/logo.png" alt=""></div>
+            <div class="authorization__sidebar-title">Чаевые на максимум. Подключи сервис будущего.</div>
+            <div class="authorization__gif"><img class="authorization__gif-img authorization__gif-img--sidebar" src="images/authorization/animation.png" alt=""></div>
+            <div class="authorization__sidebar-rules"> <a class="authorization__sidebar-btn" href="">Политика конфидениальности Nachai</a></div>
+        </div>
+        <div class="authorization__content">
+            <div class="authorization__content-back"> <img src="images/authorization/arrow.png" alt="">
+                <!-- authorization__main link --><a href="authorization__main.html">Назад</a> </div>
+            <!-- media header -->
+            <div class="authorization-media__confirm-header">
+                <div class="authorization-media__confirm-item authorization-media__confirm-item--active">
+                    <div class="authorization-media__confirm-textblock">
+                        <div class="authorization-media__confirm-text">Письмо</div>
+                    </div>
+                    <div class="authorization-media__confirm-bar">
+                        <svg width="105" height="4" viewBox="0 0 105 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="105" height="4" rx="2" fill="#4ADE80" /> </svg>
+                    </div>
+                </div>
+                <div class="authorization-media__confirm-item">
+                    <div class="authorization-media__confirm-textblock">
+                        <div class="authorization-media__confirm-text">Пароль</div>
+                    </div>
+                    <div class="authorization-media__confirm-bar">
+                        <svg width="105" height="4" viewBox="0 0 105 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="105" height="4" rx="2" fill="#4ADE80" /> </svg>
+                    </div>
+                </div>
+                <div class="authorization-media__confirm-item">
+                    <div class="authorization-media__confirm-textblock">
+                        <div class="authorization-media__confirm-text">Профиль</div>
+                    </div>
+                    <div class="authorization-media__confirm-bar">
+                        <svg width="105" height="4" viewBox="0 0 105 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="105" height="4" rx="2" fill="#4ADE80" /> </svg>
+                    </div>
+                </div>
+            </div>
+            <!--  -->
+            <div class="authorization__content-title authorization__content-title--media">Подтверждение номера</div>
+            <div class="authorization__content-subtitle">На номер +79*****8764 отправлен код подтверждения.</div>
+            <div class="authorization__content-form authorization__content-form--media authorization__content-form--media-code">
+                <!-- media label -->
+                <div class="media-label__inner">
+                    <label for="authorization__content-textform" class="authorization__content-label">Введите код из письма</label>
+                </div>
+                <!-- media form -->
+                <input type="text" class="authorization__content-textform authorization__content-textform--media" placeholder=""> </div>
+            <div class="authorization__content-form">
+                <label for="authorization__content-textform" class="authorization__content-label">Введите код</label>
+                <input type="text" class="authorization__content-textform authorization__content-textform--code" placeholder="______" maxlength="6"> </div>
+            <div class="authorization__content-timer">
+                <div class="timer__inner">
+                    <div class="timer-minutes">01</div>
+                    <p>:</p>
+                    <div class="timer-seconds">47</div>
+                </div>
+            </div>
+            <div class="authorization__content-repeat"><a href="">Отправить код повторно</a></div>
+            <div class="button authorization__content-button authorization__content-button--desktop">
+                <!-- authorization__post --><a href="authorization__post.html" class="authorization__content-btn">Продолжить</a></div>
+            <!-- media button -->
+            <div class="button authorization__content-button authorization__content-button--media">
+                <!-- authorization__new-password --><a href="authorization__new-password.html" class="authorization__content-btn">Продолжить</a></div>
+            <div class="authorization__content-subtext">Уже есть <span class="authorization__content-subtext--desktop">учетная запись</span><span class="authorization__content-subtext--media">аккаунт</span>?
+                <!-- authorization__entry --><a href="authorization__entry.html" class="authorization__content-enter"> Войти</a></div>
+        </div>
+    </div>
+</body>
+
+</html>
